@@ -10,5 +10,6 @@ playwright-report/
 .superpowers/
 work/
 outputs/
+work/release-verification.md
 *.local
 

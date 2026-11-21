@@ -8,17 +8,24 @@ import { queueReviewEvent } from '../lib/sync-queue';
 interface ReviewSessionPageProps {
   queueKind: QueueKind;
   cards: Card[];
+  activePieceIds?: string[];
   initialStates: Record<string, LearningState>;
   backend: BackendClient;
   onStateChange?: (states: Record<string, LearningState>) => void;
   onDone: () => void;
 }
 
+export function selectSessionCards(cards: Card[], queueKind: QueueKind, activePieceIds: string[] = []): Card[] {
+  if (queueKind === 'vocabulary') return cards.filter((card) => card.kind === 'sense-recall');
+  const active = new Set(activePieceIds);
+  return cards.filter((card) => card.kind !== 'sense-recall' && card.pieceId !== undefined && active.has(card.pieceId));
+}
+
 function newEventId(): string {
   return typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`;
 }
 
-export function ReviewSessionPage({ queueKind, cards, initialStates, backend, onStateChange, onDone }: ReviewSessionPageProps) {
+export function ReviewSessionPage({ queueKind, cards, activePieceIds = [], initialStates, backend, onStateChange, onDone }: ReviewSessionPageProps) {
   const [states, setStates] = useState(initialStates);
   const [index, setIndex] = useState(0);
   const now = new Date();
@@ -27,12 +34,12 @@ export function ReviewSessionPage({ queueKind, cards, initialStates, backend, on
       buildDailyQueue({
         now,
         queueKind,
-        cards,
+        cards: selectSessionCards(cards, queueKind, activePieceIds),
         states,
         dailyNewTarget: 5,
         reviewLimit: 30,
       }),
-    [cards, queueKind, states],
+    [activePieceIds, cards, queueKind, states],
   );
   const item = queue[index];
 

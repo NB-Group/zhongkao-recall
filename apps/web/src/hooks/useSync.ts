@@ -25,6 +25,7 @@ export function useSync(backend: BackendClient) {
 
   useEffect(() => {
     void refreshCount();
+    if (navigator.onLine) void flush();
     const handleOnline = () => {
       setOnline(true);
       void flush();

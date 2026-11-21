@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { BrowserRouter, Navigate, Route, Routes, useNavigate, useParams } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes, useNavigate, useParams } from 'react-router-dom';
 import type { Card, ContentPack, LearningState, Piece } from '@zhongkao-recall/domain';
 import { AppShell } from './components/AppShell';
 import { AuthPage } from './pages/AuthPage';
@@ -9,6 +9,7 @@ import { SettingsPage } from './pages/SettingsPage';
 import { TodayPage } from './pages/TodayPage';
 import { createBackendClient, type BackendClient, type UserSettings } from './lib/backend';
 import { createSupabaseBackend } from './lib/supabase';
+import { useSync } from './hooks/useSync';
 
 import cards from '../../../content/packs/zhongkao-2024/cards.json';
 import pieces from '../../../content/packs/zhongkao-2024/pieces.json';
@@ -36,6 +37,7 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
   const [settings, setSettings] = useState<UserSettings>({ dailyNewWords: 5, dailyReviewLimit: 30, timeZone: 'Asia/Shanghai' });
   const [states, setStates] = useState<Record<string, LearningState>>({});
   const [progress, setProgress] = useState<Record<string, string>>({});
+  useSync(backend);
 
   useEffect(() => {
     void backend.getSession().then((session) => setAuthenticated(Boolean(session))).catch(() => setAuthenticated(false));
@@ -80,6 +82,7 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
       <ReviewSessionPage
         queueKind={queueKind === 'prose' ? 'prose' : 'vocabulary'}
         cards={contentPack.cards}
+        activePieceIds={Object.entries(progress).filter(([, status]) => status !== 'locked').map(([pieceId]) => pieceId)}
         initialStates={states}
         backend={backend}
         onStateChange={setStates}
@@ -113,8 +116,8 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
 export function App() {
   const backend = useMemo(createConfiguredBackend, []);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppRoutes backend={backend} />
-    </BrowserRouter>
+    </HashRouter>
   );
 }

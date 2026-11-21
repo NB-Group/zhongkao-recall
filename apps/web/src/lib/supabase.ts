@@ -26,6 +26,13 @@ export function toReviewEventRow(event: ReviewEvent): ReviewEventRow {
   };
 }
 
+export function toReviewEventWrite(userId: string, event: ReviewEvent) {
+  return {
+    row: { user_id: userId, ...toReviewEventRow(event) },
+    options: { onConflict: 'event_id', ignoreDuplicates: true as const },
+  };
+}
+
 async function requireUserId(client: SupabaseClient): Promise<string> {
   const { data, error } = await client.auth.getUser();
   if (error) throw error;
@@ -112,13 +119,11 @@ export function createSupabaseBackend(url: string, anonKey: string): BackendClie
     },
     appendReviewEvent: async (event) => {
       const userId = await requireUserId(client);
-      const { data, error } = await client
+      const { error } = await client
         .from('review_events')
-        .insert({ user_id: userId, ...toReviewEventRow(event) })
-        .select('event_id')
-        .single();
+        .upsert(toReviewEventWrite(userId, event).row, toReviewEventWrite(userId, event).options);
       if (error) throw error;
-      return { eventId: data.event_id };
+      return { eventId: event.eventId };
     },
     setPieceProgress: async (pieceId, status) => {
       const userId = await requireUserId(client);
