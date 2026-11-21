@@ -110,7 +110,7 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
             />
           }
         />
-        <Route path="/content" element={<ContentPage pieces={contentPack.pieces} progress={progress} onUnlock={(pieceId) => { setProgress({ ...progress, [pieceId]: 'learning' }); void backend.setPieceProgress(pieceId, 'learning'); }} />} />
+        <Route path="/content" element={<ContentPage pieces={contentPack.pieces} progress={progress} onUnlock={(pieceId) => { setProgress({ ...progress, [pieceId]: 'learning' }); void backend.setPieceProgress(pieceId, 'learning'); }} onSetStatus={(pieceId, status) => { setProgress({ ...progress, [pieceId]: status }); void backend.setPieceProgress(pieceId, status); }} />} />
         <Route path="/settings" element={<SettingsPage settings={settings} onSave={async (next) => { setSettings(next); await backend.updateSettings(next); }} />} />
         <Route path="/review/:queueKind" element={<ReviewRoute />} />
       </Route>

@@ -5,9 +5,10 @@ interface ContentPageProps {
   pieces: Piece[];
   progress: Record<string, string>;
   onUnlock: (pieceId: string) => void;
+  onSetStatus?: (pieceId: string, status: string) => void;
 }
 
-export function ContentPage({ pieces, progress, onUnlock }: ContentPageProps) {
+export function ContentPage({ pieces, progress, onUnlock, onSetStatus }: ContentPageProps) {
   return (
     <main className="content-page">
       <header className="page-heading">
@@ -28,7 +29,12 @@ export function ContentPage({ pieces, progress, onUnlock }: ContentPageProps) {
               {status === 'locked' ? (
                 <button type="button" className="outline-button" onClick={() => onUnlock(piece.id)}>解锁</button>
               ) : (
-                <span className={`status-pill status-pill--${status}`}>{status === 'mastered' ? '熟练' : status === 'learned' ? '已学' : '学习中'}</span>
+                <div className="piece-row__actions">
+                  <span className={`status-pill status-pill--${status}`}>{status === 'mastered' ? '熟练' : status === 'learned' ? '已学' : '学习中'}</span>
+                  {onSetStatus && <button type="button" className="text-button" onClick={() => onSetStatus(piece.id, status === 'mastered' ? 'learning' : 'mastered')}>
+                    {status === 'mastered' ? '恢复学习' : '标记熟练'}
+                  </button>}
+                </div>
               )}
             </article>
           );
