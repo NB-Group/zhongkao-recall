@@ -60,6 +60,14 @@ def build_organize_prompt(document_type: str, page_number: int) -> str:
       ]
     }
   ],
+  "continuations": [
+    {
+      "parent_number": 1,
+      "parent_term": "比",
+      "meaning": null,
+      "examples": [{"text": "续表中的例句原文", "source": "续表中的出处原文", "tags": []}]
+    }
+  ],
   "noise": [],
   "warnings": []
 }
@@ -70,6 +78,7 @@ def build_organize_prompt(document_type: str, page_number: int) -> str:
   "page_number": 1,
   "document_type": "classic_text",
   "pieces": [{"title": "页面标题原文", "author": "作者原文", "location": "教材位置原文", "segments": ["页面段落原文"]}],
+  "continuations": [{"piece_title": "上一页篇名原文", "segments": ["本页续接正文原文"]}],
   "noise": [],
   "warnings": []
 }
@@ -79,7 +88,7 @@ def build_organize_prompt(document_type: str, page_number: int) -> str:
 输入包含 PDF 原生文字和表格列。只根据输入中的原文整理，不要推断，不要改写，不要补全，不要把释义、例句、出处混合。保留原始标点、括号、序号、标签和不确定内容。页眉、页脚、页码、推广文案和咨询信息放入 noise。缺失字段使用 null 或空数组。
 
 对表格输入，表格数组中的每一个 row 是不可跨越的证据边界。一个 row 的“词义、例句、出处”只能来自同一个 row，不能把下一 row 的文字拼入当前 row，也不能用页面连续文字覆盖表格单元格。只有同一词条下明确为空的例句/出处单元格，才可以按表格视觉结构归入同一义项。
-如果输入的 context 提供了上一页末尾词条或预期编号，使用它判断本页的续表归属。不要把没有序号的续表行伪造为从 1 开始的新词条。页面中出现新的分节标题时，按分节标题切换编号体系。
+如果输入的 context 提供了上一页末尾词条、篇目或预期编号，使用它判断本页的续表归属。不要把没有序号的续表行伪造为新词条或新篇目。表格续行放进 continuations。经典文本跨页正文放进 continuations，并填写 piece_title。只有页面明确出现的新标题才创建新 piece。
 
 只返回合法 JSON，不要 Markdown 代码围栏。返回结构必须符合：
 {schema}
@@ -93,7 +102,11 @@ def parse_json_response(content: str) -> dict[str, Any]:
     fenced = re.fullmatch(r"```(?:json)?\s*(.*?)\s*```", text, flags=re.DOTALL)
     if fenced:
         text = fenced.group(1).strip()
-    value = json.loads(text)
+    try:
+        value = json.loads(text)
+    except json.JSONDecodeError:
+        repaired = text.replace(",\n  }", "\n  }").replace(",\n}", "\n}")
+        value = json.loads(repaired)
     if not isinstance(value, dict):
         raise ValueError("Qwen response must be a JSON object")
     return value
@@ -139,7 +152,14 @@ class QwenOrganizer:
                 "enable_thinking": False,
                 "messages": [
                     {"role": "system", "content": "你只返回合法 JSON。"},
-                    {"role": "user", "content": build_organize_prompt(payload["document_type"], payload["page_number"]) + "\n输入证据：\n" + json.dumps(payload, ensure_ascii=False)},
+                    {
+                        "role": "user",
+                        "content": build_organize_prompt(payload["document_type"], payload["page_number"])
+                        + "\n本页上下文和预期编号：\n"
+                        + json.dumps(payload.get("context", {}), ensure_ascii=False)
+                        + "\n输入证据：\n"
+                        + json.dumps(payload, ensure_ascii=False),
+                    },
                 ],
             }
         request = urllib.request.Request(
@@ -174,6 +194,7 @@ def main() -> None:
     parser.add_argument("--end-page", type=int)
     parser.add_argument("--workers", type=int, default=1)
     parser.add_argument("--timeout", type=int, default=600)
+    parser.add_argument("--expected-page-map", type=Path)
     args = parser.parse_args()
 
     api_key = os.environ.get("SILICONFLOW_API_KEY")
@@ -182,6 +203,7 @@ def main() -> None:
     with pdfplumber.open(args.pdf) as pdf:
         end_page = args.end_page or len(pdf.pages)
     pages = list(range(args.start_page, end_page + 1))
+    expected_page_map = json.loads(args.expected_page_map.read_text(encoding="utf-8")) if args.expected_page_map else {}
     args.output.mkdir(parents=True, exist_ok=True)
     organizer = QwenOrganizer(api_key, timeout=args.timeout)
 
@@ -192,8 +214,11 @@ def main() -> None:
 
     def run_page(page_number: int, previous: dict[str, Any] | None = None) -> tuple[int, dict[str, Any]]:
         payload = extract_page_payload(args.pdf, page_number, args.document_type)
+        if str(page_number) in expected_page_map:
+            payload["context"]["expected_numbers"] = expected_page_map[str(page_number)]
         if previous:
             payload["context"]["previous_entries"] = previous.get("entries", [])[-3:]
+            payload["context"]["previous_pieces"] = previous.get("pieces", [])[-2:]
         return page_number, organizer.organize(payload)
 
     if args.document_type == "word_table" and args.workers == 1:
