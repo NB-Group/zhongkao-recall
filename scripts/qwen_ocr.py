@@ -86,6 +86,7 @@ class QwenOCRClient:
             json={
                 "model": self.model,
                 "temperature": 0,
+                "max_tokens": 5000,
                 "messages": [
                     {"role": "system", "content": "你只返回合法 JSON。"},
                     {
@@ -126,23 +127,32 @@ def main() -> None:
     parser.add_argument("--end-page", type=int)
     parser.add_argument("--endpoint", default=DEFAULT_ENDPOINT)
     parser.add_argument("--model", default=DEFAULT_MODEL)
+    parser.add_argument("--timeout", type=int, default=600)
     args = parser.parse_args()
 
     api_key = os.environ.get("SILICONFLOW_API_KEY")
     if not api_key:
         raise SystemExit("SILICONFLOW_API_KEY is not set")
     end_page = args.end_page or args.start_page
-    with tempfile.TemporaryDirectory(prefix="qwen-ocr-") as temp_dir:
-        pages = render_pdf_pages(args.pdf, Path(temp_dir), args.start_page, end_page)
-        client = QwenOCRClient(api_key, endpoint=args.endpoint, model=args.model)
-        args.output.mkdir(parents=True, exist_ok=True)
-        for image_path in pages:
-            page_number = int(image_path.stem.split("-")[-1])
-            result = client.recognize_page(image_path.read_bytes(), args.pdf.name, page_number)
-            (args.output / f"page-{page_number:03d}.json").write_text(
-                json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-            )
-            print(f"OCR_PAGE_DONE {page_number}")
+    try:
+        with tempfile.TemporaryDirectory(prefix="qwen-ocr-") as temp_dir:
+            pages = render_pdf_pages(args.pdf, Path(temp_dir), args.start_page, end_page)
+            client = QwenOCRClient(api_key, endpoint=args.endpoint, model=args.model, timeout=args.timeout)
+            args.output.mkdir(parents=True, exist_ok=True)
+            for image_path in pages:
+                page_number = int(image_path.stem.split("-")[-1])
+                result = client.recognize_page(image_path.read_bytes(), args.pdf.name, page_number)
+                (args.output / f"page-{page_number:03d}.json").write_text(
+                    json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                )
+                print(f"OCR_PAGE_DONE {page_number}", flush=True)
+    except requests.HTTPError as error:
+        status = error.response.status_code if error.response is not None else "unknown"
+        raise SystemExit(f"OCR_HTTP_ERROR status={status}") from None
+    except requests.RequestException as error:
+        raise SystemExit(f"OCR_NETWORK_ERROR type={type(error).__name__}") from None
+    except (KeyError, ValueError, json.JSONDecodeError) as error:
+        raise SystemExit(f"OCR_RESPONSE_ERROR type={type(error).__name__}") from None
 
 
 if __name__ == "__main__":
