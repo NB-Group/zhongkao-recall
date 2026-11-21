@@ -39,6 +39,12 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
   const [progress, setProgress] = useState<Record<string, string>>({});
   useSync(backend);
 
+  async function signInDemo() {
+    await backend.signIn('demo_student', 'demo_pass_123');
+    setAuthenticated(true);
+    navigate('/today');
+  }
+
   useEffect(() => {
     void backend.getSession().then((session) => setAuthenticated(Boolean(session))).catch(() => setAuthenticated(false));
   }, [backend]);
@@ -73,7 +79,8 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
   }
 
   if (!authenticated) {
-    return <AuthPage onSignIn={signIn} onSignUp={signUp} />;
+    const demoAvailable = !import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY;
+    return <AuthPage onSignIn={signIn} onSignUp={signUp} onDemo={demoAvailable ? signInDemo : undefined} />;
   }
 
   function ReviewRoute() {

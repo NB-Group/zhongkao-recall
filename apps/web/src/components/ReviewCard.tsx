@@ -20,6 +20,7 @@ export function ReviewCard({ card, onGrade, onMastered }: ReviewCardProps) {
   return (
     <article className="review-card" aria-label="复习卡片">
       <p className="review-card__kind">{card.kind === 'sense-recall' ? '实词义项' : '诗文句段'}</p>
+      {card.context && <p className="review-card__context">例句：{card.context}</p>}
       <p className="review-card__prompt">{card.prompt}</p>
       {revealed ? (
         <div className="review-card__answer" aria-live="polite">

@@ -36,6 +36,7 @@ a { color: inherit; text-decoration: none; }
 .session-progress { color: var(--muted); display: flex; font-size: 13px; justify-content: space-between; margin-bottom: 20px; }
 .review-card { background: var(--paper-bright); border-radius: 26px; box-shadow: var(--shadow); min-height: 430px; padding: clamp(28px, 7vw, 72px); display: flex; flex-direction: column; justify-content: center; }
 .review-card__kind { color: var(--jade); font-size: 13px; font-weight: 700; letter-spacing: .08em; margin: 0 0 28px; }
+.review-card__context { background: var(--jade-soft); border-radius: 12px; color: var(--ink); font-family: var(--serif); font-size: clamp(17px, 2.5vw, 23px); line-height: 1.8; margin: 0 0 22px; padding: 14px 16px; }
 .review-card__prompt, .review-card__answer p:first-child { font-family: var(--serif); font-size: clamp(25px, 4vw, 42px); line-height: 1.6; margin: 0 0 32px; }
 .review-card__answer { border-top: 1px solid var(--line); padding-top: 25px; }
 .review-card__answer p:first-child { font-size: clamp(20px, 3vw, 28px); margin-bottom: 10px; }
@@ -69,6 +70,10 @@ a { color: inherit; text-decoration: none; }
 .primary-button:disabled { cursor: wait; opacity: .65; }
 .form-error { background: #f8e2da; border-radius: 9px; color: #8b402d; font-size: 13px; margin: 0; padding: 10px 12px; }
 .auth-form__note { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 0; }
+.invite-help { background: var(--jade-soft); border-radius: 12px; color: var(--ink); font-size: 13px; line-height: 1.65; padding: 13px 15px; }
+.invite-help strong { color: var(--jade); display: block; margin-bottom: 5px; }
+.invite-help ol { margin: 0; padding-left: 20px; }
+.invite-help li + li { margin-top: 2px; }
 @media (max-width: 760px) {
   .topbar { padding: 18px; }
   .app-shell__body { display: block; padding: 20px 18px 90px; }

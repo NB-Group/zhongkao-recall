@@ -3,6 +3,23 @@ import { createBackendClient } from './backend';
 import { toAuthEmail, toReviewEventRow, toReviewEventWrite } from './supabase';
 
 describe('BackendClient', () => {
+  it('accepts a valid student invite link in the local backend', async () => {
+    const client = createBackendClient({
+      appendReviewEvent: async (event) => ({ eventId: event.eventId }),
+    });
+
+    await client.signUp('https://mp.weixin.qq.com/s/exampleInvite', 'xiaoming', 'password123');
+    await expect(client.getSession()).resolves.toEqual({ demo: true });
+  });
+
+  it('rejects invalid local registration input', async () => {
+    const client = createBackendClient({
+      appendReviewEvent: async (event) => ({ eventId: event.eventId }),
+    });
+
+    await expect(client.signUp('https://example.com', 'x', 'short')).rejects.toThrow('注册信息');
+  });
+
   it('forwards sign-in through the backend boundary', async () => {
     const signIn = vi.fn(async () => undefined);
     const client = createBackendClient({

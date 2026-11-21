@@ -55,6 +55,7 @@ export interface Card {
   segmentId?: string;
   senseId?: string;
   prompt: string;
+  context?: string;
   answer: string;
   estimatedSeconds: number;
 }

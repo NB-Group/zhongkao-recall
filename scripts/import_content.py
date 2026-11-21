@@ -328,7 +328,8 @@ def build_pack(wenyan_text: str, poetry_text: str, words_text: str, pack_id: str
                 "id": stable_id("card", content_version, sense["id"], "sense-recall"),
                 "kind": "sense-recall",
                 "senseId": sense["id"],
-                "prompt": f"{sense['term']}在这个语境中的意思是什么？",
+                "context": sense["example"],
+                "prompt": f"“{sense['term']}”在上面这句中的意思是？",
                 "answer": sense["meaning"],
                 "estimatedSeconds": 20,
             }
@@ -338,7 +339,8 @@ def build_pack(wenyan_text: str, poetry_text: str, words_text: str, pack_id: str
                 "id": stable_id("card", content_version, sense["id"], "context-cloze"),
                 "kind": "context-cloze",
                 "senseId": sense["id"],
-                "prompt": f"语境中“{sense['term']}”的意思是什么？",
+                "context": sense["example"],
+                "prompt": f"请说出“{sense['term']}”的意思。",
                 "answer": sense["meaning"],
                 "estimatedSeconds": 20,
             }

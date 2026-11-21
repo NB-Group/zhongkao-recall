@@ -30,16 +30,23 @@ const defaultSettings: UserSettings = {
 };
 
 export function createBackendClient(overrides: BackendClientOverrides): BackendClient {
+  let localSession = false;
   return {
-    signIn: async () => {
-      throw new Error('尚未配置远程账号服务');
+    signIn: async (username, password) => {
+      if (!/^[A-Za-z0-9_]{3,24}$/.test(username) || password.length < 8) {
+        throw new Error('用户名或密码格式不正确');
+      }
+      localSession = true;
     },
-    signUp: async () => {
-      throw new Error('尚未配置远程账号服务');
+    signUp: async (inviteLink, username, password) => {
+      if (!/^https:\/\/mp\.weixin\.qq\.com\/s\/[A-Za-z0-9_-]+$/.test(inviteLink.trim()) || !/^[A-Za-z0-9_]{3,24}$/.test(username) || password.length < 8) {
+        throw new Error('注册信息不正确，请检查邀请码、用户名和密码');
+      }
+      localSession = true;
     },
     signOut: async () => undefined,
     setCardMastery: async () => undefined,
-    getSession: async () => null,
+    getSession: async () => (localSession ? { demo: true } : null),
     getSettings: async () => defaultSettings,
     getLearningStates: async () => ({}),
     getPieceProgress: async () => ({}),

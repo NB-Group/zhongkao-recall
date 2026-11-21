@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 interface AuthPageProps {
   onSignIn: (username: string, password: string) => Promise<void>;
   onSignUp: (inviteLink: string, username: string, password: string, nickname?: string) => Promise<void>;
+  onDemo?: () => Promise<void>;
 }
 
-export function AuthPage({ onSignIn, onSignUp }: AuthPageProps) {
+export function AuthPage({ onSignIn, onSignUp, onDemo }: AuthPageProps) {
   const [mode, setMode] = useState<'sign-in' | 'sign-up'>('sign-in');
   const [inviteLink, setInviteLink] = useState('');
   const [username, setUsername] = useState('');
@@ -45,10 +46,21 @@ export function AuthPage({ onSignIn, onSignUp }: AuthPageProps) {
           </button>
         </div>
         {mode === 'sign-up' && (
-          <label>
-            班级群邀请码链接
-            <input type="url" required value={inviteLink} onChange={(event) => setInviteLink(event.target.value)} placeholder="粘贴群里复制的链接" />
-          </label>
+          <>
+            <div className="invite-help">
+              <strong>先获取注册邀请码</strong>
+              <ol>
+                <li>在班级钉钉群里打开“第十三周营养食谱问卷”。</li>
+                <li>点击问卷页面右上角的三个点。</li>
+                <li>在下方菜单选择“复制链接”。</li>
+                <li>把复制的完整链接粘贴到下面。</li>
+              </ol>
+            </div>
+            <label>
+              班级群邀请码链接
+              <input type="url" required value={inviteLink} onChange={(event) => setInviteLink(event.target.value)} placeholder="粘贴群里复制的链接" />
+            </label>
+          </>
         )}
         {mode === 'sign-up' && (
           <label>
@@ -68,6 +80,7 @@ export function AuthPage({ onSignIn, onSignUp }: AuthPageProps) {
         <button type="submit" className="primary-button" disabled={busy}>
           {busy ? '处理中…' : mode === 'sign-in' ? '进入今日任务' : '创建学生账号'}
         </button>
+        {onDemo && <button type="button" className="outline-button auth-form__demo" onClick={() => void onDemo()}>直接体验演示</button>}
         <p className="auth-form__note">邀请码只用于注册，登录时只需要用户名和密码。</p>
       </form>
     </main>
