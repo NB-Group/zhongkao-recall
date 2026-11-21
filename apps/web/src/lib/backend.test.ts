@@ -1,0 +1,44 @@
+import { describe, expect, it } from 'vitest';
+import { createBackendClient } from './backend';
+import { toReviewEventRow } from './supabase';
+
+describe('BackendClient', () => {
+  it('forwards review events through the backend boundary', async () => {
+    const client = createBackendClient({
+      appendReviewEvent: async (event) => ({ eventId: event.eventId }),
+    });
+
+    await expect(
+      client.appendReviewEvent({
+        eventId: 'event-1',
+        cardId: 'card-1',
+        grade: 'good',
+        reviewedAtClient: '2026-11-21T08:00:00.000Z',
+        timeZone: 'Asia/Shanghai',
+        contentVersion: '2026.11.21',
+      }),
+    ).resolves.toEqual({ eventId: 'event-1' });
+  });
+});
+
+describe('Supabase row mapping', () => {
+  it('maps review events to the database naming convention', () => {
+    expect(
+      toReviewEventRow({
+        eventId: 'event-1',
+        cardId: 'card-1',
+        grade: 'good',
+        reviewedAtClient: '2026-11-21T08:00:00.000Z',
+        timeZone: 'Asia/Shanghai',
+        contentVersion: '2026.11.21',
+      }),
+    ).toEqual({
+      event_id: 'event-1',
+      card_id: 'card-1',
+      grade: 'good',
+      reviewed_at_client: '2026-11-21T08:00:00.000Z',
+      time_zone: 'Asia/Shanghai',
+      content_version: '2026.11.21',
+    });
+  });
+});
