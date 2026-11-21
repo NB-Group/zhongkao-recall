@@ -2,9 +2,6 @@
   "name": "zhongkao-recall",
   "private": true,
   "packageManager": "pnpm@11.25.0",
-  "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
-  },
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
