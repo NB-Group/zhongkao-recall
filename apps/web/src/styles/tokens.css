@@ -1,0 +1,14 @@
+:root {
+  --paper: #f5f1e8;
+  --paper-bright: #fffdf8;
+  --ink: #1f2a2a;
+  --muted: #6b7773;
+  --jade: #286a63;
+  --jade-soft: #dce9e4;
+  --warm: #d9a441;
+  --line: rgba(31, 42, 42, 0.14);
+  --shadow: 0 18px 48px rgba(47, 58, 55, 0.09);
+  --radius: 18px;
+  --serif: "Noto Serif SC", "Songti SC", "STSong", serif;
+  --sans: "Source Sans 3", "PingFang SC", "Microsoft YaHei", sans-serif;
+}

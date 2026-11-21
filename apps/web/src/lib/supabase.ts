@@ -57,6 +57,29 @@ export function createSupabaseBackend(url: string, anonKey: string): BackendClie
   const client = createClient(url, anonKey);
 
   return createBackendClient({
+    signIn: async (email, password) => {
+      const { error } = await client.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+    },
+    signUp: async (email, password, nickname) => {
+      const { data, error } = await client.auth.signUp({ email, password });
+      if (error) throw error;
+      if (data.user) {
+        const { error: profileError } = await client.from('profiles').upsert({
+          id: data.user.id,
+          nickname: nickname || null,
+        });
+        if (profileError) throw profileError;
+        const { error: settingsError } = await client.from('user_settings').upsert({
+          user_id: data.user.id,
+        });
+        if (settingsError) throw settingsError;
+      }
+    },
+    signOut: async () => {
+      const { error } = await client.auth.signOut();
+      if (error) throw error;
+    },
     getSession: async () => {
       const { data, error } = await client.auth.getSession();
       if (error) throw error;

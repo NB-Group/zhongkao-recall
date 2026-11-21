@@ -1,8 +1,19 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { createBackendClient } from './backend';
 import { toReviewEventRow } from './supabase';
 
 describe('BackendClient', () => {
+  it('forwards sign-in through the backend boundary', async () => {
+    const signIn = vi.fn(async () => undefined);
+    const client = createBackendClient({
+      signIn,
+      appendReviewEvent: async (event) => ({ eventId: event.eventId }),
+    });
+
+    await client.signIn('student@example.com', 'password');
+    expect(signIn).toHaveBeenCalledWith('student@example.com', 'password');
+  });
+
   it('forwards review events through the backend boundary', async () => {
     const client = createBackendClient({
       appendReviewEvent: async (event) => ({ eventId: event.eventId }),

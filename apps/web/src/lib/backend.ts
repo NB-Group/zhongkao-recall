@@ -7,6 +7,9 @@ export interface UserSettings {
 }
 
 export interface BackendClient {
+  signIn(email: string, password: string): Promise<void>;
+  signUp(email: string, password: string, nickname?: string): Promise<void>;
+  signOut(): Promise<void>;
   getSession(): Promise<unknown>;
   getSettings(): Promise<UserSettings>;
   getLearningStates(): Promise<Record<string, LearningState>>;
@@ -27,6 +30,13 @@ const defaultSettings: UserSettings = {
 
 export function createBackendClient(overrides: BackendClientOverrides): BackendClient {
   return {
+    signIn: async () => {
+      throw new Error('尚未配置远程账号服务');
+    },
+    signUp: async () => {
+      throw new Error('尚未配置远程账号服务');
+    },
+    signOut: async () => undefined,
     getSession: async () => null,
     getSettings: async () => defaultSettings,
     getLearningStates: async () => ({}),
