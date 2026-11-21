@@ -1,0 +1,13 @@
+{
+  "packId": "zhongkao-2024",
+  "version": "2026.11.21",
+  "title": "上海中考初中文言文与古诗词",
+  "counts": {
+    "prosePieces": 41,
+    "poetryPieces": 82,
+    "realWordTerms": 150,
+    "functionWordTerms": 6,
+    "realWordSenses": 354,
+    "functionWordSenses": 12
+  }
+}
