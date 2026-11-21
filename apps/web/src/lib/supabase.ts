@@ -15,6 +15,10 @@ export interface ReviewEventRow {
   content_version: string;
 }
 
+export function toAuthEmail(username: string): string {
+  return `${username.trim().toLowerCase()}@students.invalid`;
+}
+
 export function toReviewEventRow(event: ReviewEvent): ReviewEventRow {
   return {
     event_id: event.eventId,
@@ -64,24 +68,20 @@ export function createSupabaseBackend(url: string, anonKey: string): BackendClie
   const client = createClient(url, anonKey);
 
   return createBackendClient({
-    signIn: async (email, password) => {
-      const { error } = await client.auth.signInWithPassword({ email, password });
+    signIn: async (username, password) => {
+      const { error } = await client.auth.signInWithPassword({ email: toAuthEmail(username), password });
       if (error) throw error;
     },
-    signUp: async (email, password, nickname) => {
-      const { data, error } = await client.auth.signUp({ email, password });
+    signUp: async (inviteLink, username, password, nickname) => {
+      const { error } = await client.functions.invoke('register-student', {
+        body: { inviteLink, username, password, nickname: nickname || undefined },
+      });
       if (error) throw error;
-      if (data.user && data.session) {
-        const { error: profileError } = await client.from('profiles').upsert({
-          id: data.user.id,
-          nickname: nickname || null,
-        });
-        if (profileError) throw profileError;
-        const { error: settingsError } = await client.from('user_settings').upsert({
-          user_id: data.user.id,
-        });
-        if (settingsError) throw settingsError;
-      }
+      const { error: signInError } = await client.auth.signInWithPassword({
+        email: toAuthEmail(username),
+        password,
+      });
+      if (signInError) throw signInError;
     },
     signOut: async () => {
       const { error } = await client.auth.signOut();

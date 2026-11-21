@@ -11,7 +11,7 @@ pnpm exec tsc --noEmit
 pnpm --dir apps/web dev
 ```
 
-没有配置 Supabase 环境变量时，应用仍然可以构建并展示登录界面。正式使用需要设置 `.env.local` 中的 `VITE_SUPABASE_URL` 和 `VITE_SUPABASE_ANON_KEY`。
+没有配置 Supabase 环境变量时，应用仍然可以构建并展示登录界面。正式使用需要设置 `.env.local` 中的 `VITE_SUPABASE_URL` 和 `VITE_SUPABASE_ANON_KEY`，并部署 `register-student` Edge Function。学生注册使用班级群邀请码，登录使用用户名和密码。
 
 ## 内容包
 

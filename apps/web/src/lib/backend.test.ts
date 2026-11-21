@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { createBackendClient } from './backend';
-import { toReviewEventRow, toReviewEventWrite } from './supabase';
+import { toAuthEmail, toReviewEventRow, toReviewEventWrite } from './supabase';
 
 describe('BackendClient', () => {
   it('forwards sign-in through the backend boundary', async () => {
@@ -10,8 +10,8 @@ describe('BackendClient', () => {
       appendReviewEvent: async (event) => ({ eventId: event.eventId }),
     });
 
-    await client.signIn('student@example.com', 'password');
-    expect(signIn).toHaveBeenCalledWith('student@example.com', 'password');
+    await client.signIn('xiaoming', 'password');
+    expect(signIn).toHaveBeenCalledWith('xiaoming', 'password');
   });
 
   it('forwards manual card mastery through the backend boundary', async () => {
@@ -44,6 +44,9 @@ describe('BackendClient', () => {
 });
 
 describe('Supabase row mapping', () => {
+  it('derives an internal auth email from a normalized username', () => {
+    expect(toAuthEmail('  Xiao_Ming ')).toBe('xiao_ming@students.invalid');
+  });
   it('maps review events to the database naming convention', () => {
     expect(
       toReviewEventRow({

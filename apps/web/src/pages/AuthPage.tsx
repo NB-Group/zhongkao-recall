@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 interface AuthPageProps {
-  onSignIn: (email: string, password: string) => Promise<void>;
-  onSignUp: (email: string, password: string, nickname?: string) => Promise<void>;
+  onSignIn: (username: string, password: string) => Promise<void>;
+  onSignUp: (inviteLink: string, username: string, password: string, nickname?: string) => Promise<void>;
 }
 
 export function AuthPage({ onSignIn, onSignUp }: AuthPageProps) {
   const [mode, setMode] = useState<'sign-in' | 'sign-up'>('sign-in');
-  const [email, setEmail] = useState('');
+  const [inviteLink, setInviteLink] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [nickname, setNickname] = useState('');
   const [error, setError] = useState<string>();
@@ -18,8 +19,8 @@ export function AuthPage({ onSignIn, onSignUp }: AuthPageProps) {
     setBusy(true);
     setError(undefined);
     try {
-      if (mode === 'sign-in') await onSignIn(email, password);
-      else await onSignUp(email, password, nickname || undefined);
+      if (mode === 'sign-in') await onSignIn(username, password);
+      else await onSignUp(inviteLink, username, password, nickname || undefined);
     } catch (submissionError) {
       setError(submissionError instanceof Error ? submissionError.message : '操作失败，请稍后重试');
     } finally {
@@ -45,23 +46,29 @@ export function AuthPage({ onSignIn, onSignUp }: AuthPageProps) {
         </div>
         {mode === 'sign-up' && (
           <label>
+            班级群邀请码链接
+            <input type="url" required value={inviteLink} onChange={(event) => setInviteLink(event.target.value)} placeholder="粘贴群里复制的链接" />
+          </label>
+        )}
+        {mode === 'sign-up' && (
+          <label>
             昵称
             <input value={nickname} onChange={(event) => setNickname(event.target.value)} maxLength={40} />
           </label>
         )}
         <label>
-          邮箱
-          <input type="email" required value={email} onChange={(event) => setEmail(event.target.value)} />
+          用户名
+          <input required minLength={3} maxLength={24} pattern="[A-Za-z0-9_]+" value={username} onChange={(event) => setUsername(event.target.value)} placeholder="例如 xiaoming" />
         </label>
         <label>
           密码
-          <input type="password" required minLength={6} value={password} onChange={(event) => setPassword(event.target.value)} />
+          <input type="password" required minLength={8} value={password} onChange={(event) => setPassword(event.target.value)} />
         </label>
         {error && <p className="form-error" role="alert">{error}</p>}
         <button type="submit" className="primary-button" disabled={busy}>
           {busy ? '处理中…' : mode === 'sign-in' ? '进入今日任务' : '创建学生账号'}
         </button>
-        <p className="auth-form__note">不收集真实姓名、学校、班级或手机号。</p>
+        <p className="auth-form__note">邀请码只用于注册，登录时只需要用户名和密码。</p>
       </form>
     </main>
   );

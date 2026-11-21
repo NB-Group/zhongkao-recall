@@ -54,17 +54,14 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
     );
   }, [authenticated, backend]);
 
-  async function signIn(email: string, password: string) {
-    await backend.signIn(email, password);
+  async function signIn(username: string, password: string) {
+    await backend.signIn(username, password);
     setAuthenticated(true);
     navigate('/today');
   }
 
-  async function signUp(email: string, password: string, nickname?: string) {
-    await backend.signUp(email, password, nickname);
-    if (!(await backend.getSession())) {
-      throw new Error('注册邮件已发送，请先完成邮箱确认后再登录');
-    }
+  async function signUp(inviteLink: string, username: string, password: string, nickname?: string) {
+    await backend.signUp(inviteLink, username, password, nickname);
     setAuthenticated(true);
     navigate('/today');
   }

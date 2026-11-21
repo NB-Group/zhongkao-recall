@@ -7,8 +7,8 @@ export interface UserSettings {
 }
 
 export interface BackendClient {
-  signIn(email: string, password: string): Promise<void>;
-  signUp(email: string, password: string, nickname?: string): Promise<void>;
+  signIn(username: string, password: string): Promise<void>;
+  signUp(inviteLink: string, username: string, password: string, nickname?: string): Promise<void>;
   signOut(): Promise<void>;
   setCardMastery(cardId: string, mastered: boolean): Promise<void>;
   getSession(): Promise<unknown>;

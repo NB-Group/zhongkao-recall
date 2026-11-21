@@ -16,7 +16,7 @@
 - 首页把新学实词和诗文复习分成两个入口。
 - 诗词按联或小节切分，文言文按自然段或语义段切分，实词按具体义项切分。
 - 四档评分只更新卡片间隔，熟练状态由学生手动标记。
-- 第一版使用邮箱加密码登录，昵称可选，不收集真实姓名、手机号、学校、班级和出生日期。
+- 第一版使用班级群邀请码注册，用户名加密码登录，昵称可选，不收集邮箱、真实姓名、手机号、学校、班级和出生日期。
 - 第一版不提供汉字手写识别，不把输入文字匹配当作书写能力证明。
 - 所有用户数据通过 Supabase 行级安全策略隔离，客户端不包含服务端密钥。
 - 原始 PDF 不进入公共仓库，公共仓库保存标准化内容包和导入脚本。
@@ -201,13 +201,13 @@
 
 **Interfaces:**
 - Consumes the shared domain functions, `BackendClient`, content pack and sync hooks.
-- Produces the student flows for email/password auth, separate vocabulary and prose queues, piece unlock, review rating, manual mastery and settings.
+- Produces the student flows for invite-link registration, username/password auth, separate vocabulary and prose queues, piece unlock, review rating, manual mastery and settings.
 
 - [ ] **Step 1: Write failing component tests for answer reveal, four rating buttons, an interrupted card, separate task entry points and manual mastery.**
 
 - [ ] **Step 2: Build the auth page and protected app shell.**
 
-  Use email/password auth, optional nickname, generic errors and no personal-profile fields beyond the nickname.
+  Use an Edge Function to validate the invite-link hash and create a confirmed Supabase user with a synthetic internal email. The browser exposes only username, password, nickname and invite-link fields.
 
 - [ ] **Step 3: Build Today, Review Session, Content and Settings pages.**
 

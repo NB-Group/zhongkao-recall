@@ -16,7 +16,21 @@ python3 scripts/import_content.py \
 
 ## Supabase
 
-在项目中运行 `supabase db push` 应用 `supabase/migrations/`。首次使用前创建邮箱密码登录配置，并在客户端使用公开 anon key。所有用户表启用行级安全策略。
+在项目中运行 `supabase db push` 应用 `supabase/migrations/`，并在客户端使用公开 anon key。所有用户表启用行级安全策略。
+
+### 学生邀请码注册
+
+`supabase/functions/register-student/` 负责验证班级群链接并创建学生账号。原始链接不进入仓库。部署者在本地临时设置链接并只把 SHA-256 哈希写入 Supabase Secret：
+
+```bash
+INVITE_LINK='从班级群复制的完整链接'
+export STUDENT_INVITE_SHA256="$(printf '%s' "$INVITE_LINK" | shasum -a 256 | awk '{print $1}')"
+supabase secrets set STUDENT_INVITE_SHA256="$STUDENT_INVITE_SHA256"
+supabase functions deploy register-student
+unset INVITE_LINK STUDENT_INVITE_SHA256
+```
+
+浏览器只提交邀请码链接到 Edge Function。服务端使用 `SUPABASE_SERVICE_ROLE_KEY` 创建已确认的内部账号，前端不会接触服务密钥。
 
 ## GitHub Pages
 

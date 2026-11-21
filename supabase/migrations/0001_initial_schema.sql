@@ -6,6 +6,7 @@ create type public.review_grade as enum ('again', 'hard', 'good', 'easy');
 
 create table public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
+  username text unique,
   nickname text,
   created_at timestamptz not null default now(),
   constraint profiles_nickname_length check (nickname is null or char_length(nickname) between 1 and 40)
