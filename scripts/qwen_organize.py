@@ -11,11 +11,12 @@ import json
 import os
 import re
 import tempfile
+import urllib.error
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 
-import requests
 
 
 DEFAULT_ENDPOINT = "https://api.siliconflow.cn/v1/chat/completions"
@@ -28,6 +29,7 @@ def build_page_payload(
     page_text: str,
     tables: list[list[list[str | None]]],
     document_type: str,
+    context: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     return {
         "source_name": source_name,
@@ -35,6 +37,7 @@ def build_page_payload(
         "document_type": document_type,
         "page_text": page_text,
         "tables": tables,
+        "context": context or {},
     }
 
 
@@ -75,6 +78,9 @@ def build_organize_prompt(document_type: str, page_number: int) -> str:
 
 输入包含 PDF 原生文字和表格列。只根据输入中的原文整理，不要推断，不要改写，不要补全，不要把释义、例句、出处混合。保留原始标点、括号、序号、标签和不确定内容。页眉、页脚、页码、推广文案和咨询信息放入 noise。缺失字段使用 null 或空数组。
 
+对表格输入，表格数组中的每一个 row 是不可跨越的证据边界。一个 row 的“词义、例句、出处”只能来自同一个 row，不能把下一 row 的文字拼入当前 row，也不能用页面连续文字覆盖表格单元格。只有同一词条下明确为空的例句/出处单元格，才可以按表格视觉结构归入同一义项。
+如果输入的 context 提供了上一页末尾词条或预期编号，使用它判断本页的续表归属。不要把没有序号的续表行伪造为从 1 开始的新词条。页面中出现新的分节标题时，按分节标题切换编号体系。
+
 只返回合法 JSON，不要 Markdown 代码围栏。返回结构必须符合：
 {schema}
 
@@ -100,7 +106,19 @@ def extract_page_payload(pdf_path: Path, page_number: int, document_type: str) -
         page = pdf.pages[page_number - 1]
         text = page.extract_text(x_tolerance=1, y_tolerance=3) or ""
         tables = page.extract_tables() if document_type == "word_table" else []
-    return build_page_payload(pdf_path.name, page_number, text, tables, document_type)
+    expected_numbers = []
+    for table in tables:
+        for row in table:
+            if row and row[0] and str(row[0]).strip().isdigit():
+                expected_numbers.append(int(str(row[0]).strip()))
+    return build_page_payload(
+        pdf_path.name,
+        page_number,
+        text,
+        tables,
+        document_type,
+        {"expected_numbers": expected_numbers},
+    )
 
 
 class QwenOrganizer:
@@ -113,10 +131,8 @@ class QwenOrganizer:
         self.timeout = timeout
 
     def organize(self, payload: dict[str, Any]) -> dict[str, Any]:
-        response = requests.post(
-            self.endpoint,
-            headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
-            json={
+        evidence = payload
+        body = {
                 "model": self.model,
                 "temperature": 0,
                 "max_tokens": 5000,
@@ -125,19 +141,31 @@ class QwenOrganizer:
                     {"role": "system", "content": "你只返回合法 JSON。"},
                     {"role": "user", "content": build_organize_prompt(payload["document_type"], payload["page_number"]) + "\n输入证据：\n" + json.dumps(payload, ensure_ascii=False)},
                 ],
-            },
-            timeout=self.timeout,
+            }
+        request = urllib.request.Request(
+            self.endpoint,
+            data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
+            headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
+            method="POST",
         )
-        response.raise_for_status()
-        content = response.json()["choices"][0]["message"]["content"]
+        try:
+            with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                response_payload = json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as error:
+            raise RuntimeError(f"OCR_HTTP_ERROR status={error.code}") from None
+        except urllib.error.URLError as error:
+            raise RuntimeError(f"OCR_NETWORK_ERROR reason={error.reason}") from None
+        content = response_payload["choices"][0]["message"]["content"]
         result = parse_json_response(content)
-        result["source_name"] = payload["source_name"]
-        result["page_number"] = payload["page_number"]
-        result["evidence"] = payload
+        result["source_name"] = evidence["source_name"]
+        result["page_number"] = evidence["page_number"]
+        result["evidence"] = evidence
         return result
 
 
 def main() -> None:
+    import pdfplumber
+
     parser = argparse.ArgumentParser()
     parser.add_argument("pdf", type=Path)
     parser.add_argument("--output", type=Path, required=True)
@@ -157,18 +185,34 @@ def main() -> None:
     args.output.mkdir(parents=True, exist_ok=True)
     organizer = QwenOrganizer(api_key, timeout=args.timeout)
 
-    def run_page(page_number: int) -> tuple[int, dict[str, Any]]:
+    previous_result: dict[str, Any] | None = None
+    previous_path = args.output / f"page-{args.start_page - 1:03d}.json"
+    if previous_path.exists():
+        previous_result = json.loads(previous_path.read_text(encoding="utf-8"))
+
+    def run_page(page_number: int, previous: dict[str, Any] | None = None) -> tuple[int, dict[str, Any]]:
         payload = extract_page_payload(args.pdf, page_number, args.document_type)
+        if previous:
+            payload["context"]["previous_entries"] = previous.get("entries", [])[-3:]
         return page_number, organizer.organize(payload)
 
-    with ThreadPoolExecutor(max_workers=max(1, args.workers)) as executor:
-        futures = {executor.submit(run_page, page): page for page in pages}
-        for future in as_completed(futures):
-            page_number, result = future.result()
+    if args.document_type == "word_table" and args.workers == 1:
+        for page_number in pages:
+            page_number, result = run_page(page_number, previous_result)
             (args.output / f"page-{page_number:03d}.json").write_text(
                 json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
             )
+            previous_result = result
             print(f"ORGANIZE_PAGE_DONE {page_number}", flush=True)
+    else:
+        with ThreadPoolExecutor(max_workers=max(1, args.workers)) as executor:
+            futures = {executor.submit(run_page, page): page for page in pages}
+            for future in as_completed(futures):
+                page_number, result = future.result()
+                (args.output / f"page-{page_number:03d}.json").write_text(
+                    json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                )
+                print(f"ORGANIZE_PAGE_DONE {page_number}", flush=True)
 
 
 if __name__ == "__main__":
