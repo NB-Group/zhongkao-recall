@@ -11,6 +11,7 @@ import json
 import os
 import re
 import tempfile
+import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -88,7 +89,8 @@ def build_organize_prompt(document_type: str, page_number: int) -> str:
 输入包含 PDF 原生文字和表格列。只根据输入中的原文整理，不要推断，不要改写，不要补全，不要把释义、例句、出处混合。保留原始标点、括号、序号、标签和不确定内容。页眉、页脚、页码、推广文案和咨询信息放入 noise。缺失字段使用 null 或空数组。
 
 对表格输入，表格数组中的每一个 row 是不可跨越的证据边界。一个 row 的“词义、例句、出处”只能来自同一个 row，不能把下一 row 的文字拼入当前 row，也不能用页面连续文字覆盖表格单元格。只有同一词条下明确为空的例句/出处单元格，才可以按表格视觉结构归入同一义项。
-如果输入的 context 提供了上一页末尾词条、篇目或预期编号，使用它判断本页的续表归属。不要把没有序号的续表行伪造为新词条或新篇目。表格续行放进 continuations。经典文本跨页正文放进 continuations，并填写 piece_title。只有页面明确出现的新标题才创建新 piece。
+如果输入的 context 提供了上一页末尾词条、篇目或预期编号，使用它判断本页的续表归属。不要把没有序号的续表行伪造为新词条或新篇目。表格续行放进 continuations。经典文本跨页正文放进 continuations，并填写 piece_title。只有页面明确出现的新篇名才创建新 piece。
+经典文本的封面标题、总标题、页码、机构信息和年级分节标题不能创建 piece，放入 noise 或作为 location。piece 的 title 只能是具体诗名或文章名，不能是“风华教育语文必备手册”“古诗词背诵”“文言文阅读”“第 N 页”。author 只能是作者或“佚名/汉乐府”等作者信息。教材位置放入 location。segments 只能放正文，不要重复 title、author、location。
 
 只返回合法 JSON，不要 Markdown 代码围栏。返回结构必须符合：
 {schema}
@@ -168,15 +170,39 @@ class QwenOrganizer:
             headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
             method="POST",
         )
-        try:
-            with urllib.request.urlopen(request, timeout=self.timeout) as response:
-                response_payload = json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as error:
-            raise RuntimeError(f"OCR_HTTP_ERROR status={error.code}") from None
-        except urllib.error.URLError as error:
-            raise RuntimeError(f"OCR_NETWORK_ERROR reason={error.reason}") from None
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                    response_payload = json.loads(response.read().decode("utf-8"))
+                break
+            except urllib.error.HTTPError as error:
+                if error.code == 503 and attempt < 2:
+                    time.sleep(2 ** attempt)
+                    continue
+                raise RuntimeError(f"OCR_HTTP_ERROR status={error.code}") from None
+            except urllib.error.URLError as error:
+                if attempt < 2:
+                    time.sleep(2 ** attempt)
+                    continue
+                raise RuntimeError(f"OCR_NETWORK_ERROR reason={error.reason}") from None
         content = response_payload["choices"][0]["message"]["content"]
-        result = parse_json_response(content)
+        try:
+            result = parse_json_response(content)
+        except json.JSONDecodeError:
+            retry_body = dict(body)
+            retry_body["messages"] = body["messages"] + [{
+                "role": "user",
+                "content": "上一次输出不是合法 JSON。请重新输出完整、闭合、无 Markdown 围栏的 JSON，只返回 JSON。",
+            }]
+            retry_request = urllib.request.Request(
+                self.endpoint,
+                data=json.dumps(retry_body, ensure_ascii=False).encode("utf-8"),
+                headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(retry_request, timeout=self.timeout) as retry_response:
+                retry_payload = json.loads(retry_response.read().decode("utf-8"))
+            result = parse_json_response(retry_payload["choices"][0]["message"]["content"])
         result["source_name"] = evidence["source_name"]
         result["page_number"] = evidence["page_number"]
         result["evidence"] = evidence
@@ -221,7 +247,7 @@ def main() -> None:
             payload["context"]["previous_pieces"] = previous.get("pieces", [])[-2:]
         return page_number, organizer.organize(payload)
 
-    if args.document_type == "word_table" and args.workers == 1:
+    if args.workers == 1:
         for page_number in pages:
             page_number, result = run_page(page_number, previous_result)
             (args.output / f"page-{page_number:03d}.json").write_text(

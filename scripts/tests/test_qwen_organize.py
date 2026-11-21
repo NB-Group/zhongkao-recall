@@ -43,3 +43,11 @@ def test_page_payload_keeps_expected_numbers_and_previous_context():
 
     assert payload["context"]["expected_numbers"] == [1, 2, 3]
     assert payload["context"]["previous_entries"][0]["term"] == "之"
+
+
+def test_classic_prompt_separates_piece_titles_from_cover_and_grade_headers():
+    prompt = build_organize_prompt("classic_text", 2)
+
+    assert "古诗词背诵" in prompt
+    assert "不能创建 piece" in prompt
+    assert "只有页面明确出现的新篇名" in prompt

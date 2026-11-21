@@ -11,8 +11,8 @@ import { createBackendClient, type BackendClient, type UserSettings } from './li
 import { createSupabaseBackend } from './lib/supabase';
 import { useSync } from './hooks/useSync';
 
-import cards from '../../../content/packs/zhongkao-2024/cards.json';
-import pieces from '../../../content/packs/zhongkao-2024/pieces.json';
+import cards from '../../../content/packs/zhongkao-qwen-2026.11.22/cards.json';
+import pieces from '../../../content/packs/zhongkao-qwen-2026.11.22/pieces.json';
 
 const contentPack: Pick<ContentPack, 'cards' | 'pieces'> = {
   cards: cards as Card[],
