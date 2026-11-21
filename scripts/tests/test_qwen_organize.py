@@ -33,3 +33,13 @@ def test_parse_json_response_handles_fenced_json():
     result = parse_json_response("```json\n{\"page_number\": 1, \"entries\": []}\n```")
 
     assert result == {"page_number": 1, "entries": []}
+
+
+def test_page_payload_keeps_expected_numbers_and_previous_context():
+    payload = build_page_payload(
+        "words.pdf", 24, "续表", [], "word_table",
+        {"expected_numbers": [1, 2, 3], "previous_entries": [{"number": 1, "term": "之"}]},
+    )
+
+    assert payload["context"]["expected_numbers"] == [1, 2, 3]
+    assert payload["context"]["previous_entries"][0]["term"] == "之"
