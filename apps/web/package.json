@@ -1,5 +1,9 @@
 {
   "name": "@zhongkao-recall/web",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
+    "@zhongkao-recall/domain": "workspace:*"
+  }
 }

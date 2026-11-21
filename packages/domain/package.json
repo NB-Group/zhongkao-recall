@@ -1,5 +1,8 @@
 {
   "name": "@zhongkao-recall/domain",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  }
 }
