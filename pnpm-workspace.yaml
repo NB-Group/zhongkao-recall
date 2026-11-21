@@ -2,7 +2,7 @@ packages:
   - apps/*
   - packages/*
 
-onlyBuiltDependencies:
-  - esbuild
+allowBuilds:
+  esbuild: true
 allowBuilds:
   esbuild: set this to true or false
