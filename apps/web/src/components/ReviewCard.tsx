@@ -4,6 +4,7 @@ import type { Card, ReviewGrade } from '@zhongkao-recall/domain';
 interface ReviewCardProps {
   card: Card;
   onGrade: (grade: ReviewGrade) => void;
+  onMastered?: () => void;
 }
 
 const grades: Array<{ grade: ReviewGrade; label: string }> = [
@@ -13,7 +14,7 @@ const grades: Array<{ grade: ReviewGrade; label: string }> = [
   { grade: 'easy', label: '很熟' },
 ];
 
-export function ReviewCard({ card, onGrade }: ReviewCardProps) {
+export function ReviewCard({ card, onGrade, onMastered }: ReviewCardProps) {
   const [revealed, setRevealed] = useState(false);
 
   return (
@@ -24,6 +25,7 @@ export function ReviewCard({ card, onGrade }: ReviewCardProps) {
         <div className="review-card__answer" aria-live="polite">
           <p>{card.answer}</p>
           <p className="review-card__note">系统记录背诵自评，字形尚未检验。</p>
+          {onMastered && <button type="button" className="text-button" onClick={onMastered}>标记熟练</button>}
           <div className="review-card__ratings" aria-label="复习结果">
             {grades.map(({ grade, label }) => (
               <button key={grade} type="button" onClick={() => onGrade(grade)}>

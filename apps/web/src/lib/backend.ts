@@ -10,6 +10,7 @@ export interface BackendClient {
   signIn(email: string, password: string): Promise<void>;
   signUp(email: string, password: string, nickname?: string): Promise<void>;
   signOut(): Promise<void>;
+  setCardMastery(cardId: string, mastered: boolean): Promise<void>;
   getSession(): Promise<unknown>;
   getSettings(): Promise<UserSettings>;
   getLearningStates(): Promise<Record<string, LearningState>>;
@@ -37,6 +38,7 @@ export function createBackendClient(overrides: BackendClientOverrides): BackendC
       throw new Error('尚未配置远程账号服务');
     },
     signOut: async () => undefined,
+    setCardMastery: async () => undefined,
     getSession: async () => null,
     getSettings: async () => defaultSettings,
     getLearningStates: async () => ({}),

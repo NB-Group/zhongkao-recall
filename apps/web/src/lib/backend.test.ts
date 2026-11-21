@@ -14,6 +14,17 @@ describe('BackendClient', () => {
     expect(signIn).toHaveBeenCalledWith('student@example.com', 'password');
   });
 
+  it('forwards manual card mastery through the backend boundary', async () => {
+    const setCardMastery = vi.fn(async () => undefined);
+    const client = createBackendClient({
+      setCardMastery,
+      appendReviewEvent: async (event) => ({ eventId: event.eventId }),
+    });
+
+    await client.setCardMastery('card-1', true);
+    expect(setCardMastery).toHaveBeenCalledWith('card-1', true);
+  });
+
   it('forwards review events through the backend boundary', async () => {
     const client = createBackendClient({
       appendReviewEvent: async (event) => ({ eventId: event.eventId }),

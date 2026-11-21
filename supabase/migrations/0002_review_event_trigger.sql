@@ -31,15 +31,15 @@ begin
     elsif new.grade = 'hard' then
       next_interval := greatest(1, round(current_state.interval_days * 1.5));
       next_status := 'review';
-      next_due := new.created_at + make_interval(days => next_interval);
+      next_due := ((new.created_at at time zone new.time_zone) + make_interval(days => next_interval)) at time zone new.time_zone;
     elsif new.grade = 'good' then
       next_interval := greatest(1, round(current_state.interval_days * 2.3));
       next_status := 'review';
-      next_due := new.created_at + make_interval(days => next_interval);
+      next_due := ((new.created_at at time zone new.time_zone) + make_interval(days => next_interval)) at time zone new.time_zone;
     else
       next_interval := greatest(3, round(current_state.interval_days * 3.5));
       next_status := 'review';
-      next_due := new.created_at + make_interval(days => next_interval);
+      next_due := ((new.created_at at time zone new.time_zone) + make_interval(days => next_interval)) at time zone new.time_zone;
     end if;
   elsif new.grade = 'again' then
     next_interval := 0;
@@ -48,19 +48,19 @@ begin
   elsif new.grade = 'easy' then
     next_interval := greatest(3, round(greatest(1, current_state.interval_days) * 3.5));
     next_status := 'review';
-    next_due := new.created_at + make_interval(days => next_interval);
+    next_due := ((new.created_at at time zone new.time_zone) + make_interval(days => next_interval)) at time zone new.time_zone;
   elsif current_state.interval_days = 0 then
     next_interval := 1;
     next_status := 'learning';
-    next_due := new.created_at + interval '1 day';
+    next_due := ((new.created_at at time zone new.time_zone) + interval '1 day') at time zone new.time_zone;
   elsif current_state.interval_days = 1 then
     next_interval := 3;
     next_status := 'learning';
-    next_due := new.created_at + interval '3 days';
+    next_due := ((new.created_at at time zone new.time_zone) + interval '3 days') at time zone new.time_zone;
   else
     next_interval := 7;
     next_status := 'review';
-    next_due := new.created_at + interval '7 days';
+    next_due := ((new.created_at at time zone new.time_zone) + interval '7 days') at time zone new.time_zone;
   end if;
 
   insert into public.learning_states (

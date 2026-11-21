@@ -66,6 +66,12 @@ create policy "settings are private" on public.user_settings
 create policy "learning states are private" on public.learning_states
   for select using (auth.uid() = user_id);
 
+create policy "learning states can be inserted by owner" on public.learning_states
+  for insert with check (auth.uid() = user_id);
+
+create policy "learning states can be updated by owner" on public.learning_states
+  for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
 create policy "review events are private" on public.review_events
   for select using (auth.uid() = user_id);
 

@@ -24,4 +24,12 @@ describe('ReviewCard', () => {
     fireEvent.click(screen.getByRole('button', { name: '想起了' }));
     expect(onGrade).toHaveBeenCalledWith('good');
   });
+
+  it('offers a manual mastery action after revealing the answer', () => {
+    const onMastered = vi.fn();
+    render(<ReviewCard card={card} onGrade={vi.fn()} onMastered={onMastered} />);
+    fireEvent.click(screen.getByRole('button', { name: '显示答案' }));
+    fireEvent.click(screen.getByRole('button', { name: '标记熟练' }));
+    expect(onMastered).toHaveBeenCalledOnce();
+  });
 });

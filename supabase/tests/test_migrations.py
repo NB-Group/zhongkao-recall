@@ -34,3 +34,9 @@ def test_review_grades_and_manual_mastery_are_constrained():
     assert "good" in sql
     assert "easy" in sql
     assert "mastered" in sql
+
+
+def test_review_due_dates_use_the_event_timezone_for_calendar_days():
+    sql = migration_text().lower()
+
+    assert "at time zone new.time_zone" in sql

@@ -1,15 +1,16 @@
 import type { LearningState, ReviewGrade } from './types';
-import { addDays, addMinutes } from './time';
+import { addCalendarDays, addMinutes } from './time';
 
 export interface ReviewInput {
   cardId: string;
   now: Date;
   grade: ReviewGrade;
+  timeZone?: string;
   current?: LearningState;
 }
 
-function dueAtFor(now: Date, intervalDays: number): string {
-  return (intervalDays === 0 ? addMinutes(now, 10) : addDays(now, intervalDays)).toISOString();
+function dueAtFor(now: Date, intervalDays: number, timeZone: string): string {
+  return (intervalDays === 0 ? addMinutes(now, 10) : addCalendarDays(now, intervalDays, timeZone)).toISOString();
 }
 
 function roundInterval(days: number, minimum: number): number {
@@ -55,7 +56,7 @@ export function computeNextLearningState(input: ReviewInput): LearningState {
     cardId: input.cardId,
     status,
     intervalDays,
-    dueAt: dueAtFor(input.now, intervalDays),
+    dueAt: dueAtFor(input.now, intervalDays, input.timeZone ?? 'Asia/Shanghai'),
     lapseCount: (current?.lapseCount ?? 0) + (input.grade === 'again' && current ? 1 : 0),
     lastGrade: input.grade,
     updatedAt: input.now.toISOString(),

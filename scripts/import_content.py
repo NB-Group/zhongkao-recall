@@ -11,6 +11,7 @@ from typing import Iterable
 
 
 PAGE_MARKER = re.compile(r"^第\s*\d+\s*页\s*共\s*\d+\s*页$")
+EMBEDDED_PAGE_MARKER = re.compile(r"=====\s*PAGE\s*\d+\s*=====")
 GRADE_MARKER = re.compile(r"^(六|七|八|九)年级(上册|下册)$")
 POETRY_SECTION = re.compile(r"^【(六|七|八|九)(上|下)】$")
 AUTHOR_MARKER = re.compile(r"^(?:\[?(?:唐|宋|元|清)\]?|汉乐府|《古诗十九首》)")
@@ -21,7 +22,9 @@ def clean_lines(lines: Iterable[str]) -> list[str]:
     cleaned: list[str] = []
 
     for raw_line in lines:
-        line = re.sub(r"\s+", " ", raw_line).strip()
+        line = EMBEDDED_PAGE_MARKER.sub(" ", raw_line)
+        line = line.replace("更多初中学习资料等你来领", " ")
+        line = re.sub(r"\s+", " ", line).strip()
         if not line:
             continue
         if PAGE_MARKER.match(line):
@@ -247,7 +250,7 @@ def parse_words(text: str, pack_id: str) -> list[dict]:
         current_number: int | None = None
         current_header = ""
         current_body: list[str] = []
-        for raw_line in lines[start:end] + ["__END__"]:
+        for raw_line in lines[start:end]:
             line = raw_line.strip()
             match = WORD_NUMBER.match(line)
             if match and 1 <= int(match.group(1)) <= max_number:
@@ -273,6 +276,7 @@ def parse_words(text: str, pack_id: str) -> list[dict]:
 
 
 def build_pack(wenyan_text: str, poetry_text: str, words_text: str, pack_id: str) -> dict:
+    content_version = "2026.11.21"
     prose_pieces, prose_segments = parse_wenyan(wenyan_text, pack_id)
     poem_pieces, poem_segments = parse_poetry(poetry_text, pack_id)
     senses = parse_words(words_text, pack_id)
@@ -280,9 +284,10 @@ def build_pack(wenyan_text: str, poetry_text: str, words_text: str, pack_id: str
     segments = prose_segments + poem_segments
     cards: list[dict] = []
     for segment in segments:
+        cloze_text = re.sub(r"^.{1,4}", "____", segment["text"], count=1)
         cards.append(
             {
-                "id": stable_id("card", pack_id, segment["id"], "segment-continuation"),
+                "id": stable_id("card", content_version, segment["id"], "segment-continuation"),
                 "kind": "segment-continuation",
                 "pieceId": segment["pieceId"],
                 "segmentId": segment["id"],
@@ -291,10 +296,36 @@ def build_pack(wenyan_text: str, poetry_text: str, words_text: str, pack_id: str
                 "estimatedSeconds": 25,
             }
         )
+        cards.append(
+            {
+                "id": stable_id("card", content_version, segment["id"], "segment-cloze"),
+                "kind": "segment-cloze",
+                "pieceId": segment["pieceId"],
+                "segmentId": segment["id"],
+                "prompt": cloze_text,
+                "answer": segment["text"],
+                "estimatedSeconds": 25,
+            }
+        )
+    segments_by_piece: dict[str, list[dict]] = {}
+    for segment in segments:
+        segments_by_piece.setdefault(segment["pieceId"], []).append(segment)
+    for piece in pieces:
+        full_text = "\n".join(segment["text"] for segment in segments_by_piece.get(piece["id"], []))
+        cards.append(
+            {
+                "id": stable_id("card", content_version, piece["id"], "piece-check"),
+                "kind": "piece-check",
+                "pieceId": piece["id"],
+                "prompt": f"请回忆《{piece['title']}》全文",
+                "answer": full_text,
+                "estimatedSeconds": 60,
+            }
+        )
     for sense in senses:
         cards.append(
             {
-                "id": stable_id("card", pack_id, sense["id"], "sense-recall"),
+                "id": stable_id("card", content_version, sense["id"], "sense-recall"),
                 "kind": "sense-recall",
                 "senseId": sense["id"],
                 "prompt": f"{sense['term']}在这个语境中的意思是什么？",
@@ -302,10 +333,20 @@ def build_pack(wenyan_text: str, poetry_text: str, words_text: str, pack_id: str
                 "estimatedSeconds": 20,
             }
         )
+        cards.append(
+            {
+                "id": stable_id("card", content_version, sense["id"], "context-cloze"),
+                "kind": "context-cloze",
+                "senseId": sense["id"],
+                "prompt": f"语境中“{sense['term']}”的意思是什么？",
+                "answer": sense["meaning"],
+                "estimatedSeconds": 20,
+            }
+        )
     return {
         "manifest": {
             "packId": pack_id,
-            "version": "2026.11.21",
+            "version": content_version,
             "title": "上海中考初中文言文与古诗词",
             "counts": {
                 "prosePieces": len(prose_pieces),
@@ -335,7 +376,7 @@ def validate_pack(pack: dict) -> dict:
     ids = [item["id"] for key in ("pieces", "segments", "senses", "cards") for item in pack[key]]
     if len(ids) != len(set(ids)):
         errors.append("duplicate content IDs")
-    forbidden = ("第 ", "公众号：", "咨询热线：", "校区地址：")
+    forbidden = ("第 ", "===== PAGE", "公众号：", "更多初中学习资料", "咨询热线：", "校区地址：")
     for key in ("pieces", "segments", "senses"):
         for item in pack[key]:
             if any(token in json.dumps(item, ensure_ascii=False) for token in forbidden):
@@ -343,10 +384,16 @@ def validate_pack(pack: dict) -> dict:
     counts = manifest["counts"]
     if counts["prosePieces"] != 41:
         errors.append(f"expected 41 prose pieces, got {counts['prosePieces']}")
+    if counts["poetryPieces"] != 82:
+        errors.append(f"expected 82 poetry pieces, got {counts['poetryPieces']}")
     if counts["realWordTerms"] != 150:
         errors.append(f"expected 150 real-word terms, got {counts['realWordTerms']}")
     if counts["functionWordTerms"] != 6:
         errors.append(f"expected 6 function-word terms, got {counts['functionWordTerms']}")
+    if counts["realWordSenses"] < counts["realWordTerms"]:
+        errors.append("real-word sense count is below term count")
+    if counts["functionWordSenses"] < counts["functionWordTerms"]:
+        errors.append("function-word sense count is below term count")
     return {"ok": not errors, "errors": errors, "counts": counts}
 
 

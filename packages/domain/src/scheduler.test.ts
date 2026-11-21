@@ -12,6 +12,17 @@ describe('computeNextLearningState', () => {
     expect(state.dueAt).toBe('2026-11-21T08:10:00.000Z');
   });
 
+  it('uses the learner timezone for calendar-day intervals', () => {
+    const state = computeNextLearningState({
+      cardId: 'card-1',
+      now: new Date('2026-03-07T17:00:00.000Z'),
+      grade: 'good',
+      timeZone: 'America/New_York',
+    });
+
+    expect(state.dueAt).toBe('2026-03-08T16:00:00.000Z');
+  });
+
   it('moves a new card through one day and three day steps', () => {
     const oneDay = computeNextLearningState({
       cardId: 'card-1',

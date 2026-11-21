@@ -10,6 +10,9 @@ interface ReviewSessionPageProps {
   cards: Card[];
   activePieceIds?: string[];
   initialStates: Record<string, LearningState>;
+  dailyNewTarget: number;
+  reviewLimit: number;
+  timeZone: string;
   backend: BackendClient;
   onStateChange?: (states: Record<string, LearningState>) => void;
   onDone: () => void;
@@ -25,27 +28,27 @@ function newEventId(): string {
   return typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`;
 }
 
-export function ReviewSessionPage({ queueKind, cards, activePieceIds = [], initialStates, backend, onStateChange, onDone }: ReviewSessionPageProps) {
+export function ReviewSessionPage({ queueKind, cards, activePieceIds = [], initialStates, dailyNewTarget, reviewLimit, timeZone, backend, onStateChange, onDone }: ReviewSessionPageProps) {
   const [states, setStates] = useState(initialStates);
-  const [index, setIndex] = useState(0);
-  const now = new Date();
-  const queue = useMemo(
-    () =>
-      buildDailyQueue({
-        now,
-        queueKind,
-        cards: selectSessionCards(cards, queueKind, activePieceIds),
-        states,
-        dailyNewTarget: 5,
-        reviewLimit: 30,
-      }),
-    [activePieceIds, cards, queueKind, states],
+  const sessionCards = useMemo(
+    () => selectSessionCards(cards, queueKind, activePieceIds),
+    [activePieceIds, cards, queueKind],
   );
+  const [queue, setQueue] = useState(() => buildDailyQueue({
+    now: new Date(),
+    queueKind,
+    cards: sessionCards,
+    states: initialStates,
+    dailyNewTarget,
+    reviewLimit,
+  }));
+  const [completedCount, setCompletedCount] = useState(0);
+  const index = 0;
   const item = queue[index];
 
   async function handleGrade(grade: ReviewGrade) {
     if (!item) return;
-    const next = computeNextLearningState({ cardId: item.card.id, now: new Date(), grade, current: states[item.card.id] });
+    const next = computeNextLearningState({ cardId: item.card.id, now: new Date(), grade, timeZone, current: states[item.card.id] });
     setStates((current) => {
       const updated = { ...current, [item.card.id]: next };
       onStateChange?.(updated);
@@ -59,7 +62,29 @@ export function ReviewSessionPage({ queueKind, cards, activePieceIds = [], initi
       timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       contentVersion: '2026.11.21',
     });
-    setIndex((current) => current + 1);
+    setQueue((current) => current.filter((queueItem) => queueItem.card.id !== item.card.id));
+    setCompletedCount((current) => current + 1);
+  }
+
+  async function handleMastered() {
+    if (!item) return;
+    const now = new Date().toISOString();
+    const next: LearningState = {
+      cardId: item.card.id,
+      status: 'mastered',
+      dueAt: now,
+      intervalDays: states[item.card.id]?.intervalDays ?? 0,
+      lapseCount: states[item.card.id]?.lapseCount ?? 0,
+      updatedAt: now,
+    };
+    setStates((current) => {
+      const updated = { ...current, [item.card.id]: next };
+      onStateChange?.(updated);
+      return updated;
+    });
+    await backend.setCardMastery(item.card.id, true);
+    setQueue((current) => current.filter((queueItem) => queueItem.card.id !== item.card.id));
+    setCompletedCount((current) => current + 1);
   }
 
   if (!item) {
@@ -76,10 +101,10 @@ export function ReviewSessionPage({ queueKind, cards, activePieceIds = [], initi
   return (
     <main className="review-session">
       <div className="session-progress">
-        <span>{index + 1} / {queue.length}</span>
+        <span>{completedCount + 1} / {completedCount + queue.length}</span>
         <span>{item.reason === 'new' ? '新学' : '复习'}</span>
       </div>
-      <ReviewCard card={item.card} onGrade={(grade) => void handleGrade(grade)} />
+      <ReviewCard card={item.card} onGrade={(grade) => void handleGrade(grade)} onMastered={() => void handleMastered()} />
     </main>
   );
 }

@@ -71,7 +71,7 @@ export function createSupabaseBackend(url: string, anonKey: string): BackendClie
     signUp: async (email, password, nickname) => {
       const { data, error } = await client.auth.signUp({ email, password });
       if (error) throw error;
-      if (data.user) {
+      if (data.user && data.session) {
         const { error: profileError } = await client.from('profiles').upsert({
           id: data.user.id,
           nickname: nickname || null,
@@ -85,6 +85,18 @@ export function createSupabaseBackend(url: string, anonKey: string): BackendClie
     },
     signOut: async () => {
       const { error } = await client.auth.signOut();
+      if (error) throw error;
+    },
+    setCardMastery: async (cardId, mastered) => {
+      const userId = await requireUserId(client);
+      const { error } = await client.from('learning_states').upsert({
+        user_id: userId,
+        card_id: cardId,
+        status: mastered ? 'mastered' : 'review',
+        due_at: new Date().toISOString(),
+        interval_days: mastered ? 0 : 1,
+        updated_at: new Date().toISOString(),
+      });
       if (error) throw error;
     },
     getSession: async () => {

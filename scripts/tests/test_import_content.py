@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).parents[1]))
 
-from import_content import clean_lines, parse_poetry, parse_wenyan, parse_words
+from import_content import build_pack, clean_lines, parse_poetry, parse_wenyan, parse_words
 
 
 def test_clean_lines_removes_layout_noise():
@@ -17,6 +17,12 @@ def test_clean_lines_removes_layout_noise():
     )
 
     assert lines == ["桃花源记"]
+
+
+def test_clean_lines_removes_embedded_page_markers_and_promotion_copy():
+    lines = clean_lines(["内容===== PAGE 3 =====下一段", "更多初中学习资料等你来领"])
+
+    assert lines == ["内容 下一段"]
 
 
 def test_parse_wenyan_keeps_grade_author_and_segments():
@@ -71,3 +77,15 @@ def test_parse_words_keeps_real_and_function_word_ranges():
     assert senses[-1]["term"] == "之"
     assert senses[0]["category"] == "real-word"
     assert senses[-1]["category"] == "function-word"
+
+
+def test_build_pack_includes_segment_cloze_and_piece_check_cards():
+    pack = build_pack(
+        "六年级上册\n两小儿辩日\n作者：列御寇\n孔子东游，见两小儿辩斗。",
+        "【六上】\n宿建德江\n[唐] 孟浩然\n移舟泊烟渚，\n日暮客愁新。",
+        "1 比\n靠近 其两膝相比者",
+        "test-pack",
+    )
+
+    kinds = {card["kind"] for card in pack["cards"]}
+    assert {"segment-continuation", "segment-cloze", "piece-check", "sense-recall", "context-cloze"} <= kinds

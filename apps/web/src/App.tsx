@@ -62,6 +62,9 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
 
   async function signUp(email: string, password: string, nickname?: string) {
     await backend.signUp(email, password, nickname);
+    if (!(await backend.getSession())) {
+      throw new Error('注册邮件已发送，请先完成邮箱确认后再登录');
+    }
     setAuthenticated(true);
     navigate('/today');
   }
@@ -84,6 +87,9 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
         cards={contentPack.cards}
         activePieceIds={Object.entries(progress).filter(([, status]) => status !== 'locked').map(([pieceId]) => pieceId)}
         initialStates={states}
+        dailyNewTarget={settings.dailyNewWords}
+        reviewLimit={settings.dailyReviewLimit}
+        timeZone={settings.timeZone}
         backend={backend}
         onStateChange={setStates}
         onDone={() => navigate('/today')}
