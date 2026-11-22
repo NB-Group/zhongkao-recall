@@ -17,6 +17,7 @@ export interface BackendClient {
   getPieceProgress(): Promise<Record<string, string>>;
   appendReviewEvent(event: ReviewEvent): Promise<{ eventId: string }>;
   setPieceProgress(pieceId: string, status: string): Promise<void>;
+  setPieceProgressBatch?(progress: Array<{ pieceId: string; status: string }>): Promise<void>;
   updateSettings(settings: UserSettings): Promise<void>;
 }
 

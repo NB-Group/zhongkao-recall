@@ -147,6 +147,18 @@ export function createSupabaseBackend(url: string, anonKey: string): BackendClie
       });
       if (error) throw error;
     },
+    setPieceProgressBatch: async (progress) => {
+      const userId = await requireUserId(client);
+      const { error } = await client.from('piece_progress').upsert(
+        progress.map(({ pieceId, status }) => ({
+          user_id: userId,
+          piece_id: pieceId,
+          status,
+          updated_at: new Date().toISOString(),
+        })),
+      );
+      if (error) throw error;
+    },
     updateSettings: async (settings) => {
       const userId = await requireUserId(client);
       const { error } = await client.from('user_settings').upsert({

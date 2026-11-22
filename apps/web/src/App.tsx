@@ -3,7 +3,7 @@ import { HashRouter, Navigate, Route, Routes, useNavigate, useParams } from 'rea
 import type { Card, ContentPack, LearningState, Piece } from '@zhongkao-recall/domain';
 import { AppShell } from './components/AppShell';
 import { AuthPage } from './pages/AuthPage';
-import { ContentPage } from './pages/ContentPage';
+import { ContentPage, piecesThroughSelection } from './pages/ContentPage';
 import { ReviewSessionPage } from './pages/ReviewSessionPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { TodayPage } from './pages/TodayPage';
@@ -114,7 +114,7 @@ function AppRoutes({ backend }: { backend: BackendClient }) {
             />
           }
         />
-        <Route path="/content" element={<ContentPage pieces={contentPack.pieces} progress={progress} onUnlock={(pieceId) => { setProgress({ ...progress, [pieceId]: 'learning' }); void backend.setPieceProgress(pieceId, 'learning'); }} onSetStatus={(pieceId, status) => { setProgress({ ...progress, [pieceId]: status }); void backend.setPieceProgress(pieceId, status); }} />} />
+        <Route path="/content" element={<ContentPage pieces={contentPack.pieces} progress={progress} onUnlock={(pieceId) => { const ids = piecesThroughSelection(contentPack.pieces, pieceId); const next = { ...progress }; for (const id of ids) next[id] = 'learning'; setProgress(next); if (backend.setPieceProgressBatch) void backend.setPieceProgressBatch(ids.map((id) => ({ pieceId: id, status: 'learning' }))); else for (const id of ids) void backend.setPieceProgress(id, 'learning'); }} onSetStatus={(pieceId, status) => { setProgress({ ...progress, [pieceId]: status }); void backend.setPieceProgress(pieceId, status); }} />} />
         <Route path="/settings" element={<SettingsPage settings={settings} onSave={async (next) => { setSettings(next); await backend.updateSettings(next); }} />} />
         <Route path="/review/:queueKind" element={<ReviewRoute />} />
       </Route>
