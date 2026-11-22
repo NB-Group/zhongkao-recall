@@ -37,6 +37,10 @@ jobs:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+      - name: Keep compatibility assets for cached pages
+        run: |
+          for name in index-yNyrwHFq index-DSctGXCD; do cp apps/web/dist/assets/app.js "apps/web/dist/assets/${name}.js"; done
+          for name in index-DE2mLamD index-DeO8UgnG; do cp apps/web/dist/assets/app.css "apps/web/dist/assets/${name}.css"; done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: apps/web/dist
