@@ -6,6 +6,13 @@ interface AuthPageProps {
   onDemo?: () => Promise<void>;
 }
 
+export function formatAuthError(error: unknown): string {
+  const message = error instanceof Error ? error.message : String(error ?? '');
+  if (message === 'Invalid login credentials') return '用户名或密码不正确。首次使用请切换到“注册”。';
+  if (message === 'Email not confirmed') return '账号还没有完成确认，请重新注册。';
+  return message || '操作失败，请稍后重试';
+}
+
 export function AuthPage({ onSignIn, onSignUp, onDemo }: AuthPageProps) {
   const [mode, setMode] = useState<'sign-in' | 'sign-up'>('sign-in');
   const [inviteLink, setInviteLink] = useState('');
@@ -23,7 +30,7 @@ export function AuthPage({ onSignIn, onSignUp, onDemo }: AuthPageProps) {
       if (mode === 'sign-in') await onSignIn(username, password);
       else await onSignUp(inviteLink, username, password, nickname || undefined);
     } catch (submissionError) {
-      setError(submissionError instanceof Error ? submissionError.message : '操作失败，请稍后重试');
+      setError(formatAuthError(submissionError));
     } finally {
       setBusy(false);
     }
