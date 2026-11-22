@@ -37,6 +37,10 @@ a { color: inherit; text-decoration: none; }
 .review-card { background: var(--paper-bright); border-radius: 26px; box-shadow: var(--shadow); min-height: 430px; padding: clamp(28px, 7vw, 72px); display: flex; flex-direction: column; justify-content: center; }
 .review-card__kind { color: var(--jade); font-size: 13px; font-weight: 700; letter-spacing: .08em; margin: 0 0 28px; }
 .review-card__context { background: var(--jade-soft); border-radius: 12px; color: var(--ink); font-family: var(--serif); font-size: clamp(17px, 2.5vw, 23px); line-height: 1.8; margin: 0 0 22px; padding: 14px 16px; }
+.review-card__options { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.review-card__options button { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; color: var(--ink); min-height: 54px; padding: 12px 14px; text-align: left; }
+.review-card__options button:hover { border-color: var(--jade); color: var(--jade); }
+.review-card__wrong { color: #9b4c32; font-family: var(--sans) !important; font-size: 14px !important; margin: 0 0 8px !important; }
 .review-card__prompt, .review-card__answer p:first-child { font-family: var(--serif); font-size: clamp(25px, 4vw, 42px); line-height: 1.6; margin: 0 0 32px; }
 .review-card__answer { border-top: 1px solid var(--line); padding-top: 25px; }
 .review-card__answer p:first-child { font-size: clamp(20px, 3vw, 28px); margin-bottom: 10px; }

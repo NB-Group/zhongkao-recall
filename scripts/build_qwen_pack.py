@@ -152,6 +152,10 @@ def build_pack(poetry_root: Path, prose_root: Path, word_roots: list[Path], word
     senses = load_word_senses(word_roots, word_map_path)
     unique_senses = {sense["id"]: sense for sense in senses}
     cards = []
+    senses_by_term: dict[str, list[dict[str, Any]]] = {}
+    for sense in unique_senses.values():
+        senses_by_term.setdefault(sense["term"], []).append(sense)
+    all_meanings = [sense["meaning"] for sense in unique_senses.values() if sense.get("meaning")]
     for segment in segments:
         cards.append({
             "id": stable_id("card", "qwen-2026.11.22", segment["id"], "segment-continuation"),
@@ -163,12 +167,29 @@ def build_pack(poetry_root: Path, prose_root: Path, word_roots: list[Path], word
             "estimatedSeconds": 25,
         })
     for sense in unique_senses.values():
+        choices = []
+        answer = sense.get("meaning")
+        if answer:
+            choices.append(answer)
+        for candidate in senses_by_term.get(sense["term"], []):
+            if candidate.get("meaning") and candidate["meaning"] not in choices:
+                choices.append(candidate["meaning"])
+        for candidate in all_meanings:
+            if candidate not in choices:
+                choices.append(candidate)
+            if len(choices) >= 4:
+                break
+        choices = choices[:4]
+        if len(choices) > 1:
+            rotation = int(stable_id("choice-order", sense["id"]).split(":", 1)[1], 16) % len(choices)
+            choices = choices[rotation:] + choices[:rotation]
         cards.append({
             "id": stable_id("card", "qwen-2026.11.22", sense["id"], "sense-recall"),
             "kind": "sense-recall",
             "senseId": sense["id"],
             "context": sense["example"],
             "prompt": f"“{sense['term']}”在上面这句中的意思是？",
+            "options": choices,
             "answer": sense["meaning"],
             "estimatedSeconds": 20,
         })

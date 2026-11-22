@@ -3965,6 +3965,12 @@
     "senseId": "sense:061f9f9849da",
     "context": "其两膝相比者，各隐卷底衣褶中",
     "prompt": "“比”在上面这句中的意思是？",
+    "options": [
+      "浅陋，目光短浅",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "靠近",
     "estimatedSeconds": 20
   },
@@ -3974,6 +3980,12 @@
     "senseId": "sense:870ae7c44084",
     "context": "比至陈，车六七百乘",
     "prompt": "“比”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "比较",
+      "浅陋，目光短浅",
+      "及，等到 (……的时候)"
+    ],
     "answer": "及，等到 (……的时候)",
     "estimatedSeconds": 20
   },
@@ -3983,6 +3995,12 @@
     "senseId": "sense:52df76cb654e",
     "context": "心却比，男儿烈浅陋，目光短浅",
     "prompt": "“比”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "浅陋，目光短浅",
+      "比较"
+    ],
     "answer": "比较",
     "estimatedSeconds": 20
   },
@@ -3992,6 +4010,12 @@
     "senseId": "sense:8cb121286285",
     "context": "刿曰：‘肉食者鄙，未能远谋。’",
     "prompt": "“鄙”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "浅陋，目光短浅",
+      "靠近"
+    ],
     "answer": "浅陋，目光短浅",
     "estimatedSeconds": 20
   },
@@ -4001,6 +4025,12 @@
     "senseId": "sense:d3d2ff5a0cd2",
     "context": "今南方已定，兵甲已足",
     "prompt": "“兵”在上面这句中的意思是？",
+    "options": [
+      "士兵",
+      "战争",
+      "兵器，武器",
+      "军队"
+    ],
     "answer": "兵器，武器",
     "estimatedSeconds": 20
   },
@@ -4010,6 +4040,12 @@
     "senseId": "sense:caba0f742776",
     "context": "可汗大点兵",
     "prompt": "“兵”在上面这句中的意思是？",
+    "options": [
+      "士兵",
+      "战争",
+      "军队",
+      "兵器，武器"
+    ],
     "answer": "军队",
     "estimatedSeconds": 20
   },
@@ -4019,6 +4055,12 @@
     "senseId": "sense:0af8f4218898",
     "context": "一老河兵闻之",
     "prompt": "“兵”在上面这句中的意思是？",
+    "options": [
+      "士兵",
+      "兵器，武器",
+      "军队",
+      "战争"
+    ],
     "answer": "士兵",
     "estimatedSeconds": 20
   },
@@ -4028,6 +4070,12 @@
     "senseId": "sense:1cdf46af90c4",
     "context": "况乃未休兵",
     "prompt": "“兵”在上面这句中的意思是？",
+    "options": [
+      "兵器，武器",
+      "军队",
+      "士兵",
+      "战争"
+    ],
     "answer": "战争",
     "estimatedSeconds": 20
   },
@@ -4037,6 +4085,12 @@
     "senseId": "sense:218537ccb576",
     "context": "未果，寻病终",
     "prompt": "“病”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "生病",
+      "枯萎"
+    ],
     "answer": "生病",
     "estimatedSeconds": 20
   },
@@ -4046,6 +4100,12 @@
     "senseId": "sense:bc1ea874fde4",
     "context": "病树前头万木春",
     "prompt": "“病”在上面这句中的意思是？",
+    "options": [
+      "生病",
+      "靠近",
+      "及，等到 (……的时候)",
+      "枯萎"
+    ],
     "answer": "枯萎",
     "estimatedSeconds": 20
   },
@@ -4055,6 +4115,12 @@
     "senseId": "sense:a710d6f4d07c",
     "context": "公与之乘",
     "prompt": "“乘”在上面这句中的意思是？",
+    "options": [
+      "坐、驾 (车)",
+      "趁着，冒着",
+      "辆 (用以计算车子)",
+      "靠近"
+    ],
     "answer": "坐、驾 (车)",
     "estimatedSeconds": 20
   },
@@ -4064,6 +4130,12 @@
     "senseId": "sense:f8ecef9b1985",
     "context": "从今若许闲乘月",
     "prompt": "“乘”在上面这句中的意思是？",
+    "options": [
+      "趁着，冒着",
+      "坐、驾 (车)",
+      "辆 (用以计算车子)",
+      "靠近"
+    ],
     "answer": "趁着，冒着",
     "estimatedSeconds": 20
   },
@@ -4073,6 +4145,12 @@
     "senseId": "sense:3c91225d471f",
     "context": "车六七百乘",
     "prompt": "“乘”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "辆 (用以计算车子)",
+      "坐、驾 (车)",
+      "趁着，冒着"
+    ],
     "answer": "辆 (用以计算车子)",
     "estimatedSeconds": 20
   },
@@ -4082,6 +4160,12 @@
     "senseId": "sense:11d00075d571",
     "context": "锐兵刃，彀弓弩，持满",
     "prompt": "“持”在上面这句中的意思是？",
+    "options": [
+      "拉",
+      "拿着",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "拉",
     "estimatedSeconds": 20
   },
@@ -4091,6 +4175,12 @@
     "senseId": "sense:3e8bd364653c",
     "context": "屠乃奔倚其下，弛担持刀",
     "prompt": "“持”在上面这句中的意思是？",
+    "options": [
+      "拉",
+      "靠近",
+      "及，等到 (……的时候)",
+      "拿着"
+    ],
     "answer": "拿着",
     "estimatedSeconds": 20
   },
@@ -4100,6 +4190,12 @@
     "senseId": "sense:53b209bf1ac8",
     "context": "七十而从心所欲",
     "prompt": "“从”在上面这句中的意思是？",
+    "options": [
+      "采取某一种办法",
+      "自，由",
+      "跟从，跟随",
+      "听从，顺从"
+    ],
     "answer": "跟从，跟随",
     "estimatedSeconds": 20
   },
@@ -4109,6 +4205,12 @@
     "senseId": "sense:f3ed7f31a28b",
     "context": "小惠未遍，民弗从也",
     "prompt": "“从”在上面这句中的意思是？",
+    "options": [
+      "跟从，跟随",
+      "采取某一种办法",
+      "自，由",
+      "听从，顺从"
+    ],
     "answer": "听从，顺从",
     "estimatedSeconds": 20
   },
@@ -4118,6 +4220,12 @@
     "senseId": "sense:6eb5cbbd9c25",
     "context": "无从致书以观",
     "prompt": "“从”在上面这句中的意思是？",
+    "options": [
+      "听从，顺从",
+      "自，由",
+      "采取某一种办法",
+      "跟从，跟随"
+    ],
     "answer": "采取某一种办法",
     "estimatedSeconds": 20
   },
@@ -4127,6 +4235,12 @@
     "senseId": "sense:8ae55b079ab0",
     "context": "从小丘西行百二十步",
     "prompt": "“从”在上面这句中的意思是？",
+    "options": [
+      "听从，顺从",
+      "采取某一种办法",
+      "自，由",
+      "跟从，跟随"
+    ],
     "answer": "自，由",
     "estimatedSeconds": 20
   },
@@ -4136,6 +4250,12 @@
     "senseId": "sense:7ae8a45ceec1",
     "context": "指通豫南，达于汉阴",
     "prompt": "“达”在上面这句中的意思是？",
+    "options": [
+      "通顺，通畅",
+      "到达",
+      "得志，显贵",
+      "有道德，有学问 (的人)"
+    ],
     "answer": "到达",
     "estimatedSeconds": 20
   },
@@ -4145,6 +4265,12 @@
     "senseId": "sense:3ec8a5146a83",
     "context": "不求闻达于诸侯",
     "prompt": "“达”在上面这句中的意思是？",
+    "options": [
+      "得志，显贵",
+      "到达",
+      "有道德，有学问 (的人)",
+      "通顺，通畅"
+    ],
     "answer": "得志，显贵",
     "estimatedSeconds": 20
   },
@@ -4154,6 +4280,12 @@
     "senseId": "sense:bc2d26ecfb0b",
     "context": "从乡之先达执经叩问",
     "prompt": "“达”在上面这句中的意思是？",
+    "options": [
+      "到达",
+      "得志，显贵",
+      "通顺，通畅",
+      "有道德，有学问 (的人)"
+    ],
     "answer": "有道德，有学问 (的人)",
     "estimatedSeconds": 20
   },
@@ -4163,6 +4295,12 @@
     "senseId": "sense:56f7819b141c",
     "context": "辞甚畅达",
     "prompt": "“达”在上面这句中的意思是？",
+    "options": [
+      "到达",
+      "得志，显贵",
+      "有道德，有学问 (的人)",
+      "通顺，通畅"
+    ],
     "answer": "通顺，通畅",
     "estimatedSeconds": 20
   },
@@ -4172,6 +4310,12 @@
     "senseId": "sense:93ae71dfd8b2",
     "context": "陈康肃公善射，当世无双",
     "prompt": "“当”在上面这句中的意思是？",
+    "options": [
+      "在 (某时、某处)",
+      "应当，应该",
+      "将要，就要",
+      "对着，面对"
+    ],
     "answer": "在 (某时、某处)",
     "estimatedSeconds": 20
   },
@@ -4181,6 +4325,12 @@
     "senseId": "sense:e1b8c3d049bf",
     "context": "耕当问奴，织当问婢",
     "prompt": "“当”在上面这句中的意思是？",
+    "options": [
+      "将要，就要",
+      "对着，面对",
+      "应当，应该",
+      "在 (某时、某处)"
+    ],
     "answer": "应当，应该",
     "estimatedSeconds": 20
   },
@@ -4190,6 +4340,12 @@
     "senseId": "sense:79b7c3e72a0d",
     "context": "今当远离",
     "prompt": "“当”在上面这句中的意思是？",
+    "options": [
+      "对着，面对",
+      "将要，就要",
+      "在 (某时、某处)",
+      "应当，应该"
+    ],
     "answer": "将要，就要",
     "estimatedSeconds": 20
   },
@@ -4199,6 +4355,12 @@
     "senseId": "sense:30ac5281ca7e",
     "context": "木兰当户织",
     "prompt": "“当”在上面这句中的意思是？",
+    "options": [
+      "将要，就要",
+      "对着，面对",
+      "在 (某时、某处)",
+      "应当，应该"
+    ],
     "answer": "对着，面对",
     "estimatedSeconds": 20
   },
@@ -4208,6 +4370,12 @@
     "senseId": "sense:6505ff7cae54",
     "context": "卿今当涂掌事",
     "prompt": "“当”在上面这句中的意思是？",
+    "options": [
+      "在 (某时、某处)",
+      "应当，应该",
+      "将要，就要",
+      "掌管，主持"
+    ],
     "answer": "掌管，主持",
     "estimatedSeconds": 20
   },
@@ -4217,6 +4385,12 @@
     "senseId": "sense:0a4cbb1b9d6b",
     "context": "伐竹取道，下见小潭，水尤清冽",
     "prompt": "“道”在上面这句中的意思是？",
+    "options": [
+      "(儒家推崇的上古时代的) 政治制度",
+      "正道",
+      "路；途",
+      "道理，规律，方法"
+    ],
     "answer": "路；途",
     "estimatedSeconds": 20
   },
@@ -4226,6 +4400,12 @@
     "senseId": "sense:6f2092232de8",
     "context": "虽有至道，弗学，不知其善也",
     "prompt": "“道”在上面这句中的意思是？",
+    "options": [
+      "路；途",
+      "(儒家推崇的上古时代的) 政治制度",
+      "正道",
+      "道理，规律，方法"
+    ],
     "answer": "道理，规律，方法",
     "estimatedSeconds": 20
   },
@@ -4235,6 +4415,12 @@
     "senseId": "sense:ac1aac5a8cc4",
     "context": "以咨诹善道，察纳雅言",
     "prompt": "“道”在上面这句中的意思是？",
+    "options": [
+      "路；途",
+      "道理，规律，方法",
+      "正道",
+      "(儒家推崇的上古时代的) 政治制度"
+    ],
     "answer": "(儒家推崇的上古时代的) 政治制度",
     "estimatedSeconds": 20
   },
@@ -4244,6 +4430,12 @@
     "senseId": "sense:a1c5610cdfb7",
     "context": "得道者多助，失道者寡助",
     "prompt": "“道”在上面这句中的意思是？",
+    "options": [
+      "道理，规律，方法",
+      "(儒家推崇的上古时代的) 政治制度",
+      "正道",
+      "路；途"
+    ],
     "answer": "正道",
     "estimatedSeconds": 20
   },
@@ -4253,6 +4445,12 @@
     "senseId": "sense:c32619b5f295",
     "context": "国人道之，闻之于宋君",
     "prompt": "“道”在上面这句中的意思是？",
+    "options": [
+      "道理，规律，方法",
+      "(儒家推崇的上古时代的) 政治制度",
+      "说，讲",
+      "路；途"
+    ],
     "answer": "说，讲",
     "estimatedSeconds": 20
   },
@@ -4262,6 +4460,12 @@
     "senseId": "sense:dcf3773fd84e",
     "context": "穿井得一人",
     "prompt": "“得”在上面这句中的意思是？",
+    "options": [
+      "(看到，看见)",
+      "(领会)",
+      "(找到)",
+      "得到，获得 (取得)"
+    ],
     "answer": "得到，获得 (取得)",
     "estimatedSeconds": 20
   },
@@ -4271,6 +4475,12 @@
     "senseId": "sense:39daf4d5ac23",
     "context": "林尽水源，便得一山",
     "prompt": "“得”在上面这句中的意思是？",
+    "options": [
+      "得到，获得 (取得)",
+      "(领会)",
+      "(找到)",
+      "(看到，看见)"
+    ],
     "answer": "(看到，看见)",
     "estimatedSeconds": 20
   },
@@ -4280,6 +4490,12 @@
     "senseId": "sense:44094a78123a",
     "context": "得之心而寓之酒也",
     "prompt": "“得”在上面这句中的意思是？",
+    "options": [
+      "(找到)",
+      "(领会)",
+      "得到，获得 (取得)",
+      "(看到，看见)"
+    ],
     "answer": "(领会)",
     "estimatedSeconds": 20
   },
@@ -4289,6 +4505,12 @@
     "senseId": "sense:c5f80da3e6b4",
     "context": "求二石兽于水中，竟不可得",
     "prompt": "“得”在上面这句中的意思是？",
+    "options": [
+      "得到，获得 (取得)",
+      "(看到，看见)",
+      "(领会)",
+      "(找到)"
+    ],
     "answer": "(找到)",
     "estimatedSeconds": 20
   },
@@ -4298,6 +4520,12 @@
     "senseId": "sense:58d19e584a65",
     "context": "无他，但手熟尔",
     "prompt": "“尔”在上面这句中的意思是？",
+    "options": [
+      "助词，附在形容词、动词、副词或拟声词后，用作后缀",
+      "词尾，相当于“地”“然”",
+      "代词，你 (你们)",
+      "同“耳”，相当于“罢了”"
+    ],
     "answer": "同“耳”，相当于“罢了”",
     "estimatedSeconds": 20
   },
@@ -4307,6 +4535,12 @@
     "senseId": "sense:ffe2c2b4f8d7",
     "context": "呼尔而与之，行道之人弗受",
     "prompt": "“尔”在上面这句中的意思是？",
+    "options": [
+      "词尾，相当于“地”“然”",
+      "代词，你 (你们)",
+      "助词，附在形容词、动词、副词或拟声词后，用作后缀",
+      "同“耳”，相当于“罢了”"
+    ],
     "answer": "助词，附在形容词、动词、副词或拟声词后，用作后缀",
     "estimatedSeconds": 20
   },
@@ -4316,6 +4550,12 @@
     "senseId": "sense:95da3750ca68",
     "context": "俶尔远逝",
     "prompt": "“尔”在上面这句中的意思是？",
+    "options": [
+      "同“耳”，相当于“罢了”",
+      "助词，附在形容词、动词、副词或拟声词后，用作后缀",
+      "代词，你 (你们)",
+      "词尾，相当于“地”“然”"
+    ],
     "answer": "词尾，相当于“地”“然”",
     "estimatedSeconds": 20
   },
@@ -4325,6 +4565,12 @@
     "senseId": "sense:cc2956d52b85",
     "context": "尔安敢轻吾射",
     "prompt": "“尔”在上面这句中的意思是？",
+    "options": [
+      "助词，附在形容词、动词、副词或拟声词后，用作后缀",
+      "词尾，相当于“地”“然”",
+      "代词，你 (你们)",
+      "同“耳”，相当于“罢了”"
+    ],
     "answer": "代词，你 (你们)",
     "estimatedSeconds": 20
   },
@@ -4334,6 +4580,12 @@
     "senseId": "sense:d88d6dfb6ab8",
     "context": "尔来二十有一年矣",
     "prompt": "“尔”在上面这句中的意思是？",
+    "options": [
+      "同“耳”，相当于“罢了”",
+      "助词，附在形容词、动词、副词或拟声词后，用作后缀",
+      "词尾，相当于“地”“然”",
+      "指示代词，这，那"
+    ],
     "answer": "指示代词，这，那",
     "estimatedSeconds": 20
   },
@@ -4343,6 +4595,12 @@
     "senseId": "sense:f38bdd08de24",
     "context": "伐竹取道，下见小潭，水尤清冽",
     "prompt": "“伐”在上面这句中的意思是？",
+    "options": [
+      "砍伐",
+      "攻打，讨伐",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "砍伐",
     "estimatedSeconds": 20
   },
@@ -4352,6 +4610,12 @@
     "senseId": "sense:de1e70b94a7d",
     "context": "十年春，齐师伐我",
     "prompt": "“伐”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "攻打，讨伐",
+      "砍伐",
+      "靠近"
+    ],
     "answer": "攻打，讨伐",
     "estimatedSeconds": 20
   },
@@ -4361,6 +4625,12 @@
     "senseId": "sense:35a09ec70cd7",
     "context": "至于亚夫，可得而犯邪",
     "prompt": "“犯”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "侵害，危害",
+      "触犯，违犯"
+    ],
     "answer": "侵害，危害",
     "estimatedSeconds": 20
   },
@@ -4370,6 +4640,12 @@
     "senseId": "sense:d491eb855b84",
     "context": "若有作奸犯科及为忠善者",
     "prompt": "“犯”在上面这句中的意思是？",
+    "options": [
+      "触犯，违犯",
+      "侵害，危害",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "触犯，违犯",
     "estimatedSeconds": 20
   },
@@ -4379,6 +4655,12 @@
     "senseId": "sense:f9b3a51991fa",
     "context": "太行、王屋二山，方七百里",
     "prompt": "“方”在上面这句中的意思是？",
+    "options": [
+      "表示时间、相当于“始”“才”",
+      "方圆，周围",
+      "区域，地方",
+      "将，将要"
+    ],
     "answer": "方圆，周围",
     "estimatedSeconds": 20
   },
@@ -4388,6 +4670,12 @@
     "senseId": "sense:32b072cf1cbb",
     "context": "有朋自远方来，不亦乐乎",
     "prompt": "“方”在上面这句中的意思是？",
+    "options": [
+      "表示时间、相当于“始”“才”",
+      "区域，地方",
+      "方圆，周围",
+      "将，将要"
+    ],
     "answer": "区域，地方",
     "estimatedSeconds": 20
   },
@@ -4397,6 +4685,12 @@
     "senseId": "sense:ac052396aa0d",
     "context": "方欲行，转视积薪后",
     "prompt": "“方”在上面这句中的意思是？",
+    "options": [
+      "区域，地方",
+      "表示时间、相当于“始”“才”",
+      "将，将要",
+      "方圆，周围"
+    ],
     "answer": "将，将要",
     "estimatedSeconds": 20
   },
@@ -4406,6 +4700,12 @@
     "senseId": "sense:4b4226c016c1",
     "context": "方鼓琴而志在太山",
     "prompt": "“方”在上面这句中的意思是？",
+    "options": [
+      "方圆，周围",
+      "区域，地方",
+      "将，将要",
+      "表示时间、相当于“始”“才”"
+    ],
     "answer": "表示时间、相当于“始”“才”",
     "estimatedSeconds": 20
   },
@@ -4415,6 +4715,12 @@
     "senseId": "sense:dedc719c01b8",
     "context": "帝感其诚，命夸娥氏二子负二山",
     "prompt": "“负”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "背，以背载物",
+      "凭借，依仗，依靠"
+    ],
     "answer": "背，以背载物",
     "estimatedSeconds": 20
   },
@@ -4424,6 +4730,12 @@
     "senseId": "sense:db4a1342a2ea",
     "context": "皆生寒树，负势竞上",
     "prompt": "“负”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "凭借，依仗，依靠",
+      "背，以背载物"
+    ],
     "answer": "凭借，依仗，依靠",
     "estimatedSeconds": 20
   },
@@ -4433,6 +4745,12 @@
     "senseId": "sense:1d0d00a67076",
     "context": "刻唐贤今人诗赋于其上",
     "prompt": "“赋”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "一种文体",
+      "靠近"
+    ],
     "answer": "一种文体",
     "estimatedSeconds": 20
   },
@@ -4442,6 +4760,12 @@
     "senseId": "sense:9d7d0afd7bed",
     "context": "士别三日，即更刮目相待",
     "prompt": "“更”在上面这句中的意思是？",
+    "options": [
+      "夜间计时的单位",
+      "另，另外",
+      "再",
+      "又，还"
+    ],
     "answer": "另，另外",
     "estimatedSeconds": 20
   },
@@ -4451,6 +4775,12 @@
     "senseId": "sense:b652bcd2185f",
     "context": "室中更无人，惟有乳下孙",
     "prompt": "“更”在上面这句中的意思是？",
+    "options": [
+      "再",
+      "另，另外",
+      "又，还",
+      "夜间计时的单位"
+    ],
     "answer": "再",
     "estimatedSeconds": 20
   },
@@ -4460,6 +4790,12 @@
     "senseId": "sense:eb39aac68a08",
     "context": "湖中焉得更有此人",
     "prompt": "“更”在上面这句中的意思是？",
+    "options": [
+      "再",
+      "夜间计时的单位",
+      "又，还",
+      "另，另外"
+    ],
     "answer": "又，还",
     "estimatedSeconds": 20
   },
@@ -4469,6 +4805,12 @@
     "senseId": "sense:21d1f2aed4dc",
     "context": "是日更定矣",
     "prompt": "“更”在上面这句中的意思是？",
+    "options": [
+      "另，另外",
+      "再",
+      "又，还",
+      "夜间计时的单位"
+    ],
     "answer": "夜间计时的单位",
     "estimatedSeconds": 20
   },
@@ -4478,6 +4820,12 @@
     "senseId": "sense:fb2bc943bdcb",
     "context": "苟全性命于乱世",
     "prompt": "“更”在上面这句中的意思是？",
+    "options": [
+      "另，另外",
+      "再",
+      "又，还",
+      "随便，苟且"
+    ],
     "answer": "随便，苟且",
     "estimatedSeconds": 20
   },
@@ -4487,6 +4835,12 @@
     "senseId": "sense:79c237ea1a95",
     "context": "苟全性命于乱世",
     "prompt": "“苟”在上面这句中的意思是？",
+    "options": [
+      "随便，苟且",
+      "故不为苟得也",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "随便，苟且",
     "estimatedSeconds": 20
   },
@@ -4496,6 +4850,12 @@
     "senseId": "sense:cb27f14ac551",
     "context": "故不为苟得也",
     "prompt": "“苟”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "故不为苟得也",
+      "随便，苟且"
+    ],
     "answer": "故不为苟得也",
     "estimatedSeconds": 20
   },
@@ -4505,6 +4865,12 @@
     "senseId": "sense:4f27aa630eff",
     "context": "温故而知新，可以为师矣",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "是故学然后知不足",
+      "过去，原来，照旧",
+      "原因，缘故",
+      "所以，因此"
+    ],
     "answer": "过去，原来，照旧",
     "estimatedSeconds": 20
   },
@@ -4514,6 +4880,12 @@
     "senseId": "sense:31cc1acbda8c",
     "context": "见两小儿辩斗，问其故",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "原因，缘故",
+      "过去，原来，照旧",
+      "所以，因此",
+      "是故学然后知不足"
+    ],
     "answer": "原因，缘故",
     "estimatedSeconds": 20
   },
@@ -4523,6 +4895,12 @@
     "senseId": "sense:38036c87fd8c",
     "context": "故天将降大任于是人也",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "原因，缘故",
+      "是故学然后知不足",
+      "所以，因此",
+      "过去，原来，照旧"
+    ],
     "answer": "所以，因此",
     "estimatedSeconds": 20
   },
@@ -4532,6 +4910,12 @@
     "senseId": "sense:ee0e45f1cb42",
     "context": "是故学然后知不足",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "过去，原来，照旧",
+      "原因，缘故",
+      "所以，因此",
+      "是故学然后知不足"
+    ],
     "answer": "是故学然后知不足",
     "estimatedSeconds": 20
   },
@@ -4541,6 +4925,12 @@
     "senseId": "sense:ad325ce47e93",
     "context": "故曰：教学相长也",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "原因，缘故",
+      "所以，因此",
+      "故曰：教学相长也",
+      "过去，原来，照旧"
+    ],
     "answer": "故曰：教学相长也",
     "estimatedSeconds": 20
   },
@@ -4550,6 +4940,12 @@
     "senseId": "sense:4b992bb3cebe",
     "context": "故自号曰醉翁也",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "原因，缘故",
+      "所以，因此",
+      "故自号曰醉翁也",
+      "过去，原来，照旧"
+    ],
     "answer": "故自号曰醉翁也",
     "estimatedSeconds": 20
   },
@@ -4559,6 +4955,12 @@
     "senseId": "sense:8b42646e3430",
     "context": "故临崩寄臣以大事也",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "故临崩寄臣以大事也",
+      "过去，原来，照旧",
+      "原因，缘故",
+      "所以，因此"
+    ],
     "answer": "故临崩寄臣以大事也",
     "estimatedSeconds": 20
   },
@@ -4568,6 +4970,12 @@
     "senseId": "sense:9939e79b850c",
     "context": "故五月渡泸，深入不毛",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "原因，缘故",
+      "所以，因此",
+      "故五月渡泸，深入不毛",
+      "过去，原来，照旧"
+    ],
     "answer": "故五月渡泸，深入不毛",
     "estimatedSeconds": 20
   },
@@ -4577,6 +4985,12 @@
     "senseId": "sense:27b94c6712b6",
     "context": "故克之",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "故克之",
+      "过去，原来，照旧",
+      "原因，缘故",
+      "所以，因此"
+    ],
     "answer": "故克之",
     "estimatedSeconds": 20
   },
@@ -4586,6 +5000,12 @@
     "senseId": "sense:4243c7d5458a",
     "context": "余故道为学之难以告之",
     "prompt": "“故”在上面这句中的意思是？",
+    "options": [
+      "所以，因此",
+      "④特意",
+      "过去，原来，照旧",
+      "原因，缘故"
+    ],
     "answer": "④特意",
     "estimatedSeconds": 20
   },
@@ -4595,6 +5015,12 @@
     "senseId": "sense:51bfaecc9a85",
     "context": "元方入门不顾",
     "prompt": "“顾”在上面这句中的意思是？",
+    "options": [
+      "拜访",
+      "靠近",
+      "回头看，看，视",
+      "顾野有麦场"
+    ],
     "answer": "回头看，看，视",
     "estimatedSeconds": 20
   },
@@ -4604,6 +5030,12 @@
     "senseId": "sense:7758e189093d",
     "context": "顾野有麦场",
     "prompt": "“顾”在上面这句中的意思是？",
+    "options": [
+      "顾野有麦场",
+      "回头看，看，视",
+      "拜访",
+      "靠近"
+    ],
     "answer": "顾野有麦场",
     "estimatedSeconds": 20
   },
@@ -4613,6 +5045,12 @@
     "senseId": "sense:4dd55d27488f",
     "context": "三顾臣于草庐之中",
     "prompt": "“顾”在上面这句中的意思是？",
+    "options": [
+      "拜访",
+      "回头看，看，视",
+      "顾野有麦场",
+      "靠近"
+    ],
     "answer": "拜访",
     "estimatedSeconds": 20
   },
@@ -4622,6 +5060,12 @@
     "senseId": "sense:9502363bceb3",
     "context": "启窗而观",
     "prompt": "“观”在上面这句中的意思是？",
+    "options": [
+      "(观赏)",
+      "予观夫巴陵胜状",
+      "景象",
+      "看，仔细看"
+    ],
     "answer": "看，仔细看",
     "estimatedSeconds": 20
   },
@@ -4631,6 +5075,12 @@
     "senseId": "sense:984bcff5252d",
     "context": "可远观而不可亵玩焉",
     "prompt": "“观”在上面这句中的意思是？",
+    "options": [
+      "看，仔细看",
+      "予观夫巴陵胜状",
+      "景象",
+      "(观赏)"
+    ],
     "answer": "(观赏)",
     "estimatedSeconds": 20
   },
@@ -4640,6 +5090,12 @@
     "senseId": "sense:28f1fb5f7f28",
     "context": "予观夫巴陵胜状",
     "prompt": "“观”在上面这句中的意思是？",
+    "options": [
+      "景象",
+      "予观夫巴陵胜状",
+      "看，仔细看",
+      "(观赏)"
+    ],
     "answer": "予观夫巴陵胜状",
     "estimatedSeconds": 20
   },
@@ -4649,6 +5105,12 @@
     "senseId": "sense:eb0caa7626c8",
     "context": "此则岳阳楼之大观也",
     "prompt": "“观”在上面这句中的意思是？",
+    "options": [
+      "景象",
+      "看，仔细看",
+      "(观赏)",
+      "予观夫巴陵胜状"
+    ],
     "answer": "景象",
     "estimatedSeconds": 20
   },
@@ -4658,6 +5120,12 @@
     "senseId": "sense:7dc76809165a",
     "context": "人恒过，然后能改",
     "prompt": "“过”在上面这句中的意思是？",
+    "options": [
+      "④经过",
+      "①犯错",
+      "②过分，过于",
+      "③过了，超过"
+    ],
     "answer": "①犯错",
     "estimatedSeconds": 20
   },
@@ -4667,6 +5135,12 @@
     "senseId": "sense:4f106d17fc62",
     "context": "以其境过清，不可久居",
     "prompt": "“过”在上面这句中的意思是？",
+    "options": [
+      "③过了，超过",
+      "④经过",
+      "②过分，过于",
+      "①犯错"
+    ],
     "answer": "②过分，过于",
     "estimatedSeconds": 20
   },
@@ -4676,6 +5150,12 @@
     "senseId": "sense:0fc3511fe6b7",
     "context": "过中不至，太丘舍去",
     "prompt": "“过”在上面这句中的意思是？",
+    "options": [
+      "③过了，超过",
+      "①犯错",
+      "②过分，过于",
+      "④经过"
+    ],
     "answer": "③过了，超过",
     "estimatedSeconds": 20
   },
@@ -4685,6 +5165,12 @@
     "senseId": "sense:e5f64076bf99",
     "context": "及鲁肃过寻阳，与蒙论议",
     "prompt": "“过”在上面这句中的意思是？",
+    "options": [
+      "④经过",
+      "①犯错",
+      "②过分，过于",
+      "③过了，超过"
+    ],
     "answer": "④经过",
     "estimatedSeconds": 20
   },
@@ -4694,6 +5180,12 @@
     "senseId": "sense:d460ecf8a2c2",
     "context": "好鸟相鸣，嘤嘤成韵",
     "prompt": "“好”在上面这句中的意思是？",
+    "options": [
+      "③爱好，喜爱",
+      "靠近",
+      "①美丽的",
+      "②使人满意，与“坏”相对"
+    ],
     "answer": "①美丽的",
     "estimatedSeconds": 20
   },
@@ -4703,6 +5195,12 @@
     "senseId": "sense:543a64b7de0b",
     "context": "窈窕淑女，君子好逑",
     "prompt": "“好”在上面这句中的意思是？",
+    "options": [
+      "③爱好，喜爱",
+      "靠近",
+      "②使人满意，与“坏”相对",
+      "①美丽的"
+    ],
     "answer": "②使人满意，与“坏”相对",
     "estimatedSeconds": 20
   },
@@ -4712,6 +5210,12 @@
     "senseId": "sense:235e32ce0296",
     "context": "蜀中有杜处士，好书画",
     "prompt": "“好”在上面这句中的意思是？",
+    "options": [
+      "②使人满意，与“坏”相对",
+      "靠近",
+      "③爱好，喜爱",
+      "①美丽的"
+    ],
     "answer": "③爱好，喜爱",
     "estimatedSeconds": 20
   },
@@ -4721,6 +5225,12 @@
     "senseId": "sense:87b00c3b27a9",
     "context": "阴风怒号，浊浪排空",
     "prompt": "“号”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "①大叫，呼啸",
+      "②取名号"
+    ],
     "answer": "①大叫，呼啸",
     "estimatedSeconds": 20
   },
@@ -4730,6 +5240,12 @@
     "senseId": "sense:c575f18b8602",
     "context": "故自号曰醉翁也",
     "prompt": "“号”在上面这句中的意思是？",
+    "options": [
+      "②取名号",
+      "①大叫，呼啸",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②取名号",
     "estimatedSeconds": 20
   },
@@ -4739,6 +5255,12 @@
     "senseId": "sense:a0aed56ba7d2",
     "context": "便要还家，设酒杀鸡作食",
     "prompt": "“还”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "①返回，回到",
+      "②交还，归还"
+    ],
     "answer": "①返回，回到",
     "estimatedSeconds": 20
   },
@@ -4748,6 +5270,12 @@
     "senseId": "sense:d9f094efb3d3",
     "context": "计日以还",
     "prompt": "“还”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "②交还，归还",
+      "①返回，回到",
+      "靠近"
+    ],
     "answer": "②交还，归还",
     "estimatedSeconds": 20
   },
@@ -4757,6 +5285,12 @@
     "senseId": "sense:8966b580dcd8",
     "context": "迁客骚人，多会于此",
     "prompt": "“会”在上面这句中的意思是？",
+    "options": [
+      "②适逢，恰巧遇到",
+      "③终将",
+      "靠近",
+      "①会合，聚会，集会"
+    ],
     "answer": "①会合，聚会，集会",
     "estimatedSeconds": 20
   },
@@ -4766,6 +5300,12 @@
     "senseId": "sense:cf020b36b4ad",
     "context": "会天大雨",
     "prompt": "“会”在上面这句中的意思是？",
+    "options": [
+      "③终将",
+      "靠近",
+      "②适逢，恰巧遇到",
+      "①会合，聚会，集会"
+    ],
     "answer": "②适逢，恰巧遇到",
     "estimatedSeconds": 20
   },
@@ -4775,6 +5315,12 @@
     "senseId": "sense:bb30d4dab3ea",
     "context": "会当凌绝顶",
     "prompt": "“会”在上面这句中的意思是？",
+    "options": [
+      "②适逢，恰巧遇到",
+      "靠近",
+      "③终将",
+      "①会合，聚会，集会"
+    ],
     "answer": "③终将",
     "estimatedSeconds": 20
   },
@@ -4784,6 +5330,12 @@
     "senseId": "sense:24ed892bface",
     "context": "小惠未遍，民弗从也",
     "prompt": "“惠”在上面这句中的意思是？",
+    "options": [
+      "①恩惠，(给人以)好处",
+      "②同“慧”，聪明",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "①恩惠，(给人以)好处",
     "estimatedSeconds": 20
   },
@@ -4793,6 +5345,12 @@
     "senseId": "sense:9ff41007b9bc",
     "context": "甚矣，汝之不惠",
     "prompt": "“惠”在上面这句中的意思是？",
+    "options": [
+      "①恩惠，(给人以)好处",
+      "靠近",
+      "及，等到 (……的时候)",
+      "②同“慧”，聪明"
+    ],
     "answer": "②同“慧”，聪明",
     "estimatedSeconds": 20
   },
@@ -4802,6 +5360,12 @@
     "senseId": "sense:c2984b3cf774",
     "context": "其远而无所至极邪",
     "prompt": "“极”在上面这句中的意思是？",
+    "options": [
+      "①尽头",
+      "②极点",
+      "③很，非常",
+      "计算，计量，总计"
+    ],
     "answer": "①尽头",
     "estimatedSeconds": 20
   },
@@ -4811,6 +5375,12 @@
     "senseId": "sense:4b1b2b0ac199",
     "context": "感极而悲者矣",
     "prompt": "“极”在上面这句中的意思是？",
+    "options": [
+      "①尽头",
+      "③很，非常",
+      "计算，计量，总计",
+      "②极点"
+    ],
     "answer": "②极点",
     "estimatedSeconds": 20
   },
@@ -4820,6 +5390,12 @@
     "senseId": "sense:61b19c837769",
     "context": "初极狭，才通人",
     "prompt": "“极”在上面这句中的意思是？",
+    "options": [
+      "①尽头",
+      "②极点",
+      "计算，计量，总计",
+      "③很，非常"
+    ],
     "answer": "③很，非常",
     "estimatedSeconds": 20
   },
@@ -4829,6 +5405,12 @@
     "senseId": "sense:a4ac5c581b40",
     "context": "通计一舟，为人五",
     "prompt": "“极”在上面这句中的意思是？",
+    "options": [
+      "计算，计量，总计",
+      "①尽头",
+      "②极点",
+      "③很，非常"
+    ],
     "answer": "计算，计量，总计",
     "estimatedSeconds": 20
   },
@@ -4838,6 +5420,12 @@
     "senseId": "sense:fb1026dfc90c",
     "context": "通计一舟，为人五",
     "prompt": "“计”在上面这句中的意思是？",
+    "options": [
+      "比较",
+      "计算，计量，总计",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "计算，计量，总计",
     "estimatedSeconds": 20
   },
@@ -4847,6 +5435,12 @@
     "senseId": "sense:680cf53f4c0d",
     "context": "直挂云帆济沧海",
     "prompt": "“济”在上面这句中的意思是？",
+    "options": [
+      "渡",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "渡",
     "estimatedSeconds": 20
   },
@@ -4856,6 +5450,12 @@
     "senseId": "sense:dd96bf18730e",
     "context": "乃悟前狼假寐",
     "prompt": "“假”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "①不真实的，假装，与“真”相对",
+      "②借",
+      "靠近"
+    ],
     "answer": "①不真实的，假装，与“真”相对",
     "estimatedSeconds": 20
   },
@@ -4865,6 +5465,12 @@
     "senseId": "sense:6ea18d312460",
     "context": "以是人多以书假余",
     "prompt": "“假”在上面这句中的意思是？",
+    "options": [
+      "②借",
+      "①不真实的，假装，与“真”相对",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②借",
     "estimatedSeconds": 20
   },
@@ -4874,6 +5480,12 @@
     "senseId": "sense:233056b8e7b5",
     "context": "尾搐人两股间",
     "prompt": "“间”在上面这句中的意思是？",
+    "options": [
+      "④隔开，不连接",
+      "①中间",
+      "②期间",
+      "③参与"
+    ],
     "answer": "①中间",
     "estimatedSeconds": 20
   },
@@ -4883,6 +5495,12 @@
     "senseId": "sense:d09e373dda87",
     "context": "少选之间而志在流水",
     "prompt": "“间”在上面这句中的意思是？",
+    "options": [
+      "④隔开，不连接",
+      "②期间",
+      "①中间",
+      "③参与"
+    ],
     "answer": "②期间",
     "estimatedSeconds": 20
   },
@@ -4892,6 +5510,12 @@
     "senseId": "sense:fe827bd71411",
     "context": "肉食者谋之，又何间焉",
     "prompt": "“间”在上面这句中的意思是？",
+    "options": [
+      "②期间",
+      "④隔开，不连接",
+      "③参与",
+      "①中间"
+    ],
     "answer": "③参与",
     "estimatedSeconds": 20
   },
@@ -4901,6 +5525,12 @@
     "senseId": "sense:fa1617749e8f",
     "context": "遂与外人间隔",
     "prompt": "“间”在上面这句中的意思是？",
+    "options": [
+      "③参与",
+      "④隔开，不连接",
+      "①中间",
+      "②期间"
+    ],
     "answer": "④隔开，不连接",
     "estimatedSeconds": 20
   },
@@ -4910,6 +5540,12 @@
     "senseId": "sense:c9c0309b3ec6",
     "context": "一鼓作气，再而衰，三而竭",
     "prompt": "“竭”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "穷尽 (耗尽，消失)",
+      "靠近"
+    ],
     "answer": "穷尽 (耗尽，消失)",
     "estimatedSeconds": 20
   },
@@ -4919,6 +5555,12 @@
     "senseId": "sense:4d4060c2f343",
     "context": "一屠晚归，担中肉尽，止有剩骨",
     "prompt": "“尽”在上面这句中的意思是？",
+    "options": [
+      "②全部，都 (毫无保留)",
+      "①完，没有了",
+      "(吃完)",
+      "(发挥完)"
+    ],
     "answer": "①完，没有了",
     "estimatedSeconds": 20
   },
@@ -4928,6 +5570,12 @@
     "senseId": "sense:b845a48b44c2",
     "context": "马之千里者，一食或尽粟一石",
     "prompt": "“尽”在上面这句中的意思是？",
+    "options": [
+      "②全部，都 (毫无保留)",
+      "(吃完)",
+      "①完，没有了",
+      "(发挥完)"
+    ],
     "answer": "(吃完)",
     "estimatedSeconds": 20
   },
@@ -4937,6 +5585,12 @@
     "senseId": "sense:77fb3be47302",
     "context": "策之不以其道，食之不能尽其材",
     "prompt": "“尽”在上面这句中的意思是？",
+    "options": [
+      "(发挥完)",
+      "①完，没有了",
+      "(吃完)",
+      "②全部，都 (毫无保留)"
+    ],
     "answer": "(发挥完)",
     "estimatedSeconds": 20
   },
@@ -4946,6 +5600,12 @@
     "senseId": "sense:75c65fbbf5de",
     "context": "至于斟酌损益，进尽忠言",
     "prompt": "“尽”在上面这句中的意思是？",
+    "options": [
+      "②全部，都 (毫无保留)",
+      "①完，没有了",
+      "(吃完)",
+      "(发挥完)"
+    ],
     "answer": "②全部，都 (毫无保留)",
     "estimatedSeconds": 20
   },
@@ -4955,6 +5615,12 @@
     "senseId": "sense:8eb02f5cee24",
     "context": "是进亦忧，退亦忧",
     "prompt": "“进”在上面这句中的意思是？",
+    "options": [
+      "②进献，奉献",
+      "靠近",
+      "及，等到 (……的时候)",
+      "①在朝廷做官"
+    ],
     "answer": "①在朝廷做官",
     "estimatedSeconds": 20
   },
@@ -4964,6 +5630,12 @@
     "senseId": "sense:75fe12891719",
     "context": "进尽忠言",
     "prompt": "“进”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "②进献，奉献",
+      "①在朝廷做官",
+      "靠近"
+    ],
     "answer": "②进献，奉献",
     "estimatedSeconds": 20
   },
@@ -4973,6 +5645,12 @@
     "senseId": "sense:9609a6b5573b",
     "context": "以其境过清，不可久居",
     "prompt": "“居”在上面这句中的意思是？",
+    "options": [
+      "②居住，安居",
+      "③处在，处于 (某种地位或某个地方)",
+      "④经过，表示相隔一段时间",
+      "①停留"
+    ],
     "answer": "①停留",
     "estimatedSeconds": 20
   },
@@ -4982,6 +5660,12 @@
     "senseId": "sense:9996a852e662",
     "context": "面山而居",
     "prompt": "“居”在上面这句中的意思是？",
+    "options": [
+      "①停留",
+      "③处在，处于 (某种地位或某个地方)",
+      "④经过，表示相隔一段时间",
+      "②居住，安居"
+    ],
     "answer": "②居住，安居",
     "estimatedSeconds": 20
   },
@@ -4991,6 +5675,12 @@
     "senseId": "sense:d44ad2d939d2",
     "context": "佛印居右，鲁直居左",
     "prompt": "“居”在上面这句中的意思是？",
+    "options": [
+      "③处在，处于 (某种地位或某个地方)",
+      "①停留",
+      "②居住，安居",
+      "④经过，表示相隔一段时间"
+    ],
     "answer": "③处在，处于 (某种地位或某个地方)",
     "estimatedSeconds": 20
   },
@@ -5000,6 +5690,12 @@
     "senseId": "sense:1882a7dac221",
     "context": "居无何，上至，又不得入",
     "prompt": "“居”在上面这句中的意思是？",
+    "options": [
+      "④经过，表示相隔一段时间",
+      "①停留",
+      "②居住，安居",
+      "③处在，处于 (某种地位或某个地方)"
+    ],
     "answer": "④经过，表示相隔一段时间",
     "estimatedSeconds": 20
   },
@@ -5009,6 +5705,12 @@
     "senseId": "sense:c16d6aca727e",
     "context": "胶鬲举于鱼盐之中",
     "prompt": "“举”在上面这句中的意思是？",
+    "options": [
+      "举荐，推举",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "举荐，推举",
     "estimatedSeconds": 20
   },
@@ -5018,6 +5720,12 @@
     "senseId": "sense:d68c19c0a274",
     "context": "罔不因势象形，各具情态",
     "prompt": "“具”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "①具备，具有",
+      "②通“俱”，全部，详细"
+    ],
     "answer": "①具备，具有",
     "estimatedSeconds": 20
   },
@@ -5027,6 +5735,12 @@
     "senseId": "sense:5126725070ef",
     "context": "具答之",
     "prompt": "“具”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "②通“俱”，全部，详细",
+      "①具备，具有",
+      "靠近"
+    ],
     "answer": "②通“俱”，全部，详细",
     "estimatedSeconds": 20
   },
@@ -5036,6 +5750,12 @@
     "senseId": "sense:56203e6ce0dd",
     "context": "青林翠竹，四时俱备",
     "prompt": "“俱”在上面这句中的意思是？",
+    "options": [
+      "①全，都",
+      "②一起",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "①全，都",
     "estimatedSeconds": 20
   },
@@ -5045,6 +5765,12 @@
     "senseId": "sense:e09bdec4ff1e",
     "context": "虽与之俱学",
     "prompt": "“俱”在上面这句中的意思是？",
+    "options": [
+      "②一起",
+      "①全，都",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②一起",
     "estimatedSeconds": 20
   },
@@ -5054,6 +5780,12 @@
     "senseId": "sense:12e1e7b88a69",
     "context": "聚室而谋曰",
     "prompt": "“聚”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "①集合",
+      "②聚拢"
+    ],
     "answer": "①集合",
     "estimatedSeconds": 20
   },
@@ -5063,6 +5795,12 @@
     "senseId": "sense:8bd0c7ff25ba",
     "context": "峰峦如聚",
     "prompt": "“聚”在上面这句中的意思是？",
+    "options": [
+      "②聚拢",
+      "①集合",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②聚拢",
     "estimatedSeconds": 20
   },
@@ -5072,6 +5810,12 @@
     "senseId": "sense:6f0464e1a9d4",
     "context": "其父虽善游，其子岂遽善游哉",
     "prompt": "“遽”在上面这句中的意思是？",
+    "options": [
+      "就",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "就",
     "estimatedSeconds": 20
   },
@@ -5081,6 +5825,12 @@
     "senseId": "sense:8228a4e151b6",
     "context": "孔子不能决也",
     "prompt": "“决”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "①分辨，判断",
+      "②裂开"
+    ],
     "answer": "①分辨，判断",
     "estimatedSeconds": 20
   },
@@ -5090,6 +5840,12 @@
     "senseId": "sense:b85808e5c051",
     "context": "决眦入归鸟",
     "prompt": "“决”在上面这句中的意思是？",
+    "options": [
+      "②裂开",
+      "①分辨，判断",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②裂开",
     "estimatedSeconds": 20
   },
@@ -5099,6 +5855,12 @@
     "senseId": "sense:0b860f3927ec",
     "context": "伯牙破琴绝弦",
     "prompt": "“绝”在上面这句中的意思是？",
+    "options": [
+      "①断",
+      "②与世隔绝的",
+      "③独一无二的，独特的",
+      "④极，非常"
+    ],
     "answer": "①断",
     "estimatedSeconds": 20
   },
@@ -5108,6 +5870,12 @@
     "senseId": "sense:3fe06868f338",
     "context": "率妻子邑人来此绝境",
     "prompt": "“绝”在上面这句中的意思是？",
+    "options": [
+      "④极，非常",
+      "②与世隔绝的",
+      "①断",
+      "③独一无二的，独特的"
+    ],
     "answer": "②与世隔绝的",
     "estimatedSeconds": 20
   },
@@ -5117,6 +5885,12 @@
     "senseId": "sense:6dee394b3153",
     "context": "奇山异水，天下独绝",
     "prompt": "“绝”在上面这句中的意思是？",
+    "options": [
+      "④极，非常",
+      "③独一无二的，独特的",
+      "①断",
+      "②与世隔绝的"
+    ],
     "answer": "③独一无二的，独特的",
     "estimatedSeconds": 20
   },
@@ -5126,6 +5900,12 @@
     "senseId": "sense:8b22d980550a",
     "context": "佛印绝类弥勒",
     "prompt": "“绝”在上面这句中的意思是？",
+    "options": [
+      "②与世隔绝的",
+      "③独一无二的，独特的",
+      "④极，非常",
+      "①断"
+    ],
     "answer": "④极，非常",
     "estimatedSeconds": 20
   },
@@ -5135,6 +5915,12 @@
     "senseId": "sense:121b1711ba1a",
     "context": "空谷传响，哀转久绝",
     "prompt": "“绝”在上面这句中的意思是？",
+    "options": [
+      "①断",
+      "②与世隔绝的",
+      "③独一无二的，独特的",
+      "⑤停止，消失"
+    ],
     "answer": "⑤停止，消失",
     "estimatedSeconds": 20
   },
@@ -5144,6 +5930,12 @@
     "senseId": "sense:eff649fa32f5",
     "context": "佛印绝类弥勒",
     "prompt": "“类”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "类似，像"
+    ],
     "answer": "类似，像",
     "estimatedSeconds": 20
   },
@@ -5153,6 +5945,12 @@
     "senseId": "sense:f5004decf0ea",
     "context": "有亭翼然临于泉上者，醉翁亭也",
     "prompt": "“临”在上面这句中的意思是？",
+    "options": [
+      "④正当，将要，就要",
+      "①靠近（居高面下）",
+      "②来到",
+      "③面对，对着"
+    ],
     "answer": "①靠近（居高面下）",
     "estimatedSeconds": 20
   },
@@ -5162,6 +5960,12 @@
     "senseId": "sense:f982ade7e805",
     "context": "临溪而渔",
     "prompt": "“临”在上面这句中的意思是？",
+    "options": [
+      "④正当，将要，就要",
+      "②来到",
+      "①靠近（居高面下）",
+      "③面对，对着"
+    ],
     "answer": "②来到",
     "estimatedSeconds": 20
   },
@@ -5171,6 +5975,12 @@
     "senseId": "sense:f7d5d7353784",
     "context": "把酒临风，其喜洋洋者矣",
     "prompt": "“临”在上面这句中的意思是？",
+    "options": [
+      "①靠近（居高面下）",
+      "②来到",
+      "④正当，将要，就要",
+      "③面对，对着"
+    ],
     "answer": "③面对，对着",
     "estimatedSeconds": 20
   },
@@ -5180,6 +5990,12 @@
     "senseId": "sense:c6684cc810d5",
     "context": "故临崩寄臣以大事也",
     "prompt": "“临”在上面这句中的意思是？",
+    "options": [
+      "②来到",
+      "③面对，对着",
+      "④正当，将要，就要",
+      "①靠近（居高面下）"
+    ],
     "answer": "④正当，将要，就要",
     "estimatedSeconds": 20
   },
@@ -5189,6 +6005,12 @@
     "senseId": "sense:8d32547f9645",
     "context": "困于心，衡于虑，而后作",
     "prompt": "“虑”在上面这句中的意思是？",
+    "options": [
+      "思虑，思绪，心思",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "思虑，思绪，心思",
     "estimatedSeconds": 20
   },
@@ -5198,6 +6020,12 @@
     "senseId": "sense:a71680c3b9eb",
     "context": "惟解漫天作雪飞",
     "prompt": "“漫”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "①遍，到处都是",
+      "②长"
+    ],
     "answer": "①遍，到处都是",
     "estimatedSeconds": 20
   },
@@ -5207,6 +6035,12 @@
     "senseId": "sense:05f960c9cea5",
     "context": "故园东望路漫漫",
     "prompt": "“漫”在上面这句中的意思是？",
+    "options": [
+      "②长",
+      "①遍，到处都是",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②长",
     "estimatedSeconds": 20
   },
@@ -5216,6 +6050,12 @@
     "senseId": "sense:f7decd66624e",
     "context": "斗折蛇行，明灭可见",
     "prompt": "“明”在上面这句中的意思是？",
+    "options": [
+      "②英明",
+      "③次，下一个",
+      "④明确，坚定",
+      "①明亮，光明"
+    ],
     "answer": "①明亮，光明",
     "estimatedSeconds": 20
   },
@@ -5225,6 +6065,12 @@
     "senseId": "sense:4a2fd9d6460d",
     "context": "以昭陛下平明之理",
     "prompt": "“明”在上面这句中的意思是？",
+    "options": [
+      "①明亮，光明",
+      "③次，下一个",
+      "④明确，坚定",
+      "②英明"
+    ],
     "answer": "②英明",
     "estimatedSeconds": 20
   },
@@ -5234,6 +6080,12 @@
     "senseId": "sense:dbc5143ecb43",
     "context": "越明年，政通人和",
     "prompt": "“明”在上面这句中的意思是？",
+    "options": [
+      "④明确，坚定",
+      "③次，下一个",
+      "①明亮，光明",
+      "②英明"
+    ],
     "answer": "③次，下一个",
     "estimatedSeconds": 20
   },
@@ -5243,6 +6095,12 @@
     "senseId": "sense:429d9d35cfbe",
     "context": "非淡泊无以明志",
     "prompt": "“明”在上面这句中的意思是？",
+    "options": [
+      "④明确，坚定",
+      "①明亮，光明",
+      "②英明",
+      "③次，下一个"
+    ],
     "answer": "④明确，坚定",
     "estimatedSeconds": 20
   },
@@ -5252,6 +6110,12 @@
     "senseId": "sense:98398160cdb2",
     "context": "五十而知天命",
     "prompt": "“命”在上面这句中的意思是？",
+    "options": [
+      "①命令，号令",
+      "②任命，委派",
+      "③生命，性命",
+      "④文章体裁之一"
+    ],
     "answer": "①命令，号令",
     "estimatedSeconds": 20
   },
@@ -5261,6 +6125,12 @@
     "senseId": "sense:6c91fe58cc22",
     "context": "受命以来，夙夜忧叹",
     "prompt": "“命”在上面这句中的意思是？",
+    "options": [
+      "①命令，号令",
+      "③生命，性命",
+      "④文章体裁之一",
+      "②任命，委派"
+    ],
     "answer": "②任命，委派",
     "estimatedSeconds": 20
   },
@@ -5270,6 +6140,12 @@
     "senseId": "sense:2df86c2a52c7",
     "context": "苟全性命于乱世",
     "prompt": "“命”在上面这句中的意思是？",
+    "options": [
+      "④文章体裁之一",
+      "③生命，性命",
+      "①命令，号令",
+      "②任命，委派"
+    ],
     "answer": "③生命，性命",
     "estimatedSeconds": 20
   },
@@ -5279,6 +6155,12 @@
     "senseId": "sense:754cb5cbea0e",
     "context": "《兑命》曰“学学半”",
     "prompt": "“命”在上面这句中的意思是？",
+    "options": [
+      "①命令，号令",
+      "②任命，委派",
+      "③生命，性命",
+      "④文章体裁之一"
+    ],
     "answer": "④文章体裁之一",
     "estimatedSeconds": 20
   },
@@ -5288,6 +6170,12 @@
     "senseId": "sense:bdcf66ad3d8b",
     "context": "夫大国，难测也，惧有伏焉",
     "prompt": "“难”在上面这句中的意思是？",
+    "options": [
+      "②灾难",
+      "靠近",
+      "及，等到 (……的时候)",
+      "①不容易，困难"
+    ],
     "answer": "①不容易，困难",
     "estimatedSeconds": 20
   },
@@ -5297,6 +6185,12 @@
     "senseId": "sense:e380b4694799",
     "context": "奉命于危难之间",
     "prompt": "“难”在上面这句中的意思是？",
+    "options": [
+      "①不容易，困难",
+      "靠近",
+      "及，等到 (……的时候)",
+      "②灾难"
+    ],
     "answer": "②灾难",
     "estimatedSeconds": 20
   },
@@ -5306,6 +6200,12 @@
     "senseId": "sense:cfd1e7b1369a",
     "context": "土地平旷，屋舍俨然",
     "prompt": "“平”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "①平坦",
+      "②填平，铲平",
+      "③公平，公正"
+    ],
     "answer": "①平坦",
     "estimatedSeconds": 20
   },
@@ -5315,6 +6215,12 @@
     "senseId": "sense:517c5f58770a",
     "context": "吾与汝毕力平险",
     "prompt": "“平”在上面这句中的意思是？",
+    "options": [
+      "③公平，公正",
+      "靠近",
+      "②填平，铲平",
+      "①平坦"
+    ],
     "answer": "②填平，铲平",
     "estimatedSeconds": 20
   },
@@ -5324,6 +6230,12 @@
     "senseId": "sense:64a8772ff028",
     "context": "以昭陛下平明之理",
     "prompt": "“平”在上面这句中的意思是？",
+    "options": [
+      "③公平，公正",
+      "①平坦",
+      "②填平，铲平",
+      "靠近"
+    ],
     "answer": "③公平，公正",
     "estimatedSeconds": 20
   },
@@ -5333,6 +6245,12 @@
     "senseId": "sense:59e15ebe5550",
     "context": "寡助之至，亲戚畔之",
     "prompt": "“戚”在上面这句中的意思是？",
+    "options": [
+      "比较",
+      "亲属 (指族外)",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "亲属 (指族外)",
     "estimatedSeconds": 20
   },
@@ -5342,6 +6260,12 @@
     "senseId": "sense:94152b70150a",
     "context": "知困，然后能自强也",
     "prompt": "“强”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "①强悍，强大",
+      "② (qiǎng) 竭力，尽力 (勉强，硬要)",
+      "③有余"
+    ],
     "answer": "①强悍，强大",
     "estimatedSeconds": 20
   },
@@ -5351,6 +6275,12 @@
     "senseId": "sense:bd281ebd9eed",
     "context": "余强饮三大白而别",
     "prompt": "“强”在上面这句中的意思是？",
+    "options": [
+      "①强悍，强大",
+      "③有余",
+      "靠近",
+      "② (qiǎng) 竭力，尽力 (勉强，硬要)"
+    ],
     "answer": "② (qiǎng) 竭力，尽力 (勉强，硬要)",
     "estimatedSeconds": 20
   },
@@ -5360,6 +6290,12 @@
     "senseId": "sense:420271a00daa",
     "context": "赏赐百千强",
     "prompt": "“强”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "③有余",
+      "①强悍，强大",
+      "② (qiǎng) 竭力，尽力 (勉强，硬要)"
+    ],
     "answer": "③有余",
     "estimatedSeconds": 20
   },
@@ -5369,6 +6305,12 @@
     "senseId": "sense:01fbddb36e7c",
     "context": "盗窃乱贼而不作",
     "prompt": "“窃”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "偷取"
+    ],
     "answer": "偷取",
     "estimatedSeconds": 20
   },
@@ -5378,6 +6320,12 @@
     "senseId": "sense:d72aaacc8922",
     "context": "所识穷乏者得我与",
     "prompt": "“穷”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "①穷困（生活困难）",
+      "②穷尽，完结",
+      "③极"
+    ],
     "answer": "①穷困（生活困难）",
     "estimatedSeconds": 20
   },
@@ -5387,6 +6335,12 @@
     "senseId": "sense:838dad3585ee",
     "context": "子子孙孙无穷匮也",
     "prompt": "“穷”在上面这句中的意思是？",
+    "options": [
+      "①穷困（生活困难）",
+      "③极",
+      "靠近",
+      "②穷尽，完结"
+    ],
     "answer": "②穷尽，完结",
     "estimatedSeconds": 20
   },
@@ -5396,6 +6350,12 @@
     "senseId": "sense:4689730998a8",
     "context": "穷冬烈风",
     "prompt": "“穷”在上面这句中的意思是？",
+    "options": [
+      "②穷尽，完结",
+      "靠近",
+      "③极",
+      "①穷困（生活困难）"
+    ],
     "answer": "③极",
     "estimatedSeconds": 20
   },
@@ -5405,6 +6365,12 @@
     "senseId": "sense:3d4b95cef42a",
     "context": "求二石兽于水中",
     "prompt": "“求”在上面这句中的意思是？",
+    "options": [
+      "③索取，要求，需求",
+      "靠近",
+      "①寻找，寻求",
+      "②探求，探索，追求，谋求，奢求"
+    ],
     "answer": "①寻找，寻求",
     "estimatedSeconds": 20
   },
@@ -5414,6 +6380,12 @@
     "senseId": "sense:a41d67fe9bea",
     "context": "予尝求古仁人之心",
     "prompt": "“求”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "②探求，探索，追求，谋求，奢求",
+      "①寻找，寻求",
+      "③索取，要求，需求"
+    ],
     "answer": "②探求，探索，追求，谋求，奢求",
     "estimatedSeconds": 20
   },
@@ -5423,6 +6395,12 @@
     "senseId": "sense:f2c332e503c2",
     "context": "安求其能千里也",
     "prompt": "“求”在上面这句中的意思是？",
+    "options": [
+      "③索取，要求，需求",
+      "①寻找，寻求",
+      "②探求，探索，追求，谋求，奢求",
+      "靠近"
+    ],
     "answer": "③索取，要求，需求",
     "estimatedSeconds": 20
   },
@@ -5432,6 +6410,12 @@
     "senseId": "sense:380fc572dee6",
     "context": "乃取一葫芦置于地",
     "prompt": "“取”在上面这句中的意思是？",
+    "options": [
+      "③选取，采用",
+      "靠近",
+      "①拿",
+      "②获得，讨取 (开辟)"
+    ],
     "answer": "①拿",
     "estimatedSeconds": 20
   },
@@ -5441,6 +6425,12 @@
     "senseId": "sense:b0fe412b4571",
     "context": "伐竹取道，下见小潭，水尤清冽",
     "prompt": "“取”在上面这句中的意思是？",
+    "options": [
+      "②获得，讨取 (开辟)",
+      "①拿",
+      "③选取，采用",
+      "靠近"
+    ],
     "answer": "②获得，讨取 (开辟)",
     "estimatedSeconds": 20
   },
@@ -5450,6 +6440,12 @@
     "senseId": "sense:d365ed88d080",
     "context": "舍鱼而取熊掌者也",
     "prompt": "“取”在上面这句中的意思是？",
+    "options": [
+      "③选取，采用",
+      "①拿",
+      "②获得，讨取 (开辟)",
+      "靠近"
+    ],
     "answer": "③选取，采用",
     "estimatedSeconds": 20
   },
@@ -5459,6 +6455,12 @@
     "senseId": "sense:7925552a9523",
     "context": "一狼径去",
     "prompt": "“去”在上面这句中的意思是？",
+    "options": [
+      "②距离",
+      "靠近",
+      "①离开",
+      "(消逝，丧失)"
+    ],
     "answer": "①离开",
     "estimatedSeconds": 20
   },
@@ -5468,6 +6470,12 @@
     "senseId": "sense:2ea572abb32d",
     "context": "意与日去，遂成枯落",
     "prompt": "“去”在上面这句中的意思是？",
+    "options": [
+      "①离开",
+      "②距离",
+      "靠近",
+      "(消逝，丧失)"
+    ],
     "answer": "(消逝，丧失)",
     "estimatedSeconds": 20
   },
@@ -5477,6 +6485,12 @@
     "senseId": "sense:6df31a571d50",
     "context": "我以日始出时去人近",
     "prompt": "“去”在上面这句中的意思是？",
+    "options": [
+      "②距离",
+      "①离开",
+      "(消逝，丧失)",
+      "靠近"
+    ],
     "answer": "②距离",
     "estimatedSeconds": 20
   },
@@ -5486,6 +6500,12 @@
     "senseId": "sense:76aaf92e62f2",
     "context": "全石以为底",
     "prompt": "“全”在上面这句中的意思是？",
+    "options": [
+      "①完整，整个",
+      "②完全，完备",
+      "③保全",
+      "靠近"
+    ],
     "answer": "①完整，整个",
     "estimatedSeconds": 20
   },
@@ -5495,6 +6515,12 @@
     "senseId": "sense:05a2ef08ff90",
     "context": "子之不知鱼之乐，全矣",
     "prompt": "“全”在上面这句中的意思是？",
+    "options": [
+      "①完整，整个",
+      "③保全",
+      "靠近",
+      "②完全，完备"
+    ],
     "answer": "②完全，完备",
     "estimatedSeconds": 20
   },
@@ -5504,6 +6530,12 @@
     "senseId": "sense:de80ae0c0a5b",
     "context": "苟全性命于乱世",
     "prompt": "“全”在上面这句中的意思是？",
+    "options": [
+      "③保全",
+      "①完整，整个",
+      "②完全，完备",
+      "靠近"
+    ],
     "answer": "③保全",
     "estimatedSeconds": 20
   },
@@ -5513,6 +6545,12 @@
     "senseId": "sense:ebfa5f23af7f",
     "context": "元方入门不顾",
     "prompt": "“入”在上面这句中的意思是？",
+    "options": [
+      "进入，与“出”相对",
+      "②在国内",
+      "(进入朝廷)",
+      "靠近"
+    ],
     "answer": "进入，与“出”相对",
     "estimatedSeconds": 20
   },
@@ -5522,6 +6560,12 @@
     "senseId": "sense:dfb261d978d3",
     "context": "入则无法家拂士",
     "prompt": "“入”在上面这句中的意思是？",
+    "options": [
+      "②在国内",
+      "进入，与“出”相对",
+      "(进入朝廷)",
+      "靠近"
+    ],
     "answer": "②在国内",
     "estimatedSeconds": 20
   },
@@ -5531,6 +6575,12 @@
     "senseId": "sense:18da06462bef",
     "context": "乃入见",
     "prompt": "“入”在上面这句中的意思是？",
+    "options": [
+      "进入，与“出”相对",
+      "②在国内",
+      "靠近",
+      "(进入朝廷)"
+    ],
     "answer": "(进入朝廷)",
     "estimatedSeconds": 20
   },
@@ -5540,6 +6590,12 @@
     "senseId": "sense:366caaf2b994",
     "context": "巍巍乎若太山",
     "prompt": "“若”在上面这句中的意思是？",
+    "options": [
+      "①像，如，似",
+      "②假如，如果",
+      "③你",
+      "靠近"
+    ],
     "answer": "①像，如，似",
     "estimatedSeconds": 20
   },
@@ -5549,6 +6605,12 @@
     "senseId": "sense:ea64c6359cbd",
     "context": "若有作奸犯科及为忠善者",
     "prompt": "“若”在上面这句中的意思是？",
+    "options": [
+      "①像，如，似",
+      "③你",
+      "靠近",
+      "②假如，如果"
+    ],
     "answer": "②假如，如果",
     "estimatedSeconds": 20
   },
@@ -5558,6 +6620,12 @@
     "senseId": "sense:266a9244a03a",
     "context": "若屈伸呼吸，终日在天中行止",
     "prompt": "“若”在上面这句中的意思是？",
+    "options": [
+      "①像，如，似",
+      "②假如，如果",
+      "靠近",
+      "③你"
+    ],
     "answer": "③你",
     "estimatedSeconds": 20
   },
@@ -5567,6 +6635,12 @@
     "senseId": "sense:48fbb928c5db",
     "context": "饮少辄醉，而年又最高",
     "prompt": "“少”在上面这句中的意思是？",
+    "options": [
+      "②缺少",
+      "③(shào)年轻，少年，年纪小",
+      "靠近",
+      "①不多，数量小"
+    ],
     "answer": "①不多，数量小",
     "estimatedSeconds": 20
   },
@@ -5576,6 +6650,12 @@
     "senseId": "sense:8cfda1b71216",
     "context": "但少闲人如吾两人者耳",
     "prompt": "“少”在上面这句中的意思是？",
+    "options": [
+      "①不多，数量小",
+      "③(shào)年轻，少年，年纪小",
+      "靠近",
+      "②缺少"
+    ],
     "answer": "②缺少",
     "estimatedSeconds": 20
   },
@@ -5585,6 +6665,12 @@
     "senseId": "sense:c38a33582d2c",
     "context": "陈涉少时，尝与人佣耕",
     "prompt": "“少”在上面这句中的意思是？",
+    "options": [
+      "③(shào)年轻，少年，年纪小",
+      "①不多，数量小",
+      "②缺少",
+      "靠近"
+    ],
     "answer": "③(shào)年轻，少年，年纪小",
     "estimatedSeconds": 20
   },
@@ -5594,6 +6680,12 @@
     "senseId": "sense:74be5303e20f",
     "context": "土地平旷，屋舍俨然",
     "prompt": "“舍”在上面这句中的意思是？",
+    "options": [
+      "②(shě)舍弃，丢弃",
+      "(同“释”，解除，消除)",
+      "靠近",
+      "①(shè)房屋，房舍"
+    ],
     "answer": "①(shè)房屋，房舍",
     "estimatedSeconds": 20
   },
@@ -5603,6 +6695,12 @@
     "senseId": "sense:d71b9d6c1c22",
     "context": "过中不至，太丘舍去",
     "prompt": "“舍”在上面这句中的意思是？",
+    "options": [
+      "②(shě)舍弃，丢弃",
+      "①(shè)房屋，房舍",
+      "(同“释”，解除，消除)",
+      "靠近"
+    ],
     "answer": "②(shě)舍弃，丢弃",
     "estimatedSeconds": 20
   },
@@ -5612,6 +6710,12 @@
     "senseId": "sense:e3e501ce87c2",
     "context": "其人舍然大喜",
     "prompt": "“舍”在上面这句中的意思是？",
+    "options": [
+      "②(shě)舍弃，丢弃",
+      "靠近",
+      "(同“释”，解除，消除)",
+      "①(shè)房屋，房舍"
+    ],
     "answer": "(同“释”，解除，消除)",
     "estimatedSeconds": 20
   },
@@ -5621,6 +6725,12 @@
     "senseId": "sense:5730e83ab1f5",
     "context": "但当涉猎，见往事耳",
     "prompt": "“涉”在上面这句中的意思是？",
+    "options": [
+      "比较",
+      "浏览，阅读",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "浏览，阅读",
     "estimatedSeconds": 20
   },
@@ -5630,6 +6740,12 @@
     "senseId": "sense:52bd03eba8aa",
     "context": "绝巘多生怪柏",
     "prompt": "“生”在上面这句中的意思是？",
+    "options": [
+      "②生存，活着",
+      "③生命",
+      "④后生，晚辈",
+      "①(草木)生长，出生，诞生"
+    ],
     "answer": "①(草木)生长，出生，诞生",
     "estimatedSeconds": 20
   },
@@ -5639,6 +6755,12 @@
     "senseId": "sense:6ac32b44d834",
     "context": "然后知生于忧患而死于安乐也",
     "prompt": "“生”在上面这句中的意思是？",
+    "options": [
+      "④后生，晚辈",
+      "②生存，活着",
+      "①(草木)生长，出生，诞生",
+      "③生命"
+    ],
     "answer": "②生存，活着",
     "estimatedSeconds": 20
   },
@@ -5648,6 +6770,12 @@
     "senseId": "sense:e7d362de5436",
     "context": "生物之以息相吹也",
     "prompt": "“生”在上面这句中的意思是？",
+    "options": [
+      "④后生，晚辈",
+      "③生命",
+      "①(草木)生长，出生，诞生",
+      "②生存，活着"
+    ],
     "answer": "③生命",
     "estimatedSeconds": 20
   },
@@ -5657,6 +6785,12 @@
     "senseId": "sense:1bbbb9672111",
     "context": "隶而从者，崔氏二小生",
     "prompt": "“生”在上面这句中的意思是？",
+    "options": [
+      "②生存，活着",
+      "③生命",
+      "④后生，晚辈",
+      "①(草木)生长，出生，诞生"
+    ],
     "answer": "④后生，晚辈",
     "estimatedSeconds": 20
   },
@@ -5666,6 +6800,12 @@
     "senseId": "sense:a730b1ec394e",
     "context": "射者中，弈者胜，觥筹交错",
     "prompt": "“胜”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "①胜利",
+      "②尽，完",
+      "③美好"
+    ],
     "answer": "①胜利",
     "estimatedSeconds": 20
   },
@@ -5675,6 +6815,12 @@
     "senseId": "sense:cc19dd1b7f7b",
     "context": "臣不胜受恩感激",
     "prompt": "“胜”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "②尽，完",
+      "①胜利",
+      "③美好"
+    ],
     "answer": "②尽，完",
     "estimatedSeconds": 20
   },
@@ -5684,6 +6830,12 @@
     "senseId": "sense:c82bd2138668",
     "context": "予观夫巴陵胜状，在洞庭一湖",
     "prompt": "“胜”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "③美好",
+      "①胜利",
+      "②尽，完"
+    ],
     "answer": "③美好",
     "estimatedSeconds": 20
   },
@@ -5693,6 +6845,12 @@
     "senseId": "sense:b47da44f8230",
     "context": "十年春，齐师伐我",
     "prompt": "“师”在上面这句中的意思是？",
+    "options": [
+      "①军队",
+      "②老师",
+      "③首都，京城",
+      "靠近"
+    ],
     "answer": "①军队",
     "estimatedSeconds": 20
   },
@@ -5702,6 +6860,12 @@
     "senseId": "sense:d085b95a0f35",
     "context": "温故而知新，可以为师矣",
     "prompt": "“师”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "②老师",
+      "①军队",
+      "③首都，京城"
+    ],
     "answer": "②老师",
     "estimatedSeconds": 20
   },
@@ -5711,6 +6875,12 @@
     "senseId": "sense:48ef96b20fd6",
     "context": "余朝京师，生以乡人子谒余",
     "prompt": "“师”在上面这句中的意思是？",
+    "options": [
+      "③首都，京城",
+      "①军队",
+      "②老师",
+      "靠近"
+    ],
     "answer": "③首都，京城",
     "estimatedSeconds": 20
   },
@@ -5720,6 +6890,12 @@
     "senseId": "sense:84f428204bea",
     "context": "实是欲界之仙都",
     "prompt": "“实”在上面这句中的意思是？",
+    "options": [
+      "①实际，事实 (实在)",
+      "②诚实，真实",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "①实际，事实 (实在)",
     "estimatedSeconds": 20
   },
@@ -5729,6 +6905,12 @@
     "senseId": "sense:935aacb8561d",
     "context": "此皆良实",
     "prompt": "“实”在上面这句中的意思是？",
+    "options": [
+      "②诚实，真实",
+      "①实际，事实 (实在)",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②诚实，真实",
     "estimatedSeconds": 20
   },
@@ -5738,6 +6920,12 @@
     "senseId": "sense:34593ba80386",
     "context": "弗食，不知其旨也",
     "prompt": "“食”在上面这句中的意思是？",
+    "options": [
+      "③供养，给……吃",
+      "靠近",
+      "①吃，吃饭",
+      "②粮食，食物"
+    ],
     "answer": "①吃，吃饭",
     "estimatedSeconds": 20
   },
@@ -5747,6 +6935,12 @@
     "senseId": "sense:3d15a58b07f0",
     "context": "一箪食，一瓢饮，在陋巷",
     "prompt": "“食”在上面这句中的意思是？",
+    "options": [
+      "②粮食，食物",
+      "①吃，吃饭",
+      "③供养，给……吃",
+      "靠近"
+    ],
     "answer": "②粮食，食物",
     "estimatedSeconds": 20
   },
@@ -5756,6 +6950,12 @@
     "senseId": "sense:b306c0c43c88",
     "context": "主人日再食",
     "prompt": "“食”在上面这句中的意思是？",
+    "options": [
+      "③供养，给……吃",
+      "①吃，吃饭",
+      "②粮食，食物",
+      "靠近"
+    ],
     "answer": "③供养，给……吃",
     "estimatedSeconds": 20
   },
@@ -5765,6 +6965,12 @@
     "senseId": "sense:55ebc83b4487",
     "context": "得一人之使，非得一人于井中也",
     "prompt": "“使”在上面这句中的意思是？",
+    "options": [
+      "①使唤，派遣",
+      "②让，叫，令；使得，致使",
+      "③出使",
+      "④使节"
+    ],
     "answer": "①使唤，派遣",
     "estimatedSeconds": 20
   },
@@ -5774,6 +6980,12 @@
     "senseId": "sense:7a9c95beccb2",
     "context": "使弈秋诲二人弈",
     "prompt": "“使”在上面这句中的意思是？",
+    "options": [
+      "④使节",
+      "②让，叫，令；使得，致使",
+      "①使唤，派遣",
+      "③出使"
+    ],
     "answer": "②让，叫，令；使得，致使",
     "estimatedSeconds": 20
   },
@@ -5783,6 +6995,12 @@
     "senseId": "sense:6889930f0fd0",
     "context": "安陵君因使唐雎使于秦",
     "prompt": "“使”在上面这句中的意思是？",
+    "options": [
+      "④使节",
+      "③出使",
+      "①使唤，派遣",
+      "②让，叫，令；使得，致使"
+    ],
     "answer": "③出使",
     "estimatedSeconds": 20
   },
@@ -5792,6 +7010,12 @@
     "senseId": "sense:b422b58e1f79",
     "context": "于是上乃使使持节诏将军",
     "prompt": "“使”在上面这句中的意思是？",
+    "options": [
+      "①使唤，派遣",
+      "②让，叫，令；使得，致使",
+      "③出使",
+      "④使节"
+    ],
     "answer": "④使节",
     "estimatedSeconds": 20
   },
@@ -5801,6 +7025,12 @@
     "senseId": "sense:0c9c5e3e60cd",
     "context": "使人之所恶莫甚于死者",
     "prompt": "“使”在上面这句中的意思是？",
+    "options": [
+      "②让，叫，令；使得，致使",
+      "③出使",
+      "⑤假使，纵使，即使",
+      "①使唤，派遣"
+    ],
     "answer": "⑤假使，纵使，即使",
     "estimatedSeconds": 20
   },
@@ -5810,6 +7040,12 @@
     "senseId": "sense:a8646c51663a",
     "context": "有卖油翁释担而立",
     "prompt": "“释”在上面这句中的意思是？",
+    "options": [
+      "比较",
+      "放下",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "放下",
     "estimatedSeconds": 20
   },
@@ -5819,6 +7055,12 @@
     "senseId": "sense:2a6786a0e7c4",
     "context": "百里奚举于市",
     "prompt": "“市”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "①市场，集市",
+      "②买",
+      "靠近"
+    ],
     "answer": "①市场，集市",
     "estimatedSeconds": 20
   },
@@ -5828,6 +7070,12 @@
     "senseId": "sense:be760966ebc8",
     "context": "愿为市鞍马，从此替爷征",
     "prompt": "“市”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "②买",
+      "①市场，集市"
+    ],
     "answer": "②买",
     "estimatedSeconds": 20
   },
@@ -5837,6 +7085,12 @@
     "senseId": "sense:efe3a9e6440b",
     "context": "子何恃而往",
     "prompt": "“恃”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "依赖，倚仗",
+      "靠近"
+    ],
     "answer": "依赖，倚仗",
     "estimatedSeconds": 20
   },
@@ -5846,6 +7100,12 @@
     "senseId": "sense:400bddd12065",
     "context": "以刀劈狼首，又数刀毙之",
     "prompt": "“数”在上面这句中的意思是？",
+    "options": [
+      "②计算，点数",
+      "靠近",
+      "及，等到 (……的时候)",
+      "①几，几个"
+    ],
     "answer": "①几，几个",
     "estimatedSeconds": 20
   },
@@ -5855,6 +7115,12 @@
     "senseId": "sense:9d8bfd52edec",
     "context": "所宝以百数",
     "prompt": "“数”在上面这句中的意思是？",
+    "options": [
+      "②计算，点数",
+      "①几，几个",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②计算，点数",
     "estimatedSeconds": 20
   },
@@ -5864,6 +7130,12 @@
     "senseId": "sense:a54d7ed4d82e",
     "context": "及郡下，诣太守，说如此",
     "prompt": "“说”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "①陈述，解说，讲",
+      "②古代的一种文体",
+      "③(yuè)同“悦”,愉快，高兴"
+    ],
     "answer": "①陈述，解说，讲",
     "estimatedSeconds": 20
   },
@@ -5873,6 +7145,12 @@
     "senseId": "sense:9cf9be6ef444",
     "context": "爱莲说",
     "prompt": "“说”在上面这句中的意思是？",
+    "options": [
+      "①陈述，解说，讲",
+      "③(yuè)同“悦”,愉快，高兴",
+      "靠近",
+      "②古代的一种文体"
+    ],
     "answer": "②古代的一种文体",
     "estimatedSeconds": 20
   },
@@ -5882,6 +7160,12 @@
     "senseId": "sense:f8a2b9526277",
     "context": "学而时习之，不亦说乎",
     "prompt": "“说”在上面这句中的意思是？",
+    "options": [
+      "②古代的一种文体",
+      "靠近",
+      "③(yuè)同“悦”,愉快，高兴",
+      "①陈述，解说，讲"
+    ],
     "answer": "③(yuè)同“悦”,愉快，高兴",
     "estimatedSeconds": 20
   },
@@ -5891,6 +7175,12 @@
     "senseId": "sense:680ee2f09b9e",
     "context": "春冬之时，则素湍绿潭",
     "prompt": "“素”在上面这句中的意思是？",
+    "options": [
+      "①白的，白色的",
+      "②朴素，不加装饰",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "①白的，白色的",
     "estimatedSeconds": 20
   },
@@ -5900,6 +7190,12 @@
     "senseId": "sense:fa4296a5f955",
     "context": "可以调素琴，阅金经",
     "prompt": "“素”在上面这句中的意思是？",
+    "options": [
+      "②朴素，不加装饰",
+      "①白的，白色的",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②朴素，不加装饰",
     "estimatedSeconds": 20
   },
@@ -5909,6 +7205,12 @@
     "senseId": "sense:4a2eda72173b",
     "context": "日初出沧沧凉凉，及其日中如探汤",
     "prompt": "“汤”在上面这句中的意思是？",
+    "options": [
+      "①热水，开水",
+      "②( shāng ) 水流大而急的样子",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "①热水，开水",
     "estimatedSeconds": 20
   },
@@ -5918,6 +7220,12 @@
     "senseId": "sense:24ee845fd8ec",
     "context": "汤汤乎若流水",
     "prompt": "“汤”在上面这句中的意思是？",
+    "options": [
+      "①热水，开水",
+      "靠近",
+      "及，等到 (……的时候)",
+      "②( shāng ) 水流大而急的样子"
+    ],
     "answer": "②( shāng ) 水流大而急的样子",
     "estimatedSeconds": 20
   },
@@ -5927,6 +7235,12 @@
     "senseId": "sense:67e62029b688",
     "context": "亦免冠徒跣，以头抢地尔",
     "prompt": "“徒”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "空，光"
+    ],
     "answer": "空，光",
     "estimatedSeconds": 20
   },
@@ -5936,6 +7250,12 @@
     "senseId": "sense:39f4d37e018e",
     "context": "出则无敌国外患者，国恒亡",
     "prompt": "“亡”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "①灭亡，死亡",
+      "②(wú)无，没有",
+      "靠近"
+    ],
     "answer": "①灭亡，死亡",
     "estimatedSeconds": 20
   },
@@ -5945,6 +7265,12 @@
     "senseId": "sense:d14235c701a3",
     "context": "河曲智叟亡以应",
     "prompt": "“亡”在上面这句中的意思是？",
+    "options": [
+      "②(wú)无，没有",
+      "①灭亡，死亡",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②(wú)无，没有",
     "estimatedSeconds": 20
   },
@@ -5954,6 +7280,12 @@
     "senseId": "sense:43ebb000931a",
     "context": "与人期行，相委而去",
     "prompt": "“委”在上面这句中的意思是？",
+    "options": [
+      "事务，事情",
+      "靠近",
+      "及，等到 (……的时候)",
+      "抛弃，舍弃"
+    ],
     "answer": "抛弃，舍弃",
     "estimatedSeconds": 20
   },
@@ -5963,6 +7295,12 @@
     "senseId": "sense:08f7b483e833",
     "context": "蒙辞以军中多务",
     "prompt": "“委”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "事务，事情",
+      "抛弃，舍弃"
+    ],
     "answer": "事务，事情",
     "estimatedSeconds": 20
   },
@@ -5972,6 +7310,12 @@
     "senseId": "sense:eb613c17fe4d",
     "context": "经纶世务者，窥谷忘反",
     "prompt": "“务”在上面这句中的意思是？",
+    "options": [
+      "经纶世务者，窥谷忘反",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "经纶世务者，窥谷忘反",
     "estimatedSeconds": 20
   },
@@ -5981,6 +7325,12 @@
     "senseId": "sense:82bb974cdc0e",
     "context": "芳草鲜美，落英缤纷",
     "prompt": "“鲜”在上面这句中的意思是？",
+    "options": [
+      "③ ( xiǎn)少",
+      "靠近",
+      "①鲜艳，鲜明",
+      "②滋味鲜美"
+    ],
     "answer": "①鲜艳，鲜明",
     "estimatedSeconds": 20
   },
@@ -5990,6 +7340,12 @@
     "senseId": "sense:c2d3cd14fb12",
     "context": "无鲜肥滋味之享",
     "prompt": "“鲜”在上面这句中的意思是？",
+    "options": [
+      "②滋味鲜美",
+      "①鲜艳，鲜明",
+      "③ ( xiǎn)少",
+      "靠近"
+    ],
     "answer": "②滋味鲜美",
     "estimatedSeconds": 20
   },
@@ -5999,6 +7355,12 @@
     "senseId": "sense:2a05049de525",
     "context": "菊之爱，陶后鲜有闻",
     "prompt": "“鲜”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "③ ( xiǎn)少",
+      "①鲜艳，鲜明",
+      "②滋味鲜美"
+    ],
     "answer": "③ ( xiǎn)少",
     "estimatedSeconds": 20
   },
@@ -6008,6 +7370,12 @@
     "senseId": "sense:f28617752b35",
     "context": "狼不敢前，眈眈相向",
     "prompt": "“向”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "①对着，朝着",
+      "②过去的，先前的，原来的",
+      "靠近"
+    ],
     "answer": "①对着，朝着",
     "estimatedSeconds": 20
   },
@@ -6017,6 +7385,12 @@
     "senseId": "sense:130cd1101de0",
     "context": "便扶向路，处处志之",
     "prompt": "“向”在上面这句中的意思是？",
+    "options": [
+      "①对着，朝着",
+      "靠近",
+      "及，等到 (……的时候)",
+      "②过去的，先前的，原来的"
+    ],
     "answer": "②过去的，先前的，原来的",
     "estimatedSeconds": 20
   },
@@ -6026,6 +7400,12 @@
     "senseId": "sense:f4c7741402fc",
     "context": "愿陛下托臣以讨贼兴复之效",
     "prompt": "“效”在上面这句中的意思是？",
+    "options": [
+      "①功效",
+      "②效果，见效，奏效",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "①功效",
     "estimatedSeconds": 20
   },
@@ -6035,6 +7415,12 @@
     "senseId": "sense:fc350f5c23fc",
     "context": "夙夜忧叹，恐托付不效",
     "prompt": "“效”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "②效果，见效，奏效",
+      "①功效",
+      "靠近"
+    ],
     "answer": "②效果，见效，奏效",
     "estimatedSeconds": 20
   },
@@ -6044,6 +7430,12 @@
     "senseId": "sense:e6d9a7004f10",
     "context": "使人称谢",
     "prompt": "“谢”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "①问候",
+      "②道歉"
+    ],
     "answer": "①问候",
     "estimatedSeconds": 20
   },
@@ -6053,6 +7445,12 @@
     "senseId": "sense:4dd5aeacacc5",
     "context": "秦王色挠，长跪而谢之",
     "prompt": "“谢”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "②道歉",
+      "①问候",
+      "靠近"
+    ],
     "answer": "②道歉",
     "estimatedSeconds": 20
   },
@@ -6062,6 +7460,12 @@
     "senseId": "sense:bc16c33efee3",
     "context": "日中不至，则是无信",
     "prompt": "“信”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "①信用，诚信 (讲信用)",
+      "②相信，信任"
+    ],
     "answer": "①信用，诚信 (讲信用)",
     "estimatedSeconds": 20
   },
@@ -6071,6 +7475,12 @@
     "senseId": "sense:40032753301a",
     "context": "愿陛下亲之信之",
     "prompt": "“信”在上面这句中的意思是？",
+    "options": [
+      "①信用，诚信 (讲信用)",
+      "靠近",
+      "及，等到 (……的时候)",
+      "②相信，信任"
+    ],
     "answer": "②相信，信任",
     "estimatedSeconds": 20
   },
@@ -6080,6 +7490,12 @@
     "senseId": "sense:d719c3562de7",
     "context": "陈太丘与友期行",
     "prompt": "“行”在上面这句中的意思是？",
+    "options": [
+      "①行走",
+      "(爬行)",
+      "(通行，出行)",
+      "(划船，划行)"
+    ],
     "answer": "①行走",
     "estimatedSeconds": 20
   },
@@ -6089,6 +7505,12 @@
     "senseId": "sense:149d8bae2b2e",
     "context": "斗折蛇行",
     "prompt": "“行”在上面这句中的意思是？",
+    "options": [
+      "①行走",
+      "(通行，出行)",
+      "(划船，划行)",
+      "(爬行)"
+    ],
     "answer": "(爬行)",
     "estimatedSeconds": 20
   },
@@ -6098,6 +7520,12 @@
     "senseId": "sense:f9d563dd2c65",
     "context": "商旅不行",
     "prompt": "“行”在上面这句中的意思是？",
+    "options": [
+      "(通行，出行)",
+      "①行走",
+      "(爬行)",
+      "(划船，划行)"
+    ],
     "answer": "(通行，出行)",
     "estimatedSeconds": 20
   },
@@ -6107,6 +7535,12 @@
     "senseId": "sense:376f476fb99b",
     "context": "缘溪行",
     "prompt": "“行”在上面这句中的意思是？",
+    "options": [
+      "①行走",
+      "(爬行)",
+      "(通行，出行)",
+      "(划船，划行)"
+    ],
     "answer": "(划船，划行)",
     "estimatedSeconds": 20
   },
@@ -6116,6 +7550,12 @@
     "senseId": "sense:15e4652af4cc",
     "context": "行拂乱其所为",
     "prompt": "“行”在上面这句中的意思是？",
+    "options": [
+      "(爬行)",
+      "(通行，出行)",
+      "②做，实行，实施 (做事)",
+      "①行走"
+    ],
     "answer": "②做，实行，实施 (做事)",
     "estimatedSeconds": 20
   },
@@ -6125,6 +7565,12 @@
     "senseId": "sense:c62ab6a0bebf",
     "context": "夫君子之行，静以修身，俭以养德",
     "prompt": "“行”在上面这句中的意思是？",
+    "options": [
+      "(爬行)",
+      "(通行，出行)",
+      "③品德，品行",
+      "①行走"
+    ],
     "answer": "③品德，品行",
     "estimatedSeconds": 20
   },
@@ -6134,6 +7580,12 @@
     "senseId": "sense:80784eb6977e",
     "context": "必能使行阵和睦，优劣得所",
     "prompt": "“行”在上面这句中的意思是？",
+    "options": [
+      "④ (háng) 行列，指队伍，部队",
+      "①行走",
+      "(爬行)",
+      "(通行，出行)"
+    ],
     "answer": "④ (háng) 行列，指队伍，部队",
     "estimatedSeconds": 20
   },
@@ -6143,6 +7595,12 @@
     "senseId": "sense:e524f36e3ca6",
     "context": "无案牍之劳形",
     "prompt": "“形”在上面这句中的意思是？",
+    "options": [
+      "(形迹，踪迹，踪影)",
+      "靠近",
+      "①形体，躯体",
+      "②形状，样子"
+    ],
     "answer": "①形体，躯体",
     "estimatedSeconds": 20
   },
@@ -6152,6 +7610,12 @@
     "senseId": "sense:b60277760ccb",
     "context": "罔不因势象形",
     "prompt": "“形”在上面这句中的意思是？",
+    "options": [
+      "①形体，躯体",
+      "(形迹，踪迹，踪影)",
+      "靠近",
+      "②形状，样子"
+    ],
     "answer": "②形状，样子",
     "estimatedSeconds": 20
   },
@@ -6161,6 +7625,12 @@
     "senseId": "sense:7aebac36b337",
     "context": "日星隐曜，山岳潜形",
     "prompt": "“形”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "(形迹，踪迹，踪影)",
+      "①形体，躯体",
+      "②形状，样子"
+    ],
     "answer": "(形迹，踪迹，踪影)",
     "estimatedSeconds": 20
   },
@@ -6170,6 +7640,12 @@
     "senseId": "sense:6822411788ea",
     "context": "清风徐来，水波不兴",
     "prompt": "“兴”在上面这句中的意思是？",
+    "options": [
+      "①起，兴起",
+      "②兴办，创办",
+      "③兴盛，振兴，复兴",
+      "靠近"
+    ],
     "answer": "①起，兴起",
     "estimatedSeconds": 20
   },
@@ -6179,6 +7655,12 @@
     "senseId": "sense:176c6e792b4f",
     "context": "越明年，政通人和，百废具兴",
     "prompt": "“兴”在上面这句中的意思是？",
+    "options": [
+      "①起，兴起",
+      "③兴盛，振兴，复兴",
+      "靠近",
+      "②兴办，创办"
+    ],
     "answer": "②兴办，创办",
     "estimatedSeconds": 20
   },
@@ -6188,6 +7670,12 @@
     "senseId": "sense:858ced7dbdef",
     "context": "此先汉所以兴隆也",
     "prompt": "“兴”在上面这句中的意思是？",
+    "options": [
+      "②兴办，创办",
+      "靠近",
+      "③兴盛，振兴，复兴",
+      "①起，兴起"
+    ],
     "answer": "③兴盛，振兴，复兴",
     "estimatedSeconds": 20
   },
@@ -6197,6 +7685,12 @@
     "senseId": "sense:ac331a5f2699",
     "context": "徐以杓酌油沥之，自钱孔人，而钱不湿",
     "prompt": "“徐”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "缓缓地，慢慢地"
+    ],
     "answer": "缓缓地，慢慢地",
     "estimatedSeconds": 20
   },
@@ -6206,6 +7700,12 @@
     "senseId": "sense:97f9e645cfee",
     "context": "潭中鱼可百许头",
     "prompt": "“许”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "①表约数，上下，光景",
+      "②赞同，答应，应允",
+      "靠近"
+    ],
     "answer": "①表约数，上下，光景",
     "estimatedSeconds": 20
   },
@@ -6215,6 +7715,12 @@
     "senseId": "sense:87fa11f6e88d",
     "context": "杂然相许",
     "prompt": "“许”在上面这句中的意思是？",
+    "options": [
+      "②赞同，答应，应允",
+      "①表约数，上下，光景",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "②赞同，答应，应允",
     "estimatedSeconds": 20
   },
@@ -6224,6 +7730,12 @@
     "senseId": "sense:97cf15831d81",
     "context": "遂至承天寺，寻张怀民",
     "prompt": "“寻”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "①寻找，寻求，探求",
+      "②不久，随即",
+      "靠近"
+    ],
     "answer": "①寻找，寻求，探求",
     "estimatedSeconds": 20
   },
@@ -6233,6 +7745,12 @@
     "senseId": "sense:ac497098ddf7",
     "context": "未果，寻病终",
     "prompt": "“寻”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "②不久，随即",
+      "①寻找，寻求，探求"
+    ],
     "answer": "②不久，随即",
     "estimatedSeconds": 20
   },
@@ -6242,6 +7760,12 @@
     "senseId": "sense:7201a663a658",
     "context": "先帝创业未半而中道崩殂",
     "prompt": "“业”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "①事业，功业",
+      "②职业",
+      "(学业，学习的功课)"
+    ],
     "answer": "①事业，功业",
     "estimatedSeconds": 20
   },
@@ -6251,6 +7775,12 @@
     "senseId": "sense:bcbb6b75c356",
     "context": "晋太元中，武陵人捕鱼为业",
     "prompt": "“业”在上面这句中的意思是？",
+    "options": [
+      "②职业",
+      "①事业，功业",
+      "(学业，学习的功课)",
+      "靠近"
+    ],
     "answer": "②职业",
     "estimatedSeconds": 20
   },
@@ -6260,6 +7790,12 @@
     "senseId": "sense:7d06698b8a02",
     "context": "其业有不精、德有不成者",
     "prompt": "“业”在上面这句中的意思是？",
+    "options": [
+      "(学业，学习的功课)",
+      "①事业，功业",
+      "②职业",
+      "靠近"
+    ],
     "answer": "(学业，学习的功课)",
     "estimatedSeconds": 20
   },
@@ -6269,6 +7805,12 @@
     "senseId": "sense:5d9773698993",
     "context": "邻人京城氏之孀妻有遗男",
     "prompt": "“遗”在上面这句中的意思是？",
+    "options": [
+      "② (wèi) 留给，给予，赠送",
+      "靠近",
+      "及，等到 (……的时候)",
+      "①遗留，留下"
+    ],
     "answer": "①遗留，留下",
     "estimatedSeconds": 20
   },
@@ -6278,6 +7820,12 @@
     "senseId": "sense:a677c056a319",
     "context": "是以先帝简拔以遗陛下",
     "prompt": "“遗”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "② (wèi) 留给，给予，赠送",
+      "①遗留，留下",
+      "靠近"
+    ],
     "answer": "② (wèi) 留给，给予，赠送",
     "estimatedSeconds": 20
   },
@@ -6287,6 +7835,12 @@
     "senseId": "sense:e4f62a3e85aa",
     "context": "尝贻余核舟一",
     "prompt": "“贻”在上面这句中的意思是？",
+    "options": [
+      "比较",
+      "赠",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "赠",
     "estimatedSeconds": 20
   },
@@ -6296,6 +7850,12 @@
     "senseId": "sense:333b1da4a6e6",
     "context": "其船背稍夷",
     "prompt": "“夷”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "①平坦",
+      "②平易",
+      "靠近"
+    ],
     "answer": "①平坦",
     "estimatedSeconds": 20
   },
@@ -6305,6 +7865,12 @@
     "senseId": "sense:84b532f0d587",
     "context": "言和而色夷",
     "prompt": "“夷”在上面这句中的意思是？",
+    "options": [
+      "①平坦",
+      "靠近",
+      "及，等到 (……的时候)",
+      "②平易"
+    ],
     "answer": "②平易",
     "estimatedSeconds": 20
   },
@@ -6314,6 +7880,12 @@
     "senseId": "sense:d46cd241a9fe",
     "context": "览物之情，得无异乎",
     "prompt": "“异”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "①不同，不同的",
+      "(特别的，奇特的，奇异的)",
+      "②惊异，诧异，奇怪"
+    ],
     "answer": "①不同，不同的",
     "estimatedSeconds": 20
   },
@@ -6323,6 +7895,12 @@
     "senseId": "sense:5ce64da664b9",
     "context": "属引凄异",
     "prompt": "“异”在上面这句中的意思是？",
+    "options": [
+      "(特别的，奇特的，奇异的)",
+      "①不同，不同的",
+      "②惊异，诧异，奇怪",
+      "靠近"
+    ],
     "answer": "(特别的，奇特的，奇异的)",
     "estimatedSeconds": 20
   },
@@ -6332,6 +7910,12 @@
     "senseId": "sense:1550c61a6820",
     "context": "渔人甚异之",
     "prompt": "“异”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "②惊异，诧异，奇怪",
+      "①不同，不同的",
+      "(特别的，奇特的，奇异的)"
+    ],
     "answer": "②惊异，诧异，奇怪",
     "estimatedSeconds": 20
   },
@@ -6341,6 +7925,12 @@
     "senseId": "sense:a5943c5978eb",
     "context": "寒暑易节，始一反焉",
     "prompt": "“易”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "①更替",
+      "②交换",
+      "靠近"
+    ],
     "answer": "①更替",
     "estimatedSeconds": 20
   },
@@ -6350,6 +7940,12 @@
     "senseId": "sense:371048ef2e75",
     "context": "寡人欲以五百里之地易安陵",
     "prompt": "“易”在上面这句中的意思是？",
+    "options": [
+      "①更替",
+      "靠近",
+      "及，等到 (……的时候)",
+      "②交换"
+    ],
     "answer": "②交换",
     "estimatedSeconds": 20
   },
@@ -6359,6 +7955,12 @@
     "senseId": "sense:aa99d4ab23bc",
     "context": "及郡下，诣太守，说如此",
     "prompt": "“诣”在上面这句中的意思是？",
+    "options": [
+      "比较",
+      "到，到达，到……去 (拜访、谒见)",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "到，到达，到……去 (拜访、谒见)",
     "estimatedSeconds": 20
   },
@@ -6368,6 +7970,12 @@
     "senseId": "sense:9273777616c2",
     "context": "所以动心忍性，曾益其所不能",
     "prompt": "“益”在上面这句中的意思是？",
+    "options": [
+      "③更加",
+      "①增长，增加",
+      "②好处，利益",
+      "（帮助）"
+    ],
     "answer": "①增长，增加",
     "estimatedSeconds": 20
   },
@@ -6377,6 +7985,12 @@
     "senseId": "sense:6c60bd9e1227",
     "context": "至于斟酌损益，进尽忠言",
     "prompt": "“益”在上面这句中的意思是？",
+    "options": [
+      "②好处，利益",
+      "①增长，增加",
+      "（帮助）",
+      "③更加"
+    ],
     "answer": "②好处，利益",
     "estimatedSeconds": 20
   },
@@ -6386,6 +8000,12 @@
     "senseId": "sense:0e2714486120",
     "context": "必能裨补阙漏，有所广益",
     "prompt": "“益”在上面这句中的意思是？",
+    "options": [
+      "③更加",
+      "（帮助）",
+      "①增长，增加",
+      "②好处，利益"
+    ],
     "answer": "（帮助）",
     "estimatedSeconds": 20
   },
@@ -6395,6 +8015,12 @@
     "senseId": "sense:6fe740c64afa",
     "context": "香远益清",
     "prompt": "“益”在上面这句中的意思是？",
+    "options": [
+      "③更加",
+      "①增长，增加",
+      "②好处，利益",
+      "（帮助）"
+    ],
     "answer": "③更加",
     "estimatedSeconds": 20
   },
@@ -6404,6 +8030,12 @@
     "senseId": "sense:b813973220a8",
     "context": "达于汉阴，可乎",
     "prompt": "“阴”在上面这句中的意思是？",
+    "options": [
+      "②阴沉，阴冷",
+      "③树阴，阴影",
+      "靠近",
+      "①山之北，水之南"
+    ],
     "answer": "①山之北，水之南",
     "estimatedSeconds": 20
   },
@@ -6413,6 +8045,12 @@
     "senseId": "sense:c1d6454dc785",
     "context": "朝晖夕阴，气象万千",
     "prompt": "“阴”在上面这句中的意思是？",
+    "options": [
+      "③树阴，阴影",
+      "靠近",
+      "②阴沉，阴冷",
+      "①山之北，水之南"
+    ],
     "answer": "②阴沉，阴冷",
     "estimatedSeconds": 20
   },
@@ -6422,6 +8060,12 @@
     "senseId": "sense:6b12134ecbca",
     "context": "野芳发而幽香，佳木秀而繁阴",
     "prompt": "“阴”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "③树阴，阴影",
+      "①山之北，水之南",
+      "②阴沉，阴冷"
+    ],
     "answer": "③树阴，阴影",
     "estimatedSeconds": 20
   },
@@ -6431,6 +8075,12 @@
     "senseId": "sense:0b1eea2bdd77",
     "context": "不宜妄自菲薄，引喻失义",
     "prompt": "“引”在上面这句中的意思是？",
+    "options": [
+      "③延长",
+      "靠近",
+      "①称引，譬喻",
+      "②拉，牵拉"
+    ],
     "answer": "①称引，譬喻",
     "estimatedSeconds": 20
   },
@@ -6440,6 +8090,12 @@
     "senseId": "sense:ea2352515c85",
     "context": "友人惭，下车引之",
     "prompt": "“引”在上面这句中的意思是？",
+    "options": [
+      "①称引，譬喻",
+      "③延长",
+      "靠近",
+      "②拉，牵拉"
+    ],
     "answer": "②拉，牵拉",
     "estimatedSeconds": 20
   },
@@ -6449,6 +8105,12 @@
     "senseId": "sense:fa780d3aef9f",
     "context": "属引凄异",
     "prompt": "“引”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "③延长",
+      "①称引，譬喻",
+      "②拉，牵拉"
+    ],
     "answer": "③延长",
     "estimatedSeconds": 20
   },
@@ -6458,6 +8120,12 @@
     "senseId": "sense:4d36f0dbf2eb",
     "context": "而计其长曾不盈寸",
     "prompt": "“盈”在上面这句中的意思是？",
+    "options": [
+      "比较",
+      "满，充满（旺盛）",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "满，充满（旺盛）",
     "estimatedSeconds": 20
   },
@@ -6467,6 +8135,12 @@
     "senseId": "sense:df79ef84276e",
     "context": "尝贻余核舟一",
     "prompt": "“余”在上面这句中的意思是？",
+    "options": [
+      "③多，表示整数后不定的零数",
+      "④其他，其余",
+      "①我，我的",
+      "②剩下，多余"
+    ],
     "answer": "①我，我的",
     "estimatedSeconds": 20
   },
@@ -6476,6 +8150,12 @@
     "senseId": "sense:1d0bb7467af7",
     "context": "以残年余力",
     "prompt": "“余”在上面这句中的意思是？",
+    "options": [
+      "④其他，其余",
+      "②剩下，多余",
+      "①我，我的",
+      "③多，表示整数后不定的零数"
+    ],
     "answer": "②剩下，多余",
     "estimatedSeconds": 20
   },
@@ -6485,6 +8165,12 @@
     "senseId": "sense:ad832586207a",
     "context": "阅十余岁",
     "prompt": "“余”在上面这句中的意思是？",
+    "options": [
+      "①我，我的",
+      "②剩下，多余",
+      "④其他，其余",
+      "③多，表示整数后不定的零数"
+    ],
     "answer": "③多，表示整数后不定的零数",
     "estimatedSeconds": 20
   },
@@ -6494,6 +8180,12 @@
     "senseId": "sense:c8b0ccb9db82",
     "context": "余人各复延至其家，皆出酒食",
     "prompt": "“余”在上面这句中的意思是？",
+    "options": [
+      "①我，我的",
+      "②剩下，多余",
+      "③多，表示整数后不定的零数",
+      "④其他，其余"
+    ],
     "answer": "④其他，其余",
     "estimatedSeconds": 20
   },
@@ -6503,6 +8195,12 @@
     "senseId": "sense:60852fbc9e60",
     "context": "小大之狱",
     "prompt": "“狱”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "诉讼案件",
+      "靠近"
+    ],
     "answer": "诉讼案件",
     "estimatedSeconds": 20
   },
@@ -6512,6 +8210,12 @@
     "senseId": "sense:d6fb645859b6",
     "context": "虽乘奔御风，不以疾也",
     "prompt": "“御”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "驾驭",
+      "靠近"
+    ],
     "answer": "驾驭",
     "estimatedSeconds": 20
   },
@@ -6521,6 +8225,12 @@
     "senseId": "sense:b15a97c5d40f",
     "context": "缘溪行，忘路之远近",
     "prompt": "“缘”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "沿着，顺着"
+    ],
     "answer": "沿着，顺着",
     "estimatedSeconds": 20
   },
@@ -6530,6 +8240,12 @@
     "senseId": "sense:e8489e605be2",
     "context": "古语有云",
     "prompt": "“云”在上面这句中的意思是？",
+    "options": [
+      "句末语气词，无实义",
+      "天空的云，云彩",
+      "(像云一样的)",
+      "说"
+    ],
     "answer": "说",
     "estimatedSeconds": 20
   },
@@ -6539,6 +8255,12 @@
     "senseId": "sense:c06079de10d0",
     "context": "盖大苏泛赤壁云",
     "prompt": "“云”在上面这句中的意思是？",
+    "options": [
+      "(像云一样的)",
+      "句末语气词，无实义",
+      "说",
+      "天空的云，云彩"
+    ],
     "answer": "句末语气词，无实义",
     "estimatedSeconds": 20
   },
@@ -6548,6 +8270,12 @@
     "senseId": "sense:d115868cb476",
     "context": "不义而富且贵，于我如浮云",
     "prompt": "“云”在上面这句中的意思是？",
+    "options": [
+      "天空的云，云彩",
+      "说",
+      "句末语气词，无实义",
+      "(像云一样的)"
+    ],
     "answer": "天空的云，云彩",
     "estimatedSeconds": 20
   },
@@ -6557,6 +8285,12 @@
     "senseId": "sense:c5ec30a27952",
     "context": "当窗理云鬓",
     "prompt": "“云”在上面这句中的意思是？",
+    "options": [
+      "句末语气词，无实义",
+      "天空的云，云彩",
+      "(像云一样的)",
+      "说"
+    ],
     "answer": "(像云一样的)",
     "estimatedSeconds": 20
   },
@@ -6566,6 +8300,12 @@
     "senseId": "sense:867c13837528",
     "context": "子曰“汝安知鱼乐”云者",
     "prompt": "“云”在上面这句中的意思是？",
+    "options": [
+      "天空的云，云彩",
+      "如此，这样",
+      "说",
+      "句末语气词，无实义"
+    ],
     "answer": "如此，这样",
     "estimatedSeconds": 20
   },
@@ -6575,6 +8315,12 @@
     "senseId": "sense:c2bee9fb5510",
     "context": "又用篆章一",
     "prompt": "“章”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "印章",
+      "知道，明白"
+    ],
     "answer": "印章",
     "estimatedSeconds": 20
   },
@@ -6584,6 +8330,12 @@
     "senseId": "sense:992fcdc4f289",
     "context": "以我酌油知之",
     "prompt": "“章”在上面这句中的意思是？",
+    "options": [
+      "知道，明白",
+      "印章",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "知道，明白",
     "estimatedSeconds": 20
   },
@@ -6593,6 +8345,12 @@
     "senseId": "sense:68b964cf7b65",
     "context": "一狼得骨止，一狼仍从",
     "prompt": "“止”在上面这句中的意思是？",
+    "options": [
+      "停止",
+      "制止，阻止",
+      "仅，只是",
+      "靠近"
+    ],
     "answer": "停止",
     "estimatedSeconds": 20
   },
@@ -6602,6 +8360,12 @@
     "senseId": "sense:943285d9c386",
     "context": "河曲智叟笑而止之曰",
     "prompt": "“止”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "制止，阻止",
+      "停止",
+      "仅，只是"
+    ],
     "answer": "制止，阻止",
     "estimatedSeconds": 20
   },
@@ -6611,6 +8375,12 @@
     "senseId": "sense:1ce2ffe1d35d",
     "context": "担中肉尽，止有剩骨",
     "prompt": "“止”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "仅，只是",
+      "停止",
+      "制止，阻止"
+    ],
     "answer": "仅，只是",
     "estimatedSeconds": 20
   },
@@ -6620,6 +8390,12 @@
     "senseId": "sense:eda1710980f4",
     "context": "寻向所志，遂迷，不复得路",
     "prompt": "“志”在上面这句中的意思是？",
+    "options": [
+      "做标记，做记号",
+      "记载",
+      "心志，情志，志向",
+      "标记，记号"
+    ],
     "answer": "标记，记号",
     "estimatedSeconds": 20
   },
@@ -6629,6 +8405,12 @@
     "senseId": "sense:c7ce12b9204f",
     "context": "便扶向路，处处志之",
     "prompt": "“志”在上面这句中的意思是？",
+    "options": [
+      "记载",
+      "心志，情志，志向",
+      "做标记，做记号",
+      "标记，记号"
+    ],
     "answer": "做标记，做记号",
     "estimatedSeconds": 20
   },
@@ -6638,6 +8420,12 @@
     "senseId": "sense:163785dd9604",
     "context": "《齐谐》者，志怪者也",
     "prompt": "“志”在上面这句中的意思是？",
+    "options": [
+      "标记，记号",
+      "做标记，做记号",
+      "心志，情志，志向",
+      "记载"
+    ],
     "answer": "记载",
     "estimatedSeconds": 20
   },
@@ -6647,6 +8435,12 @@
     "senseId": "sense:e5adb160fcf9",
     "context": "方鼓琴而志在太山",
     "prompt": "“志”在上面这句中的意思是？",
+    "options": [
+      "心志，情志，志向",
+      "标记，记号",
+      "做标记，做记号",
+      "记载"
+    ],
     "answer": "心志，情志，志向",
     "estimatedSeconds": 20
   },
@@ -6656,6 +8450,12 @@
     "senseId": "sense:6d241fc14cce",
     "context": "必先苦其心志，劳其筋骨",
     "prompt": "“志”在上面这句中的意思是？",
+    "options": [
+      "做标记，做记号",
+      "记载",
+      "志气，意志",
+      "标记，记号"
+    ],
     "answer": "志气，意志",
     "estimatedSeconds": 20
   },
@@ -6665,6 +8465,12 @@
     "senseId": "sense:70e9332ad0b2",
     "context": "家贫，无以致书以观",
     "prompt": "“致”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "取得，得到",
+      "达到，实现"
+    ],
     "answer": "取得，得到",
     "estimatedSeconds": 20
   },
@@ -6674,6 +8480,12 @@
     "senseId": "sense:a633d66358c6",
     "context": "非宁静无以致远",
     "prompt": "“致”在上面这句中的意思是？",
+    "options": [
+      "取得，得到",
+      "靠近",
+      "及，等到 (……的时候)",
+      "达到，实现"
+    ],
     "answer": "达到，实现",
     "estimatedSeconds": 20
   },
@@ -6683,6 +8495,12 @@
     "senseId": "sense:0a35a506cb46",
     "context": "余立侍左右，援疑质理",
     "prompt": "“质”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "询问",
+      "资质"
+    ],
     "answer": "询问",
     "estimatedSeconds": 20
   },
@@ -6692,6 +8510,12 @@
     "senseId": "sense:f210f831afe2",
     "context": "德有不成者，非天质之卑",
     "prompt": "“质”在上面这句中的意思是？",
+    "options": [
+      "资质",
+      "询问",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "资质",
     "estimatedSeconds": 20
   },
@@ -6701,6 +8525,12 @@
     "senseId": "sense:b91f04790557",
     "context": "衣食所安，弗敢专也，必以分人",
     "prompt": "“专”在上面这句中的意思是？",
+    "options": [
+      "独有，独自享有",
+      "专门，专一",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "独有，独自享有",
     "estimatedSeconds": 20
   },
@@ -6710,6 +8540,12 @@
     "senseId": "sense:201f768b2419",
     "context": "则心不若余之专耳",
     "prompt": "“专”在上面这句中的意思是？",
+    "options": [
+      "专门，专一",
+      "独有，独自享有",
+      "靠近",
+      "及，等到 (……的时候)"
+    ],
     "answer": "专门，专一",
     "estimatedSeconds": 20
   },
@@ -6719,6 +8555,12 @@
     "senseId": "sense:d823cabfb8d3",
     "context": "双兔傍地走",
     "prompt": "“走”在上面这句中的意思是？",
+    "options": [
+      "足够，充足",
+      "靠近",
+      "跑，逃跑",
+      "脚"
+    ],
     "answer": "跑，逃跑",
     "estimatedSeconds": 20
   },
@@ -6728,6 +8570,12 @@
     "senseId": "sense:b420892f288e",
     "context": "细若蚊足，钩画了了",
     "prompt": "“走”在上面这句中的意思是？",
+    "options": [
+      "足够，充足",
+      "靠近",
+      "脚",
+      "跑，逃跑"
+    ],
     "answer": "脚",
     "estimatedSeconds": 20
   },
@@ -6737,6 +8585,12 @@
     "senseId": "sense:8bd303bf287c",
     "context": "是故学然后知不足",
     "prompt": "“走”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "足够，充足",
+      "跑，逃跑",
+      "脚"
+    ],
     "answer": "足够，充足",
     "estimatedSeconds": 20
   },
@@ -6746,6 +8600,12 @@
     "senseId": "sense:e26218a79d85",
     "context": "细若蚊足，钩画了了",
     "prompt": "“足”在上面这句中的意思是？",
+    "options": [
+      "脚",
+      "足够，充足",
+      "值得，够得上",
+      "靠近"
+    ],
     "answer": "脚",
     "estimatedSeconds": 20
   },
@@ -6755,6 +8615,12 @@
     "senseId": "sense:d8c2e2539d53",
     "context": "是故学然后知不足",
     "prompt": "“足”在上面这句中的意思是？",
+    "options": [
+      "足够，充足",
+      "脚",
+      "值得，够得上",
+      "靠近"
+    ],
     "answer": "足够，充足",
     "estimatedSeconds": 20
   },
@@ -6764,6 +8630,12 @@
     "senseId": "sense:dc9887339ac5",
     "context": "以为世无足复为鼓琴者",
     "prompt": "“足”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "值得，够得上",
+      "脚",
+      "足够，充足"
+    ],
     "answer": "值得，够得上",
     "estimatedSeconds": 20
   },
@@ -6773,6 +8645,12 @@
     "senseId": "sense:003d16ad84ce",
     "context": "故余虽愚，卒获有所闻",
     "prompt": "“卒”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "最后，终于"
+    ],
     "answer": "最后，终于",
     "estimatedSeconds": 20
   },
@@ -6782,6 +8660,12 @@
     "senseId": "sense:e920f5c85a06",
     "context": "困于心，衡于虑，而后作",
     "prompt": "“作”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "振作，奋发"
+    ],
     "answer": "振作，奋发",
     "estimatedSeconds": 20
   },
@@ -6791,6 +8675,12 @@
     "senseId": "sense:d3705b3f0bb6",
     "context": "少时，一狼径去，其一犬坐于前",
     "prompt": "“坐”在上面这句中的意思是？",
+    "options": [
+      "起坐而喧哗者，众宾欢也",
+      "靠近",
+      "及，等到 (……的时候)",
+      "坐着，坐下 (古人双膝着地，臀部压在脚后跟上)"
+    ],
     "answer": "坐着，坐下 (古人双膝着地，臀部压在脚后跟上)",
     "estimatedSeconds": 20
   },
@@ -6800,6 +8690,12 @@
     "senseId": "sense:71cf26bf4d6d",
     "context": "起坐而喧哗者，众宾欢也",
     "prompt": "“坐”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "起坐而喧哗者，众宾欢也",
+      "坐着，坐下 (古人双膝着地，臀部压在脚后跟上)"
+    ],
     "answer": "起坐而喧哗者，众宾欢也",
     "estimatedSeconds": 20
   },
@@ -6809,6 +8705,12 @@
     "senseId": "sense:1258bb1ddd12",
     "context": "先帝不以臣卑鄙",
     "prompt": "“卑鄙”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "社会地位低微，见识短浅",
+      "靠近"
+    ],
     "answer": "社会地位低微，见识短浅",
     "estimatedSeconds": 20
   },
@@ -6818,6 +8720,12 @@
     "senseId": "sense:9041c203a931",
     "context": "臣本布衣，躬耕于南阳",
     "prompt": "“布衣”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "平民",
+      "大王尝闻布衣之怒乎",
+      "靠近"
+    ],
     "answer": "平民",
     "estimatedSeconds": 20
   },
@@ -6827,6 +8735,12 @@
     "senseId": "sense:1da294ca791f",
     "context": "大王尝闻布衣之怒乎",
     "prompt": "“布衣”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "大王尝闻布衣之怒乎",
+      "平民"
+    ],
     "answer": "大王尝闻布衣之怒乎",
     "estimatedSeconds": 20
   },
@@ -6836,6 +8750,12 @@
     "senseId": "sense:67c2c11c5d7e",
     "context": "不宜妄自菲薄，引喻失义",
     "prompt": "“菲薄”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "轻视，看轻"
+    ],
     "answer": "轻视，看轻",
     "estimatedSeconds": 20
   },
@@ -6845,6 +8765,12 @@
     "senseId": "sense:6b057cea57ea",
     "context": "叶徒相似，其实味不同",
     "prompt": "“其实”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "其，它的。实，果实"
+    ],
     "answer": "其，它的。实，果实",
     "estimatedSeconds": 20
   },
@@ -6854,6 +8780,12 @@
     "senseId": "sense:ca0b0e879a31",
     "context": "寡助之至，亲戚畔之",
     "prompt": "“亲戚”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "内外亲属，包括父系亲属和母系亲属",
+      "靠近"
+    ],
     "answer": "内外亲属，包括父系亲属和母系亲属",
     "estimatedSeconds": 20
   },
@@ -6863,6 +8795,12 @@
     "senseId": "sense:a375be20b6a7",
     "context": "由是感激，遂许先帝以驱驰",
     "prompt": "“驱驰”在上面这句中的意思是？",
+    "options": [
+      "②策马快奔",
+      "靠近",
+      "及，等到 (……的时候)",
+      "①奔走效劳"
+    ],
     "answer": "①奔走效劳",
     "estimatedSeconds": 20
   },
@@ -6872,6 +8810,12 @@
     "senseId": "sense:501df8470e9d",
     "context": "将军曰，军中不得驱驰",
     "prompt": "“驱驰”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "②策马快奔",
+      "①奔走效劳"
+    ],
     "answer": "②策马快奔",
     "estimatedSeconds": 20
   },
@@ -6881,6 +8825,12 @@
     "senseId": "sense:851e1b947cec",
     "context": "乃不知有汉，无论魏晋",
     "prompt": "“无论”在上面这句中的意思是？",
+    "options": [
+      "不要说，更不必说",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "不要说，更不必说",
     "estimatedSeconds": 20
   },
@@ -6890,6 +8840,12 @@
     "senseId": "sense:be29f16c66e5",
     "context": "牺牲玉帛，弗敢加也，必以信",
     "prompt": "“牺牲”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "指祭祀用的纯色全体牲畜"
+    ],
     "answer": "指祭祀用的纯色全体牲畜",
     "estimatedSeconds": 20
   },
@@ -6899,6 +8855,12 @@
     "senseId": "sense:d0ab9e563c1f",
     "context": "谈笑有鸿儒，往来无白丁",
     "prompt": "“鸿儒”在上面这句中的意思是？",
+    "options": [
+      "博学的人",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "博学的人",
     "estimatedSeconds": 20
   },
@@ -6908,6 +8870,12 @@
     "senseId": "sense:a515c8de2f3e",
     "context": "谈笑有鸿儒，往来无白丁",
     "prompt": "“白丁”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "平民，指没有功名的人",
+      "靠近"
+    ],
     "answer": "平民，指没有功名的人",
     "estimatedSeconds": 20
   },
@@ -6917,6 +8885,12 @@
     "senseId": "sense:ede0d485de61",
     "context": "阡陌交通，鸡犬相闻",
     "prompt": "“阡陌”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "田间小路",
+      "靠近"
+    ],
     "answer": "田间小路",
     "estimatedSeconds": 20
   },
@@ -6926,6 +8900,12 @@
     "senseId": "sense:470ccd319fbd",
     "context": "阡陌交通，鸡犬相闻",
     "prompt": "“交通”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "交错相通"
+    ],
     "answer": "交错相通",
     "estimatedSeconds": 20
   },
@@ -6935,6 +8915,12 @@
     "senseId": "sense:83ac23c62ff2",
     "context": "后遂无问津者",
     "prompt": "“问津”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "比较",
+      "询问渡口，探求，访求",
+      "靠近"
+    ],
     "answer": "询问渡口，探求，访求",
     "estimatedSeconds": 20
   },
@@ -6944,6 +8930,12 @@
     "senseId": "sense:4b82f3b4e7f1",
     "context": "率妻子邑人来此绝境",
     "prompt": "“绝境”在上面这句中的意思是？",
+    "options": [
+      "与人世隔绝的地方",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "与人世隔绝的地方",
     "estimatedSeconds": 20
   },
@@ -6953,6 +8945,12 @@
     "senseId": "sense:afa891495e86",
     "context": "率妻子邑人来此绝境",
     "prompt": "“妻子”在上面这句中的意思是？",
+    "options": [
+      "妻子儿女",
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较"
+    ],
     "answer": "妻子儿女",
     "estimatedSeconds": 20
   },
@@ -6962,6 +8960,12 @@
     "senseId": "sense:09dff2650ec2",
     "context": "伯牙鼓琴，锺子期听之",
     "prompt": "“之”在上面这句中的意思是？",
+    "options": [
+      "②助词。相当于“的”",
+      "靠近",
+      "及，等到 (……的时候)",
+      "①代词。可译为“他 (她)”\n“他 (她) 们”“我”“我\n们” “它”“它们”"
+    ],
     "answer": "①代词。可译为“他 (她)”\n“他 (她) 们”“我”“我\n们” “它”“它们”",
     "estimatedSeconds": 20
   },
@@ -6971,6 +8975,12 @@
     "senseId": "sense:2cb7e453d233",
     "context": "少选之间而志在流水",
     "prompt": "“之”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "②助词。相当于“的”",
+      "①代词。可译为“他 (她)”\n“他 (她) 们”“我”“我\n们” “它”“它们”"
+    ],
     "answer": "②助词。相当于“的”",
     "estimatedSeconds": 20
   },
@@ -6980,6 +8990,12 @@
     "senseId": "sense:dd27a9683add",
     "context": "人不堪其忧，回也不改其乐",
     "prompt": "“其”在上面这句中的意思是？",
+    "options": [
+      "及，等到 (……的时候)",
+      "① 代 词 。 可 译 为 “ 他 ( 她 ) 的 ” “ 他 ( 她 ) 们 的 ” “ 它 的 ” 等",
+      "② 副 词 。 放 在 句 首 或 句 中，表 示 推 测、反 诘、期 望、祈 使 等 语 气。视 情 况 可 译 为 “ 大 概 ” “ 怎 么 ” “ 难 道 ” “ 还 是 ” 等，或 不 翻 译",
+      "靠近"
+    ],
     "answer": "① 代 词 。 可 译 为 “ 他 ( 她 ) 的 ” “ 他 ( 她 ) 们 的 ” “ 它 的 ” 等",
     "estimatedSeconds": 20
   },
@@ -6989,6 +9005,12 @@
     "senseId": "sense:cdba397abf8b",
     "context": "其如土石何",
     "prompt": "“其”在上面这句中的意思是？",
+    "options": [
+      "① 代 词 。 可 译 为 “ 他 ( 她 ) 的 ” “ 他 ( 她 ) 们 的 ” “ 它 的 ” 等",
+      "靠近",
+      "及，等到 (……的时候)",
+      "② 副 词 。 放 在 句 首 或 句 中，表 示 推 测、反 诘、期 望、祈 使 等 语 气。视 情 况 可 译 为 “ 大 概 ” “ 怎 么 ” “ 难 道 ” “ 还 是 ” 等，或 不 翻 译"
+    ],
     "answer": "② 副 词 。 放 在 句 首 或 句 中，表 示 推 测、反 诘、期 望、祈 使 等 语 气。视 情 况 可 译 为 “ 大 概 ” “ 怎 么 ” “ 难 道 ” “ 还 是 ” 等，或 不 翻 译",
     "estimatedSeconds": 20
   },
@@ -6998,6 +9020,12 @@
     "senseId": "sense:edc1e544aae3",
     "context": "杂然而前陈者",
     "prompt": "“而”在上面这句中的意思是？",
+    "options": [
+      "靠近",
+      "及，等到 (……的时候)",
+      "比较",
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译"
+    ],
     "answer": "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
     "estimatedSeconds": 20
   },
@@ -7007,6 +9035,12 @@
     "senseId": "sense:5dd03b10cf67",
     "context": "杂然而前陈者",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "④ 连 词。表 示 因 果 或 目 的",
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译"
+    ],
     "answer": "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
     "estimatedSeconds": 20
   },
@@ -7016,6 +9050,12 @@
     "senseId": "sense:5af42f6eb790",
     "context": "学而不思则罔",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "④ 连 词。表 示 因 果 或 目 的",
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译"
+    ],
     "answer": "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
     "estimatedSeconds": 20
   },
@@ -7025,6 +9065,12 @@
     "senseId": "sense:21f33f492df6",
     "context": "我以日初出远，而日中时近也",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "④ 连 词。表 示 因 果 或 目 的",
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译"
+    ],
     "answer": "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
     "estimatedSeconds": 20
   },
@@ -7034,6 +9080,12 @@
     "senseId": "sense:c020870cfaf1",
     "context": "方鼓琴而志在太山",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "④ 连 词。表 示 因 果 或 目 的"
+    ],
     "answer": "④ 连 词。表 示 因 果 或 目 的",
     "estimatedSeconds": 20
   },
@@ -7043,6 +9095,12 @@
     "senseId": "sense:ca97160b367e",
     "context": "已而夕阳在山",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "⑤ 副 词 的 词 尾。表 示 仅 止 于 此，相 当 于 “ 罢 了”"
+    ],
     "answer": "⑤ 副 词 的 词 尾。表 示 仅 止 于 此，相 当 于 “ 罢 了”",
     "estimatedSeconds": 20
   },
@@ -7052,6 +9110,12 @@
     "senseId": "sense:d824daa0acb2",
     "context": "以其境过清",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "⑥ 介 词。因 为",
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译"
+    ],
     "answer": "⑥ 介 词。因 为",
     "estimatedSeconds": 20
   },
@@ -7061,6 +9125,12 @@
     "senseId": "sense:3a67866beddd",
     "context": "所宝以百数",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "⑦ 介 词。( 用、把、拿)"
+    ],
     "answer": "⑦ 介 词。( 用、把、拿)",
     "estimatedSeconds": 20
   },
@@ -7070,6 +9140,12 @@
     "senseId": "sense:4f60ab8e20e1",
     "context": "可以调素琴",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "⑧ 介 词。凭 借、按 照",
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译"
+    ],
     "answer": "⑧ 介 词。凭 借、按 照",
     "estimatedSeconds": 20
   },
@@ -7079,6 +9155,12 @@
     "senseId": "sense:f1c314332f7e",
     "context": "近岸，卷石底以出",
     "prompt": "“以”在上面这句中的意思是？",
+    "options": [
+      "③ 连 词。表 示 转 折 关 系，可 译 为 “ 但 是”“ 却”",
+      "⑨ 连 词。相 当 于 “ 而”",
+      "① 连 词，不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译",
+      "② 连 词。不 译，或 译 为 “ 地 ” 连 词。表 示 并 列 关 系，可 不 译"
+    ],
     "answer": "⑨ 连 词。相 当 于 “ 而”",
     "estimatedSeconds": 20
   },
@@ -7088,6 +9170,12 @@
     "senseId": "sense:cfa044cfcdc9",
     "context": "禽兽之变诈几何哉",
     "prompt": "“何”在上面这句中的意思是？",
+    "options": [
+      "③不久；很短时间之后",
+      "靠近",
+      "①疑问代词。表示询问或反问。相当于“什么”“怎么”“为什么”",
+      "②表示程度深，可译为“多么”“何等”等"
+    ],
     "answer": "①疑问代词。表示询问或反问。相当于“什么”“怎么”“为什么”",
     "estimatedSeconds": 20
   },
@@ -7097,6 +9185,12 @@
     "senseId": "sense:5cb29c9bce83",
     "context": "此乐何极",
     "prompt": "“何”在上面这句中的意思是？",
+    "options": [
+      "③不久；很短时间之后",
+      "靠近",
+      "②表示程度深，可译为“多么”“何等”等",
+      "①疑问代词。表示询问或反问。相当于“什么”“怎么”“为什么”"
+    ],
     "answer": "②表示程度深，可译为“多么”“何等”等",
     "estimatedSeconds": 20
   },
@@ -7106,6 +9200,12 @@
     "senseId": "sense:b113bd9de522",
     "context": "居无何，上至，又不得入",
     "prompt": "“何”在上面这句中的意思是？",
+    "options": [
+      "③不久；很短时间之后",
+      "①疑问代词。表示询问或反问。相当于“什么”“怎么”“为什么”",
+      "②表示程度深，可译为“多么”“何等”等",
+      "靠近"
+    ],
     "answer": "③不久；很短时间之后",
     "estimatedSeconds": 20
   },
@@ -7115,6 +9215,12 @@
     "senseId": "sense:40e8aa08ed54",
     "context": "吾十有五而志于学",
     "prompt": "“于”在上面这句中的意思是？",
+    "options": [
+      "(表示比较，相当于“比”)",
+      "(在被动句中引出动作的主动者，相当于“被”)",
+      "(表示把动作、行为加给对方，相当于“给”)",
+      "介词。引出动作的处所、时间和对象。可译为“在”“到”“向”“对于”等"
+    ],
     "answer": "介词。引出动作的处所、时间和对象。可译为“在”“到”“向”“对于”等",
     "estimatedSeconds": 20
   },
@@ -7124,6 +9230,12 @@
     "senseId": "sense:2debbbdfc24c",
     "context": "所欲有甚于生者，故不为苟得也",
     "prompt": "“于”在上面这句中的意思是？",
+    "options": [
+      "(在被动句中引出动作的主动者，相当于“被”)",
+      "(表示把动作、行为加给对方，相当于“给”)",
+      "(表示比较，相当于“比”)",
+      "介词。引出动作的处所、时间和对象。可译为“在”“到”“向”“对于”等"
+    ],
     "answer": "(表示比较，相当于“比”)",
     "estimatedSeconds": 20
   },
@@ -7133,6 +9245,12 @@
     "senseId": "sense:3508ec846122",
     "context": "闻之于宋君",
     "prompt": "“于”在上面这句中的意思是？",
+    "options": [
+      "(表示把动作、行为加给对方，相当于“给”)",
+      "(在被动句中引出动作的主动者，相当于“被”)",
+      "介词。引出动作的处所、时间和对象。可译为“在”“到”“向”“对于”等",
+      "(表示比较，相当于“比”)"
+    ],
     "answer": "(在被动句中引出动作的主动者，相当于“被”)",
     "estimatedSeconds": 20
   },
@@ -7142,6 +9260,12 @@
     "senseId": "sense:da55a0672e44",
     "context": "故天将降大任于是人也",
     "prompt": "“于”在上面这句中的意思是？",
+    "options": [
+      "介词。引出动作的处所、时间和对象。可译为“在”“到”“向”“对于”等",
+      "(表示比较，相当于“比”)",
+      "(在被动句中引出动作的主动者，相当于“被”)",
+      "(表示把动作、行为加给对方，相当于“给”)"
+    ],
     "answer": "(表示把动作、行为加给对方，相当于“给”)",
     "estimatedSeconds": 20
   }
