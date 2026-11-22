@@ -84,4 +84,13 @@ describe('ReviewCard', () => {
     expect(screen.getByRole('button', { name: '不会' })).toBeTruthy();
     expect(screen.queryByRole('button', { name: '标记熟练' })).toBeNull();
   });
+
+  it('offers unlearned and forgotten ratings after a wrong choice', () => {
+    render(<ReviewCard card={card} onGrade={vi.fn()} />);
+
+    fireEvent.click(screen.getByRole('button', { name: '比较' }));
+
+    expect(screen.getByRole('button', { name: '没学' })).toBeTruthy();
+    expect(screen.getByRole('button', { name: '忘了' })).toBeTruthy();
+  });
 });

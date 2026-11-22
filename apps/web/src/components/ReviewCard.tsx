@@ -8,6 +8,8 @@ interface ReviewCardProps {
 }
 
 const grades: Array<{ grade: ReviewGrade; label: string }> = [
+  { grade: 'again', label: '没学' },
+  { grade: 'again', label: '忘了' },
   { grade: 'again', label: '不会' },
   { grade: 'hard', label: '模糊' },
   { grade: 'good', label: '想起了' },
@@ -53,7 +55,7 @@ export function ReviewCard({ card, onGrade, onMastered }: ReviewCardProps) {
           {onMastered && !wrongChoice && <button type="button" className="text-button" onClick={onMastered}>标记熟练</button>}
           <div className="review-card__ratings" aria-label="复习结果">
             {grades.map(({ grade, label }) => (
-              <button key={grade} type="button" onClick={() => onGrade(grade)}>
+              <button key={`${grade}-${label}`} type="button" onClick={() => onGrade(grade)}>
                 {label}
               </button>
             ))}
